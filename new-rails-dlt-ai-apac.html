@@ -228,15 +228,22 @@ footer{padding:34px 52px;color:var(--muted);font-size:12px;max-width:1120px}
   .chainstep{min-width:46%}
   .barrow .bl{width:130px;font-size:11px}
 }
+
+/* home nav (injected) */
+.homelink{display:inline-flex;align-items:center;gap:7px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#C08A2D;text-decoration:none;margin-bottom:10px;border:1px solid rgba(192,138,45,.35);border-radius:5px;padding:5px 10px;transition:all .15s}
+.homelink:hover{background:#C08A2D;color:#0E1B2C}
+.homefab{display:none;position:fixed;bottom:18px;right:18px;z-index:90;background:#0E1B2C;color:#E0B565;border:1px solid rgba(192,138,45,.55);border-radius:24px;padding:11px 18px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+@media (max-width:1080px){.homefab{display:inline-flex;align-items:center;gap:6px}}
 </style>
 </head>
 <body>
 <div class="shell">
 <aside class="sidebar">
   <div class="brand">
+    <a class="homelink" href="index.html">&#8598; Command Centre</a>
     <div class="eyebrow">Companion Module · APAC KB</div>
     <h1>New Rails</h1>
-    <div class="sub">DLT &amp; AI in APAC Asset Servicing — how the technology shift converts into mandates. Prepared for the MD, Regional Head of Sales, Asia Pacific.</div>
+    <div class="sub">DLT & AI in APAC Asset Servicing — how the technology shift converts into mandates. Prepared for the MD, Regional Head of Sales, Asia Pacific.</div>
   </div>
   <div class="railkey">
     <span><i style="background:var(--teal)"></i>DLT</span>
@@ -247,7 +254,7 @@ footer{padding:34px 52px;color:var(--muted);font-size:12px;max-width:1120px}
     <div class="navgroup">Thesis</div>
     <a class="navlink" href="#s01"><span class="num">01</span>The Rails Are Being Rebuilt</a>
     <a class="navlink" href="#s02"><span class="num">02</span>Why Now — The Evidence</a>
-    <a class="navlink" href="#s03"><span class="num">03</span>Two Technologies, One P&amp;L</a>
+    <a class="navlink" href="#s03"><span class="num">03</span>Two Technologies, One P&L</a>
     <div class="navgroup">The Shift</div>
     <a class="navlink" href="#s04"><span class="num">04</span>Value Chain, Rewired</a>
     <a class="navlink" href="#s05"><span class="num">05</span>APAC Regulatory Map</a>
@@ -260,7 +267,7 @@ footer{padding:34px 52px;color:var(--muted);font-size:12px;max-width:1120px}
     <a class="navlink" href="#s11"><span class="num">11</span>Six Sales Plays</a>
     <a class="navlink" href="#s12"><span class="num">12</span>Regulatory Radar 2025–27</a>
     <div class="navgroup">Discipline</div>
-    <a class="navlink" href="#s13"><span class="num">13</span>Risks &amp; Honest Caveats</a>
+    <a class="navlink" href="#s13"><span class="num">13</span>Risks & Honest Caveats</a>
     <a class="navlink" href="#s14"><span class="num">14</span>Source Library</a>
   </nav>
 </aside>
@@ -316,9 +323,9 @@ footer{padding:34px 52px;color:var(--muted);font-size:12px;max-width:1120px}
 
 <!-- 03 TWO TECHNOLOGIES -->
 <section class="slide" id="s03">
-  <div class="kicker">03 · Two Technologies, One P&amp;L</div>
+  <div class="kicker">03 · Two Technologies, One P&L</div>
   <h2 class="title">DLT changes the product. AI changes the cost of producing it.</h2>
-  <p class="lede">These get bundled as "digital", but they attack the P&amp;L from opposite ends — and the winning propositions in APAC combine them. Keep the distinction sharp in every client conversation.</p>
+  <p class="lede">These get bundled as "digital", but they attack the P&L from opposite ends — and the winning propositions in APAC combine them. Keep the distinction sharp in every client conversation.</p>
   <div class="grid g2">
     <div class="card dlt">
       <h4>Distributed Ledger Technology <span class="tag dlt">DLT</span></h4>
@@ -428,7 +435,7 @@ footer{padding:34px 52px;color:var(--muted);font-size:12px;max-width:1120px}
     <div class="stat"><div class="v">¥1.05T</div><div class="l">(~$7B) projected size of Japan's digital-securities market by end-2026; Progmat alone holds ~¥440B and ~63% of cumulative ST issuance <span class="tag fact">FACT</span></div><div class="s">Progmat / market research, 2026</div></div>
     <div class="stat"><div class="v">Collateral</div><div class="l">BUIDL is approved as collateral on major derivatives platforms; EnsembleTX's first use case is tokenised deposits ↔ tokenised MMFs. The MMF is becoming APAC's working-capital token <span class="tag fact">FACT</span></div><div class="s">HKMA, issuer disclosures</div></div>
   </div>
-  <div class="note"><b>The servicing anatomy of one tokenised fund</b> — this is the sales checklist: token issuance &amp; smart-contract administration · wallet whitelisting / KYC gating · on-chain register (digital TA) · off-chain custody of the underlying Treasuries · NAV + on-chain yield distribution mechanics · multi-chain reconciliation · sanctions screening of transfers · collateral connectivity · reporting to two worlds (regulators + on-chain holders). BUIDL alone employs a transfer agent (Securitize), a custodian for underlying assets (BNY) and a portfolio manager (BlackRock) — the traditional trio, re-cast. <b>Every role in that trio is contestable in APAC today.</b> <span class="tag assess">ASSESSMENT</span></div>
+  <div class="note"><b>The servicing anatomy of one tokenised fund</b> — this is the sales checklist: token issuance & smart-contract administration · wallet whitelisting / KYC gating · on-chain register (digital TA) · off-chain custody of the underlying Treasuries · NAV + on-chain yield distribution mechanics · multi-chain reconciliation · sanctions screening of transfers · collateral connectivity · reporting to two worlds (regulators + on-chain holders). BUIDL alone employs a transfer agent (Securitize), a custodian for underlying assets (BNY) and a portfolio manager (BlackRock) — the traditional trio, re-cast. <b>Every role in that trio is contestable in APAC today.</b> <span class="tag assess">ASSESSMENT</span></div>
 </section>
 
 <!-- 08 AI OPS -->
@@ -445,7 +452,7 @@ footer{padding:34px 52px;color:var(--muted);font-size:12px;max-width:1120px}
   <h4 style="font-family:'Fraunces',serif;font-size:17px;margin:28px 0 10px">Where AI bites, by function — maturity heatmap <span class="tag assess">ANALYST ASSESSMENT</span></h4>
   <table class="heat">
     <tr><th style="text-align:left">Use-case family</th><th>Custody</th><th>Fund Acctg</th><th>Transfer Agency</th><th>Middle Office</th><th>Client / Data</th></tr>
-    <tr><td class="rowh">Exception &amp; break resolution</td><td><span class="hcell h3v">PROD</span></td><td><span class="hcell h3v">PROD</span></td><td><span class="hcell h2v">SCALING</span></td><td><span class="hcell h3v">PROD</span></td><td><span class="hcell h2v">SCALING</span></td></tr>
+    <tr><td class="rowh">Exception & break resolution</td><td><span class="hcell h3v">PROD</span></td><td><span class="hcell h3v">PROD</span></td><td><span class="hcell h2v">SCALING</span></td><td><span class="hcell h3v">PROD</span></td><td><span class="hcell h2v">SCALING</span></td></tr>
     <tr><td class="rowh">NAV / pricing oversight</td><td><span class="hcell h1">—</span></td><td><span class="hcell h3v">PROD</span></td><td><span class="hcell h1">—</span></td><td><span class="hcell h2v">SCALING</span></td><td><span class="hcell h2v">SCALING</span></td></tr>
     <tr><td class="rowh">KYC / AML document intelligence</td><td><span class="hcell h2v">SCALING</span></td><td><span class="hcell h1">—</span></td><td><span class="hcell h3v">PROD</span></td><td><span class="hcell h1">—</span></td><td><span class="hcell h2v">SCALING</span></td></tr>
     <tr><td class="rowh">Corporate-action processing</td><td><span class="hcell h3v">PROD</span></td><td><span class="hcell h2v">SCALING</span></td><td><span class="hcell h2v">SCALING</span></td><td><span class="hcell h2v">SCALING</span></td><td><span class="hcell h1">—</span></td></tr>
@@ -581,7 +588,7 @@ footer{padding:34px 52px;color:var(--muted);font-size:12px;max-width:1120px}
       <div class="row"><b>Landmine</b><div>Don't promise chains you can't reconcile. Multi-chain ops is the hard part clients will test.</div></div>
     </div>
   </div>
-  <div class="play"><div class="top"><h4>2 · Tokenised Liquidity &amp; Collateral Desk <span class="tag dlt">DLT</span></h4><div class="meta">Buyer: Treasurers, CIO liquidity · Markets: HK first, then SG</div></div>
+  <div class="play"><div class="top"><h4>2 · Tokenised Liquidity & Collateral Desk <span class="tag dlt">DLT</span></h4><div class="meta">Buyer: Treasurers, CIO liquidity · Markets: HK first, then SG</div></div>
     <div class="body">
       <div class="row"><b>Trigger</b><div>EnsembleTX participation windows through 2026; treasurer pain on trapped overnight cash; margin calls needing faster collateral.</div></div>
       <div class="row"><b>Proposition</b><div>Custody + tokenised-MMF access + collateral connectivity: idle cash into yield-bearing tokens that move as margin 24/7.</div></div>
@@ -632,10 +639,10 @@ footer{padding:34px 52px;color:var(--muted);font-size:12px;max-width:1120px}
     <div class="ev t"><div class="d">AUG 2025</div><h5>Hong Kong stablecoin licensing takes effect</h5><p>Fiat-referenced stablecoin issuance becomes a licensed activity; first licences targeted early 2026. <span class="tag fact">FACT</span></p><div class="so"><b>Sell:</b> reserve custody, attestation and servicing to issuer JVs (e.g. Anchorpoint-type structures).</div></div>
     <div class="ev t"><div class="d">OCT 2025</div><h5>RBI launches deposit-tokenisation pilot</h5><p>Wholesale CBDC as base layer; tokenised CDs in parallel; CP exploration; UMI concept. <span class="tag fact">FACT</span></p><div class="so"><b>Sell:</b> India digital-readiness assessments to custodian clients and treasury heads; early connectivity positioning.</div></div>
     <div class="ev t"><div class="d">NOV 2025</div><h5>EnsembleTX goes live-pilot (HK) · Australia's DAF Bill introduced</h5><p>Real-value tokenised deposits + tokenised MMFs through 2026 over RTGS, upgrading to tokenised central-bank money; DAF Bill brings tokenised custody into AFSL (Senate committee Feb 2026; 12-month commencement post-assent + 18-month compliance). <span class="tag fact">FACT</span></p><div class="so"><b>Sell:</b> HK tokenised-liquidity desk now; AU digital-custody readiness in the DAF compliance window.</div></div>
-    <div class="ev t"><div class="d">DEC 2025 – MAY 2026</div><h5>JPMorgan MONY &amp; JLTXX launch · Progmat's Avalanche migration · tokenised-JGB WG</h5><p>Bank-issued tokenised MMFs multiply; Japan's ST platform goes EVM-compatible by Jun 2026, opening foreign-investor access; JGB tokenisation + on-chain repo report due Oct 2026, commercialisation targeted within 2026. <span class="tag fact">FACT</span></p><div class="so"><b>Sell:</b> Japan-access servicing for foreign institutions as Progmat opens up; repo/collateral connectivity roadmap to insurers and banks.</div></div>
+    <div class="ev t"><div class="d">DEC 2025 – MAY 2026</div><h5>JPMorgan MONY & JLTXX launch · Progmat's Avalanche migration · tokenised-JGB WG</h5><p>Bank-issued tokenised MMFs multiply; Japan's ST platform goes EVM-compatible by Jun 2026, opening foreign-investor access; JGB tokenisation + on-chain repo report due Oct 2026, commercialisation targeted within 2026. <span class="tag fact">FACT</span></p><div class="so"><b>Sell:</b> Japan-access servicing for foreign institutions as Progmat opens up; repo/collateral connectivity roadmap to insurers and banks.</div></div>
     <div class="ev t"><div class="d">MAR 2026</div><h5>India's Asset Tokenisation Bill tabled · IFSC demat migration deadline · Ensemble×Shanghai MoU</h5><p>Private member's bill proposes multi-regulator RWA licensing; IFSC entities migrate securities to the IFSC depository by 31 Mar; HKMA signs cross-border trade-finance ledger MoU with Shanghai. <span class="tag fact">FACT</span></p><div class="so"><b>Sell:</b> GIFT depository-transition support; position for the eventual government bill's architecture.</div></div>
     <div class="ev v"><div class="d">MID 2026</div><h5>SEBI converts Responsible-AI consultation into guidelines</h5><p>Tiered framework in drafting; Chairman (Aug 2026): every regulated entity fully responsible for AI tools used, in-house or procured; IT-resilience index under examination. <span class="tag fact">FACT</span></p><div class="so"><b>Sell:</b> "SEBI-ready AI" governance wrappers with every India ops proposition; audit-evidence packs as a product feature.</div></div>
-    <div class="ev t"><div class="d">JUL 2026</div><h5>BNY launches Digital Transfer Agency</h5><p>Fund books and records legally represented on public blockchain, multi-jurisdiction, multi-chain, wired into its $8.6T fund-servicing franchise. <span class="tag fact">FACT</span></p><div class="so"><b>Sell:</b> urgency. The category leader has moved; every APAC manager's board will ask "what's our digital TA plan?" — be the one who briefed them first.</div></div>
+    <div class="ev t"><div class="d">JUL 2026</div><h5>BNY launches Digital Transfer Agency</h5><p>Fund books and records legally represented on public blockchain, multi-jurisdiction, multi-chain, wired into its $8.6T fund-servicing franchise. <span class="tag fact">FACT</span></p><div class="so"><b>Sell:</b> urgency. The category-leader has moved; every APAC manager's board will ask "what's our digital TA plan?" — be the one who briefed them first.</div></div>
     <div class="ev t"><div class="d">NOV 2026</div><h5>KRX Novel Securities Market opens (16 Nov)</h5><p>Fractional/income securities on non-traditional assets; mock trading 6 Oct–13 Nov. <span class="tag fact">FACT</span></p><div class="so"><b>Sell:</b> issuance-adjacent servicing and custody to Korean securities firms and asset owners entering the venue.</div></div>
     <div class="ev t"><div class="d">FEB 2027</div><h5>Korea's Token-Securities Act takes effect (4 Feb)</h5><p>Statutory basis for blockchain-based security tokens. <span class="tag fact">FACT</span></p><div class="so"><b>Sell:</b> the full tokenised-fund-servicing stack, proven in HK/SG/GIFT during 2026, lands in Korea with a legal green light.</div></div>
   </div>
@@ -643,7 +650,7 @@ footer{padding:34px 52px;color:var(--muted);font-size:12px;max-width:1120px}
 
 <!-- 13 RISKS -->
 <section class="slide" id="s13">
-  <div class="kicker">13 · Risks &amp; Honest Caveats</div>
+  <div class="kicker">13 · Risks & Honest Caveats</div>
   <h2 class="title">What would make this thesis wrong — say it before the client does.</h2>
   <p class="lede">Credibility with an MD audience comes from the caveats, not the hype. These are the honest counterweights.</p>
   <div class="grid g2">
@@ -667,13 +674,13 @@ footer{padding:34px 52px;color:var(--muted);font-size:12px;max-width:1120px}
     <div class="s"><b>HKMA / Project Ensemble</b> — Shanghai trade-finance ledger MoU, Mar 2026; sandbox history since Aug 2024.</div>
     <div class="s"><b>MAS Project Guardian</b> — tokenised fund subscription/redemption settlement pilot with Swift, UBS AM, Chainlink; commercialisation statements. <a href="https://www.fintechfutures.com/tokenisation/mas-project-guardian-pilots-settlement-of-tokenised-fund-subscriptions-and-redemptions-using-swift">fintechfutures.com</a></div>
     <div class="s"><b>RBI</b> — deposit-tokenisation pilot (8 Oct 2025) on wholesale CBDC; tokenised CDs; UMI. <a href="https://www.business-standard.com/economy/news/rbi-deposit-tokenisation-pilot-cbdc-wholesale-digital-tokens-oct8-125100700532_1.html">business-standard.com</a>; Chambers Fintech 2026 – India.</div>
-    <div class="s"><b>IFSCA</b> — RWA tokenisation consultation; IFSC demat framework &amp; 31 Mar 2026 migration; GIFT sandbox real-estate/AIF tokenisation pilot. <a href="https://www.business-standard.com/markets/news/ifsca-releases-consultation-paper-on-dematerialisation-of-ifsc-securities-125102700917_1.html">business-standard.com</a></div>
+    <div class="s"><b>IFSCA</b> — RWA tokenisation consultation; IFSC demat framework & 31 Mar 2026 migration; GIFT sandbox real-estate/AIF tokenisation pilot. <a href="https://www.business-standard.com/markets/news/ifsca-releases-consultation-paper-on-dematerialisation-of-ifsc-securities-125102700917_1.html">business-standard.com</a></div>
     <div class="s"><b>Asset Tokenisation (Regulation) Bill, 2026</b> — Cyril Amarchand Mangaldas FIG Paper No. 55. <a href="https://corporate.cyrilamarchandblogs.com/2026/03/fig-paper-no-55-vda-series-10-indias-first-asset-tokenisation-bill-what-it-means-for-the-digital-assets-space/">cyrilamarchandblogs.com</a></div>
     <div class="s"><b>SEBI</b> — Responsible AI/ML consultation (Jun 2025, tiered approach); Chairman Pandey remarks, FICCI CAPAM, 19 Aug 2026 (entity responsibility; IT-resilience index); guidelines in preparation. Business Standard / IANS coverage.</div>
-    <div class="s"><b>BNY</b> — Digital Transfer Agency launch, 29 Jul 2026 ($8.6T fund servicing; public-blockchain books &amp; records); $62.6T AuC/A (Jun 2026). <a href="https://www.bny.com/corporate/global/en/about-us/newsroom/press-release/bny-launches-global-digital-transfer-agency-capabilities-extending-leadership-in-fund-servicing-to-digital-market.html">bny.com</a></div>
+    <div class="s"><b>BNY</b> — Digital Transfer Agency launch, 29 Jul 2026 ($8.6T fund servicing; public-blockchain books & records); $62.6T AuC/A (Jun 2026). <a href="https://www.bny.com/corporate/global/en/about-us/newsroom/press-release/bny-launches-global-digital-transfer-agency-capabilities-extending-leadership-in-fund-servicing-to-digital-market.html">bny.com</a></div>
     <div class="s"><b>BNY Eliza / agentic AI</b> — 117 solutions in production; −40% NAV false positives; −25% contract review; ~2,000 payment repairs; ~5% custody unit-cost reduction; Gemini Enterprise (Dec 2025). Global Custody Pro 2026 guide; BNY disclosures.</div>
     <div class="s"><b>State Street</b> — Alpha: $380B AuC/A wins, 28 clients live (Q2 2025). Global Custody Pro.</div>
-    <div class="s"><b>Progmat / Japan</b> — ¥439.6B AUM, ~63% ST issuance share; Corda→Avalanche by Jun 2026; tokenised stocks 2026; tokenised-JGB &amp; on-chain repo WG (May 2026, report Oct 2026); ¥1.05T market projection. Ledger Insights; Avalanche Foundation; BigGo Finance.</div>
+    <div class="s"><b>Progmat / Japan</b> — ¥439.6B AUM, ~63% ST issuance share; Corda→Avalanche by Jun 2026; tokenised stocks 2026; tokenised-JGB & on-chain repo WG (May 2026, report Oct 2026); ¥1.05T market projection. Ledger Insights; Avalanche Foundation; BigGo Finance.</div>
     <div class="s"><b>Korea</b> — KRX Novel Securities Market opening 16 Nov 2026 (mock 6 Oct–13 Nov); Token-Securities Act effective 4 Feb 2027. Cryptonomist regulatory round-up, Aug 2026.</div>
     <div class="s"><b>Australia</b> — Digital Assets Framework Bill (introduced 26 Nov 2025; Senate committee 5 Feb 2026; AFSL integration; commencement/compliance timeline). Squire Patton Boggs.</div>
     <div class="s"><b>Adoption data</b> — Global Digital Asset Adoption Index (Apr 2026): 62% APAC pre-2026 budgets; 68% live tokenised-securities plans; 97% favourable regulatory view. Blockchain.news summary, May 2026.</div>
@@ -684,7 +691,7 @@ footer{padding:34px 52px;color:var(--muted);font-size:12px;max-width:1120px}
   </div>
 </section>
 
-<footer>New Rails · DLT &amp; AI in APAC Asset Servicing · Companion module to the APAC Asset-Servicing Knowledge Base · Compiled Aug 2026 · All ASSESSMENT items are analyst judgement, not sourced data · Refresh FACT items before client use.</footer>
+<footer>New Rails · DLT & AI in APAC Asset Servicing · Companion module to the APAC Asset-Servicing Knowledge Base · Compiled Aug 2026 · All ASSESSMENT items are analyst judgement, not sourced data · Refresh FACT items before client use.</footer>
 </main>
 </div>
 
@@ -736,12 +743,12 @@ hk:{name:'Hong Kong',mono:'LIVE · REAL-VALUE PILOT',
  means:['The only APAC venue where tokenised cash + tokenised funds settle at real value today','Banks inside the pilot (incl. HSBC from sandbox phase) are building operational muscle competitors will lack','Trade-finance ledger extends the rails toward mainland corridors'],
  sell:'<b>Sell now:</b> the Tokenised Liquidity & Collateral Desk (play 2) to treasurers; tokenised-MMF servicing to managers; stablecoin reserve custody/attestation to licence applicants. HK is the 2026 proof-of-relevance market.'},
 sg:{name:'Singapore',mono:'LIVE · COMMERCIALISING',
- rails:['<b>Project Guardian</b> (since 2022): MAS + industry tokenisation programme; piloted settlement of tokenised fund subscriptions/redemptions with Swift, UBS AM and Chainlink — riding existing bank messaging into on-chain funds','Stablecoin regulatory framework settled since Aug 2023; MAS signalled commercialisation support from Nov 2024','With HK, forming a regulated token corridor between Asia\u2019s two deepest hubs (licensing + rails on both ends)'],
- means:['Fund tokenisation here is designed to be distribution-compatible: Swift-connected sub/red means every TA and distributor can participate without ripping out plumbing','MAS\u2019s asset-management gravity (regional PE/VC, family offices) makes SG the natural first market for tokenised share classes of APAC funds'],
+ rails:['<b>Project Guardian</b> (since 2022): MAS + industry tokenisation programme; piloted settlement of tokenised fund subscriptions/redemptions with Swift, UBS AM and Chainlink — riding existing bank messaging into on-chain funds','Stablecoin regulatory framework settled since Aug 2023; MAS signalled commercialisation support from Nov 2024','With HK, forming a regulated token corridor between Asia’s two deepest hubs (licensing + rails on both ends)'],
+ means:['Fund tokenisation here is designed to be distribution-compatible: Swift-connected sub/red means every TA and distributor can participate without ripping out plumbing','MAS’s asset-management gravity (regional PE/VC, family offices) makes SG the natural first market for tokenised share classes of APAC funds'],
  sell:'<b>Sell now:</b> Tokenised Fund Servicing (play 1) to SG-domiciled managers adding a tokenised class; corridor connectivity (SG↔HK↔GIFT) as the regional differentiator.'},
 jp:{name:'Japan',mono:'LIVE MARKET · SCALING',
  rails:['<b>Progmat</b> (MUFG-backed; SMBC, Mizuho, SBI, JPX, NTT Data investors): ~¥439.6B tokenised-securities AUM, ~63% of cumulative ST issuance; migrating everything from Corda to Avalanche (EVM-compatible) by Jun 2026 — opening access to foreign institutional investors','Tokenised stocks planned for 2026; tokenised-JGB + on-chain-repo working group launched May 2026 (report Oct 2026, commercialisation targeted within 2026) with MUFG entities and BlackRock Japan','Market projected to exceed ¥1.05T (~$7B) by end-2026; big-3 banks running FSA-supervised stablecoin PoCs; SMBC developing yen stablecoins for wholesale settlement'],
- means:['Japan built tokenisation bank-first and compliance-first — and is now deliberately opening it to global capital via EVM compatibility','Tokenised JGBs + repo would put the world\u2019s largest sovereign-bond complex on 24/7 rails: collateral and custody implications are enormous'],
+ means:['Japan built tokenisation bank-first and compliance-first — and is now deliberately opening it to global capital via EVM compatibility','Tokenised JGBs + repo would put the world’s largest sovereign-bond complex on 24/7 rails: collateral and custody implications are enormous'],
  sell:'<b>Sell now:</b> Japan-access servicing for foreign managers as Progmat opens; connectivity to Progmat rails as a product feature; repo/collateral roadmap conversations with insurers and banks holding JGB books.'},
 kr:{name:'South Korea',mono:'FRAMEWORK · DATED COUNTDOWN',
  rails:['<b>KRX Novel Securities Market</b> opens 16 Nov 2026 — fractional-investment and income securities on non-traditional assets (art, real estate, music rights); mock trading 6 Oct–13 Nov 2026','<b>Token-Securities Act</b> takes effect 4 Feb 2027 — statutory basis for blockchain-based security tokens','Institutional experiments underway (e.g. Shinhan AM exploring blockchain rails for offshore fund distribution)'],
@@ -752,7 +759,7 @@ au:{name:'Australia',mono:'LEGISLATION IN FLIGHT',
  means:['A dated compliance window is a dated sales window: every platform touching Australian clients must decide build/buy/partner for licensed custody','Risk flag: if implementation is slow, activity may be serviced from offshore hubs — which is itself a cross-border servicing opportunity'],
  sell:'<b>Sell now:</b> Digital Custody Foundation (play 3) to Australian supers, managers and platforms inside the compliance window; offshore-servicing alternatives from SG/HK if the AFSL pathway proves slow.'},
 in:{name:'India + GIFT IFSC',mono:'PILOTS · DUAL-TRACK',
- rails:['<b>RBI (money layer):</b> deposit-tokenisation pilot from 8 Oct 2025 on wholesale CBDC; tokenised CDs; CP under exploration; Unified Markets Interface concept for tokenise-and-settle in central-bank money','<b>IFSCA (asset layer):</b> RWA-tokenisation consultation (India\u2019s only dedicated RWA policy doc); live sandbox pilot tokenising ~US$7M property via AIF units; IFSC demat framework — migration to India International Depository IFSC by 31 Mar 2026','<b>SEBI (AI layer):</b> Responsible-AI framework moving from consultation to guidelines; full entity responsibility for AI tools (Aug 2026); IT-resilience index under study','<b>Parliament:</b> Asset Tokenisation (Regulation) Bill 2026 (private member\u2019s, 14 Mar 2026) previews a multi-regulator licensing architecture; IoRS sandbox already coordinates RBI/SEBI/IRDAI/PFRDA/IFSCA'],
+ rails:['<b>RBI (money layer):</b> deposit-tokenisation pilot from 8 Oct 2025 on wholesale CBDC; tokenised CDs; CP under exploration; Unified Markets Interface concept for tokenise-and-settle in central-bank money','<b>IFSCA (asset layer):</b> RWA-tokenisation consultation (India’s only dedicated RWA policy doc); live sandbox pilot tokenising ~US$7M property via AIF units; IFSC demat framework — migration to India International Depository IFSC by 31 Mar 2026','<b>SEBI (AI layer):</b> Responsible-AI framework moving from consultation to guidelines; full entity responsibility for AI tools (Aug 2026); IT-resilience index under study','<b>Parliament:</b> Asset Tokenisation (Regulation) Bill 2026 (private member’s, 14 Mar 2026) previews a multi-regulator licensing architecture; IoRS sandbox already coordinates RBI/SEBI/IRDAI/PFRDA/IFSCA'],
  means:['Onshore = money-layer pilots + AI accountability; offshore GIFT = the only Indian venue for tokenised assets today','The combination is unique in APAC: a domestic CBDC-anchored settlement experiment AND an offshore RWA sandbox inside one country'],
  sell:'<b>Sell now:</b> India Digital Corridor (play 6) — GIFT digital fund servicing + FPI custody with a UMI-era roadmap + SEBI-ready AI governance. See section 06 for the full deep dive.'}
 };
@@ -770,5 +777,6 @@ mks.forEach(m=>m.addEventListener('click',()=>{
   md.scrollIntoView({behavior:'smooth',block:'nearest'});
 }));
 </script>
+<a class="homefab" href="index.html">&#8962; Home</a>
 </body>
 </html>
