@@ -152,6 +152,12 @@ h3.blockhead{font-family:'Fraunces',serif;font-weight:600;font-size:20px;color:v
 .menu-btn{display:none;position:fixed;top:14px;left:14px;z-index:70;background:var(--ink);color:#fff;border:none;border-radius:4px;padding:9px 13px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;cursor:pointer;align-items:center;gap:8px}
 @media (prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important}}
 a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+/* home nav (injected) */
+.homelink{display:inline-flex;align-items:center;gap:7px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#C08A2D;text-decoration:none;margin-bottom:10px;border:1px solid rgba(192,138,45,.35);border-radius:5px;padding:5px 10px;transition:all .15s}
+.homelink:hover{background:#C08A2D;color:#0E1B2C}
+.homefab{display:none;position:fixed;bottom:18px;right:18px;z-index:90;background:#0E1B2C;color:#E0B565;border:1px solid rgba(192,138,45,.55);border-radius:24px;padding:11px 18px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+@media (max-width:1080px){.homefab{display:inline-flex;align-items:center;gap:6px}}
 </style>
 </head>
 <body>
@@ -160,27 +166,28 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
 
 <aside class="sidebar" id="sidebar">
   <div class="brand">
+    <a class="homelink" href="index.html">&#8598; Command Centre</a>
     <div class="eyebrow">Competitive Intelligence · APAC</div>
-    <h1>Asset Servicing, Fund Administration &amp; Transfer Agency</h1>
+    <h1>Asset Servicing, Fund Administration & Transfer Agency</h1>
     <div class="sub">Knowledge base for the incoming MD, Regional Head of Sales — Asia Pacific · 8 markets · 20+ competitors</div>
   </div>
   <nav class="nav" id="nav">
     <button class="navlink" data-target="cover"><span class="num">00</span>Cover</button>
     <div class="navgroup">The Market</div>
     <button class="navlink" data-target="exec"><span class="num">01</span>Executive summary</button>
-    <button class="navlink" data-target="sizing"><span class="num">02</span>Market sizing &amp; growth</button>
+    <button class="navlink" data-target="sizing"><span class="num">02</span>Market sizing & growth</button>
     <button class="navlink" data-target="countries"><span class="num">03</span>Country deep dives</button>
     <div class="navgroup">The Battlefield</div>
     <button class="navlink" data-target="competition"><span class="num">04</span>Competitive landscape</button>
     <button class="navlink" data-target="regulation"><span class="num">05</span>Regulatory map</button>
     <button class="navlink" data-target="clients"><span class="num">06</span>Target client segments</button>
     <div class="navgroup">The Play</div>
-    <button class="navlink" data-target="gaps"><span class="num">07</span>Gaps &amp; opportunities</button>
+    <button class="navlink" data-target="gaps"><span class="num">07</span>Gaps & opportunities</button>
     <button class="navlink" data-target="gtm"><span class="num">08</span>Go-to-market strategy</button>
     <button class="navlink" data-target="pipeline"><span class="num">09</span>Mandate pipeline</button>
     <button class="navlink" data-target="decision"><span class="num">10</span>Decision framework</button>
     <button class="navlink" data-target="plan100"><span class="num">11</span>100-day action plan</button>
-    <button class="navlink" data-target="sources"><span class="num">12</span>Sources &amp; caveats</button>
+    <button class="navlink" data-target="sources"><span class="num">12</span>Sources & caveats</button>
   </nav>
   <div class="keys">Navigate with <kbd>←</kbd> <kbd>→</kbd> between sections</div>
 </aside>
@@ -192,7 +199,7 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
 <!-- 00 COVER -->
 <section class="slide" id="cover">
   <div class="slidehead">
-    <div class="kicker">Folio 00 · APAC Market Entry &amp; Growth Briefing</div>
+    <div class="kicker">Folio 00 · APAC Market Entry & Growth Briefing</div>
     <h2>APAC is the fastest-growing asset-servicing region in the world — and the global incumbents are repositioning, not defending.</h2>
     <p class="lede">Competitive intelligence and go-to-market strategy for the Regional Head of Sales: market sizing across 8 countries, positioning of 20+ custodians and local champions, regulatory catalysts, named target accounts, live mandate pipeline, and a 100-day plan.</p>
     <span class="stamp">Prepared Aug 2026 · Data window 2024–2026 · Verify before client use</span>
@@ -268,13 +275,13 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
     <div class="metric"><div class="n">~$1.0<span>T</span></div><div class="l"><b>India</b> — ₹85.76 lakh cr MF AUM (Jul 2026); AIF ₹16.94 lakh cr; fastest grower.</div></div>
     <div class="metric"><div class="n">$536<span>B</span></div><div class="l"><b>Taiwan</b> — NT$17.5T fund industry; TDCC centralised custody platform.</div></div>
   </div>
-  <h3 class="blockhead">Service-line sizing &amp; outsourcing trend</h3>
+  <h3 class="blockhead">Service-line sizing & outsourcing trend</h3>
   <div class="tblwrap"><table>
     <thead><tr><th>Service line</th><th>APAC market size</th><th>Growth driver</th><th>Outsourcing trend</th></tr></thead>
     <tbody>
       <tr><td><b>Custody</b></td><td>~$7.9B (2024)</td><td>AUM growth, cross-border investment, fund domiciliation</td><td><span class="pill i">MATURE</span> Core outsourced service</td></tr>
       <tr><td><b>Fund administration</b></td><td>Growing rapidly</td><td>VCC/OFC formations, PE, hedge funds</td><td><span class="pill t">ACCELERATING</span> Daily NAV becoming baseline in SG</td></tr>
-      <tr><td><b>Transfer agency</b></td><td>Expanding</td><td>Retail fund growth (NISA, India SIPs), ETF proliferation</td><td><span class="pill t">ACCELERATING</span> BT moved 88 funds to SS&amp;C (2024)</td></tr>
+      <tr><td><b>Transfer agency</b></td><td>Expanding</td><td>Retail fund growth (NISA, India SIPs), ETF proliferation</td><td><span class="pill t">ACCELERATING</span> BT moved 88 funds to SS&C (2024)</td></tr>
       <tr><td><b>Middle office</b></td><td>$1.92B → $4.49B (2033)</td><td>Cost pressure, operational expertise, regulatory complexity</td><td><span class="pill g">HIGH UPTAKE</span> 61.9% plan to increase</td></tr>
       <tr><td><b>Data solutions</b></td><td>Emerging</td><td>AI/analytics demand, regulatory reporting, ESG data</td><td><span class="pill g">EMERGING</span> Front-to-back platforms</td></tr>
       <tr><td><b>Digital asset custody</b></td><td>Greenfield</td><td>MAS DTSP, HK VASP, Japan stablecoin rules</td><td><span class="pill r">GREENFIELD</span> Regulated custody is new</td></tr>
@@ -321,7 +328,7 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
           <li>76% of AUM sourced from outside Singapore; 88% invested overseas; ESG overlay on 48% of AUM.</li>
         </ul>
       </div>
-      <div class="card"><h4>Regulatory &amp; structural drivers</h4>
+      <div class="card"><h4>Regulatory & structural drivers</h4>
         <ul>
           <li><b>MAS outsourcing framework (Dec 2024):</b> two-track regime with MOORS — semi-annual registers, 30-day prior consent for subcontractors, mandatory contract clauses, 3-year audit cycles.</li>
           <li><b>TPRM escalation (Jul 2025):</b> post-ransomware legacy contract remediation; board-level accountability.</li>
@@ -342,7 +349,7 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
           <li>OFC (open-ended fund company) regime growing as the local fund vehicle; ETF market expanding via Connect inclusion.</li>
         </ul>
       </div>
-      <div class="card"><h4>Regulatory &amp; structural drivers</h4>
+      <div class="card"><h4>Regulatory & structural drivers</h4>
         <ul>
           <li><b>Type 13 depositary regime (Oct 2024):</b> SFC licensing for depositaries of public funds — 19 licensed; creates a new regulated service line.</li>
           <li><b>VASP / ASPIRe roadmap (Feb 2025)</b> and <b>VA custody requirements (Aug 2025):</b> consultation toward a standalone virtual-asset custodian regime.</li>
@@ -363,7 +370,7 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
           <li>ACSA league table (Dec 2025): JPMorgan A$1,495B total AUC, Citi A$1,055B, Northern Trust A$995B; BNY ~A$27B (#11).</li>
         </ul>
       </div>
-      <div class="card"><h4>Regulatory &amp; structural drivers</h4>
+      <div class="card"><h4>Regulatory & structural drivers</h4>
         <ul>
           <li><b>CPS 230 Operational Risk (Jul 2025):</b> critical-operations identification, disruption tolerances, 72-hour incident notification, 20-day offshore arrangement notice — the decade's biggest vendor reassessment.</li>
           <li><b>Payday Super (Jul 2026):</b> per-payday contribution processing — a volume surge for registry/TA providers.</li>
@@ -385,7 +392,7 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
           <li>State Street's Mizuho acquisition (~$850B AUC, completed Oct 2025) consolidated its Japan position — and may trigger client reviews.</li>
         </ul>
       </div>
-      <div class="card"><h4>Regulatory &amp; structural drivers</h4>
+      <div class="card"><h4>Regulatory & structural drivers</h4>
         <ul>
           <li><b>"Asset Management Nation" policy (2024):</b> government push to open the asset management industry, welcome new entrants, and reform stewardship (3rd Code revision Jun 2025).</li>
           <li><b>Stablecoin rules (Jun 2026)</b> and progressive digital-asset framework — Japan is a Tier-1 regulated digital-asset market.</li>
@@ -407,7 +414,7 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
           <li>GIFT City (IFSC): US$26.3B fund commitments; unified regulator (IFSCA); tax-neutral relocation; 100% NRI corpus in IFSC FPIs.</li>
         </ul>
       </div>
-      <div class="card"><h4>Regulatory &amp; structural drivers</h4>
+      <div class="card"><h4>Regulatory & structural drivers</h4>
         <ul>
           <li><b>SEBI Custodian Regulations overhaul (notified Sep 18, 2025):</b> minimum net worth raised ₹50 cr → ₹75 cr (3-yr transition; ₹100 cr was the original consultation proposal); custodians permitted to offer other financial services (fund accounting et al.) — non-bank custodians via segregated SBUs; governance, BCP/DR and board-committee mandates.</li>
           <li><b>AIF reforms:</b> dematerialisation of units, custodian appointment restructured, co-investment schemes (Sep 2025), proposed GARUDA green-channel for faster scheme launches.</li>
@@ -428,7 +435,7 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
           <li>Onshore custody dominated by large domestic banks (ICBC, CCB, BOC); foreign servicers operate mainly via HK.</li>
         </ul>
       </div>
-      <div class="card"><h4>Constraints &amp; posture</h4>
+      <div class="card"><h4>Constraints & posture</h4>
         <ul>
           <li>Data localisation and capital controls limit cross-border operating models.</li>
           <li>Sub-custody partnerships are essential; direct onshore build is a long-cycle bet.</li>
@@ -448,7 +455,7 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
           <li>KIC (sovereign fund) and major insurers run periodic global custody RFP cycles.</li>
         </ul>
       </div>
-      <div class="card"><h4>Drivers &amp; posture</h4>
+      <div class="card"><h4>Drivers & posture</h4>
         <ul>
           <li>NPS/KIC mandate cycles and insurance solvency rules drive outsourcing demand.</li>
           <li>JPMorgan exited local custody in Korea — sub-custody flows moving to regional banks.</li>
@@ -468,7 +475,7 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
           <li>JPMorgan exited local custody in Taiwan — another displacement pocket.</li>
         </ul>
       </div>
-      <div class="card"><h4>Drivers &amp; posture</h4>
+      <div class="card"><h4>Drivers & posture</h4>
         <ul>
           <li>FSC-driven platform centralisation creates concentrated volume through fewer counterparties.</li>
           <li>Insurers (large offshore bond books) and ETF issuers are the institutional demand base.</li>
@@ -489,10 +496,10 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
   <div class="tblwrap"><table>
     <thead><tr><th>#</th><th>Custodian</th><th>Global AUC/A</th><th>APAC position</th></tr></thead>
     <tbody>
-      <tr><td>1</td><td><b>BNY</b></td><td>$59.3T (YE-2025)</td><td>Largest by global AUC; under-indexed in APAC custody (~#11 in Australia); GPIF data &amp; analytics win 2026</td></tr>
+      <tr><td>1</td><td><b>BNY</b></td><td>$59.3T (YE-2025)</td><td>Largest by global AUC; under-indexed in APAC custody (~#11 in Australia); GPIF data & analytics win 2026</td></tr>
       <tr><td>2</td><td><b>State Street</b></td><td>$53.8T (YE-2025)</td><td>Deep NPS/Korea relationship; acquired Mizuho global custody (~$850B AUC)</td></tr>
       <tr><td>3</td><td><b>JPMorgan</b></td><td>~$35T (end-2024)</td><td>#1 in Australia total AUC (A$1,495B); exited local custody in HK/TW/AU/KR</td></tr>
-      <tr><td>4</td><td><b>Citi</b></td><td>~$29.2T</td><td>#1 direct custody &amp; clearing (26.8%); #3 Australia (A$1,055B); TDCC Taiwan mandate</td></tr>
+      <tr><td>4</td><td><b>Citi</b></td><td>~$29.2T</td><td>#1 direct custody & clearing (26.8%); #3 Australia (A$1,055B); TDCC Taiwan mandate</td></tr>
       <tr><td>5</td><td><b>Northern Trust</b></td><td>$18.7T (YE-2025)</td><td>#4 Australia (A$995B); strong asset-owner franchise; private-markets leader</td></tr>
       <tr><td>6</td><td><b>BNP Paribas</b></td><td>—</td><td>European strength; selective APAC presence</td></tr>
       <tr><td>7</td><td><b>BBH</b></td><td>~$2.9T (fund custody)</td><td>HK office 35+ years; declining share</td></tr>
@@ -507,7 +514,7 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
     <button data-pane="citi">Citi</button>
     <button data-pane="jpm">JPMorgan</button>
     <button data-pane="nt">Northern Trust</button>
-    <button data-pane="regional">Regional &amp; local</button>
+    <button data-pane="regional">Regional & local</button>
   </div>
 
   <div class="tabpane on" data-tabs="comp" id="pane-ss">
@@ -521,7 +528,7 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
           <li>Columbia Threadneedle ~$431B AUC/A; JSCC partnership (2025 award); Shariah custody award; acquired CF Global Trading.</li>
           <li>"Best Global Custodian in APAC" 28 consecutive years (Asia Asset Management).</li>
         </ul></div>
-        <div><h4>Weaknesses &amp; gaps</h4><ul>
+        <div><h4>Weaknesses & gaps</h4><ul>
           <li>Late to digital-asset custody vs StanChart/HSBC.</li>
           <li>Alpha conversion slow — 25 of 35 clients live.</li>
           <li>Concentration risk in a few mega-mandates.</li>
@@ -534,13 +541,13 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
   <div class="tabpane" data-tabs="comp" id="pane-bny">
     <div class="card">
       <h3>BNY — biggest globally, lightest in APAC</h3>
-      <p><b>Scale:</b> $59.3T AUC/A (YE-2025) — the world's largest custodian, but ranked ~#11 in Australia AUC (A$27B) and thin in Asian local custody. Won GPIF data &amp; analytics ("Deal of the Year" 2026) — playing a data/platform game rather than a local-custody game in the region.</p>
+      <p><b>Scale:</b> $59.3T AUC/A (YE-2025) — the world's largest custodian, but ranked ~#11 in Australia AUC (A$27B) and thin in Asian local custody. Won GPIF data & analytics ("Deal of the Year" 2026) — playing a data/platform game rather than a local-custody game in the region.</p>
       <div class="grid2 mt">
         <div><h4>Strengths</h4><ul>
           <li>Unmatched global scale, corporate trust and collateral franchises.</li>
           <li>Data platform ambitions; GPIF relationship is a marquee beachhead in Japan.</li>
         </ul></div>
-        <div><h4>Weaknesses &amp; gaps</h4><ul>
+        <div><h4>Weaknesses & gaps</h4><ul>
           <li>Under-indexed APAC custody share; lost EPF Malaysia (~$40B) to JPMorgan in 2025.</li>
           <li>Corporate-trust strength less differentiated in APAC than the US.</li>
           <li>Limited local sub-custody footprint — dependent on partners.</li>
@@ -552,14 +559,14 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
   <div class="tabpane" data-tabs="comp" id="pane-citi">
     <div class="card">
       <h3>Citi — the proprietary-network competitor</h3>
-      <p><b>Scale:</b> ~$29.2T AUC; #1 in direct custody &amp; clearing globally (26.8% share) — the widest proprietary local-custody network, which it is monetising as others retreat. #3 in Australia (A$1,055B), adding 24 new Australian clients in 18 months.</p>
+      <p><b>Scale:</b> ~$29.2T AUC; #1 in direct custody & clearing globally (26.8% share) — the widest proprietary local-custody network, which it is monetising as others retreat. #3 in Australia (A$1,055B), adding 24 new Australian clients in 18 months.</p>
       <div class="grid2 mt">
         <div><h4>Strategic moves</h4><ul>
           <li>TDCC Taiwan centralised platform global custody mandate (~$153B, 2024).</li>
           <li>Global X ETFs HK fund services ("Deal of the Year" 2025); BetaShares custody + fund admin; Fiducian custody/admin/registry.</li>
           <li>Positioning ETF servicing and mid-market Australia as growth engines.</li>
         </ul></div>
-        <div><h4>Weaknesses &amp; gaps</h4><ul>
+        <div><h4>Weaknesses & gaps</h4><ul>
           <li>Fund administration and TA depth thinner than its custody network.</li>
           <li>Less established in private-markets/GP-LP servicing.</li>
           <li>Group-level restructuring can distract from securities services investment.</li>
@@ -577,7 +584,7 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
           <li>Balance-sheet strength and global custody scale; markets/financing adjacencies.</li>
           <li>Still the name to beat in global custody RFPs for large asset owners.</li>
         </ul></div>
-        <div><h4>Weaknesses &amp; gaps</h4><ul>
+        <div><h4>Weaknesses & gaps</h4><ul>
           <li>Local custody exit creates dependency on HSBC/StanChart — and displaced clients in four markets.</li>
           <li>Not seen as a digital-asset custody leader.</li>
           <li>Fusion not yet deeply embedded in APAC.</li>
@@ -595,7 +602,7 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
           <li>Genuine private-markets servicing leadership; high-touch asset-owner model.</li>
           <li>Strong Australia asset-owner base.</li>
         </ul></div>
-        <div><h4>Weaknesses &amp; gaps</h4><ul>
+        <div><h4>Weaknesses & gaps</h4><ul>
           <li>Smaller scale and thinner Asia (ex-Australia) footprint than the big three.</li>
           <li>Limited retail/TA capability in Asia; not a local sub-custody player.</li>
         </ul></div>
@@ -610,9 +617,9 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
         <tr><td><b>HSBC</b></td><td>Dominant regional sub-custodian; absorbing JPM's outsourced flows; broad direct-custody network across Asia; early digital-asset mover.</td><td>Both a partner (sub-custody) and a competitor (full-service securities services) in nearly every deal.</td></tr>
         <tr><td><b>Standard Chartered</b></td><td>The other JPM sub-custody beneficiary; frontier/emerging network strength; digital-asset custody early mover (Zodia ecosystem).</td><td>Aggressive in securities services investment and crypto-adjacent servicing.</td></tr>
         <tr><td><b>Japan trust banks (SMTB, MUFG)</b></td><td>Control domestic Japanese trust/custody; gatekeepers to Japanese institutional flows.</td><td>Partnership targets for Japan entry; Mizuho's exit to State Street may loosen the oligopoly.</td></tr>
-        <tr><td><b>SS&amp;C</b></td><td>TA/fund-admin consolidator — BT (Westpac) moved 88 funds to it (2024); Perennial consolidated to its TA platform (2025).</td><td>The default challenger in Australian registry/TA consolidations.</td></tr>
-        <tr><td><b>CAMS &amp; KFintech (India)</b></td><td>MF transfer-agency duopoly (~68%/~31%); CAMS dominant in AIF/PMS servicing; KFin expanding TA/fund admin across Malaysia, Philippines, SG, HK, Thailand, Canada, GIFT City.</td><td>KFin will appear in your Southeast Asia deals as a low-cost platform competitor — and is a potential partner.</td></tr>
-        <tr><td><b>Apex, IQ-EQ &amp; global fund admins</b></td><td>Alternatives administration across SG VCCs, HK OFCs, India AIFs and GIFT City.</td><td>They validate the alternatives-admin opportunity but lack custody balance sheets — bundling beats them.</td></tr>
+        <tr><td><b>SS&C</b></td><td>TA/fund-admin consolidator — BT (Westpac) moved 88 funds to it (2024); Perennial consolidated to its TA platform (2025).</td><td>The default challenger in Australian registry/TA consolidations.</td></tr>
+        <tr><td><b>CAMS & KFintech (India)</b></td><td>MF transfer-agency duopoly (~68%/~31%); CAMS dominant in AIF/PMS servicing; KFin expanding TA/fund admin across Malaysia, Philippines, SG, HK, Thailand, Canada, GIFT City.</td><td>KFin will appear in your Southeast Asia deals as a low-cost platform competitor — and is a potential partner.</td></tr>
+        <tr><td><b>Apex, IQ-EQ & global fund admins</b></td><td>Alternatives administration across SG VCCs, HK OFCs, India AIFs and GIFT City.</td><td>They validate the alternatives-admin opportunity but lack custody balance sheets — bundling beats them.</td></tr>
         <tr><td><b>Domestic bank custodians (India: SBI-SG, ICICI, Kotak, Axis, HDFC)</b></td><td>Price-led domestic custody for MFs, AIFs, insurers.</td><td>Sharpened by SEBI's 2025 overhaul allowing them into fund accounting — the integration race is on.</td></tr>
       </tbody>
     </table></div>
@@ -669,10 +676,10 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
         <tr><td><b>SBI Asset Management</b></td><td>Japan</td><td>Growing</td><td>Fund admin, custody, digital-asset servicing</td></tr>
         <tr><td><b>UOB Asset Management</b></td><td>Singapore</td><td>~$40B+</td><td>10-yr State Street mandate (2024) — long-cycle target</td></tr>
         <tr><td><b>Nikko AM Asia / Fullerton</b></td><td>Singapore</td><td>—</td><td>VCC custody, fund admin</td></tr>
-        <tr><td><b>Bosera / E Fund</b></td><td>HK / China</td><td>&gt;$100B / &gt;$200B</td><td>Cross-border custody, QFII, Stock Connect, ETF servicing</td></tr>
+        <tr><td><b>Bosera / E Fund</b></td><td>HK / China</td><td>>$100B / >$200B</td><td>Cross-border custody, QFII, Stock Connect, ETF servicing</td></tr>
         <tr><td><b>BetaShares / Global X</b></td><td>Australia / HK</td><td>~$30B+ / growing</td><td>ETF custody + admin (Citi incumbency — monitor)</td></tr>
         <tr><td><b>HDFC AMC / SBI MF / ICICI Pru / Nippon India</b></td><td>India</td><td>~$70–100B each</td><td>Custody, offshore feeders, data; TA duopoly-locked domestically</td></tr>
-        <tr><td><b>Samsung AM / Korea Investment Mgmt</b></td><td>South Korea</td><td>&gt;$300B / —</td><td>Global custody, ETF servicing, fund admin</td></tr>
+        <tr><td><b>Samsung AM / Korea Investment Mgmt</b></td><td>South Korea</td><td>>$300B / —</td><td>Global custody, ETF servicing, fund admin</td></tr>
       </tbody>
     </table></div>
   </div>
@@ -684,7 +691,7 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
         <tr><td><b>GIC</b></td><td>Singapore</td><td>~$800B (est.)</td><td>Global custody, private-markets servicing, data; mega-mandate target</td></tr>
         <tr><td><b>Temasek</b></td><td>Singapore</td><td>~S$400B+</td><td>Private-asset servicing, portfolio data platforms</td></tr>
         <tr><td><b>KIC</b></td><td>South Korea</td><td>~$200B</td><td>Global custody RFP cycles; performance/analytics</td></tr>
-        <tr><td><b>CIC / SAFE</b></td><td>China</td><td>&gt;$1T combined</td><td>Serviced via global custodians; long-cycle relationship play</td></tr>
+        <tr><td><b>CIC / SAFE</b></td><td>China</td><td>>$1T combined</td><td>Serviced via global custodians; long-cycle relationship play</td></tr>
         <tr><td><b>Future Fund</b></td><td>Australia</td><td>~A$300B</td><td>Custody/admin reviews; alternatives-heavy portfolio</td></tr>
         <tr><td><b>NIIF</b></td><td>India</td><td>~$5B+</td><td>India infrastructure alternatives; AIF servicing showcase</td></tr>
         <tr><td><b>Khazanah / EPF-adjacent</b></td><td>Malaysia</td><td>—</td><td>EPF's 2025 move to JPM shows mandates in play in SEA</td></tr>
@@ -696,7 +703,7 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
     <div class="tblwrap"><table>
       <thead><tr><th>Institution</th><th>Market</th><th>Scale</th><th>Angle</th></tr></thead>
       <tbody>
-        <tr><td><b>GPIF</b></td><td>Japan</td><td>~$1.7T — world's largest</td><td>BNY holds data &amp; analytics (2026); custody/servicing components cycle via RFP</td></tr>
+        <tr><td><b>GPIF</b></td><td>Japan</td><td>~$1.7T — world's largest</td><td>BNY holds data & analytics (2026); custody/servicing components cycle via RFP</td></tr>
         <tr><td><b>NPS</b></td><td>South Korea</td><td>World's 3rd-largest</td><td>State Street anchor (renewed 2024) — position for next cycle</td></tr>
         <tr><td><b>AustralianSuper / ART / Aware Super</b></td><td>Australia</td><td>A$150–350B each</td><td>CPS 230 reviews + merger-driven re-tenders; internalisation = data/trading needs</td></tr>
         <tr><td><b>EPF</b></td><td>Malaysia</td><td>~$300B</td><td>Moved ~$40B custody to JPM (2025) — RFP-active institution</td></tr>
@@ -710,11 +717,11 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
     <div class="tblwrap"><table>
       <thead><tr><th>Institution</th><th>Market</th><th>Scale</th><th>Angle</th></tr></thead>
       <tbody>
-        <tr><td><b>Nippon Life</b></td><td>Japan</td><td>&gt;$700B</td><td>Custody, investment-operations outsourcing</td></tr>
-        <tr><td><b>Dai-ichi Life / Meiji Yasuda</b></td><td>Japan</td><td>&gt;$300B each</td><td>Global custody, alternatives servicing as allocations shift</td></tr>
-        <tr><td><b>AIA / Prudential plc</b></td><td>Pan-Asia (HK)</td><td>&gt;$300B combined inv. assets</td><td>Multi-market custody consolidation, data platforms</td></tr>
-        <tr><td><b>Ping An / China Life</b></td><td>China</td><td>&gt;$1T combined</td><td>Offshore sleeves via HK; Connect servicing</td></tr>
-        <tr><td><b>Samsung Life / Hanwha</b></td><td>South Korea</td><td>&gt;$200B</td><td>Solvency-driven outsourcing; global custody</td></tr>
+        <tr><td><b>Nippon Life</b></td><td>Japan</td><td>>$700B</td><td>Custody, investment-operations outsourcing</td></tr>
+        <tr><td><b>Dai-ichi Life / Meiji Yasuda</b></td><td>Japan</td><td>>$300B each</td><td>Global custody, alternatives servicing as allocations shift</td></tr>
+        <tr><td><b>AIA / Prudential plc</b></td><td>Pan-Asia (HK)</td><td>>$300B combined inv. assets</td><td>Multi-market custody consolidation, data platforms</td></tr>
+        <tr><td><b>Ping An / China Life</b></td><td>China</td><td>>$1T combined</td><td>Offshore sleeves via HK; Connect servicing</td></tr>
+        <tr><td><b>Samsung Life / Hanwha</b></td><td>South Korea</td><td>>$200B</td><td>Solvency-driven outsourcing; global custody</td></tr>
         <tr><td><b>LIC / SBI Life / HDFC Life</b></td><td>India</td><td>LIC ~$600B</td><td>Custody + valuation under IRDAI investment regs; long-tenor mandates</td></tr>
         <tr><td><b>Income Insurance</b></td><td>Singapore</td><td>—</td><td>JPM custody win 2025 — evidence insurers are in market</td></tr>
       </tbody>
@@ -728,7 +735,7 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
         <tr><td><b>PAG, Hillhouse, MBK Partners</b></td><td>Pan-Asia</td><td>Regional PE/credit majors — fund admin, depositary, financing adjacencies</td></tr>
         <tr><td><b>KKR / Blackstone / EQT Asia vehicles</b></td><td>Pan-Asia</td><td>Global GPs with Asia funds — leverage existing global relationships regionally</td></tr>
         <tr><td><b>Singapore VCC managers (3,443 sub-funds)</b></td><td>Singapore</td><td>Volume play: standardised custody+admin+TA packages per sub-fund</td></tr>
-        <tr><td><b>HK hedge funds &amp; OFCs</b></td><td>Hong Kong</td><td>Prime-adjacent custody, admin, Type 13 depositary services</td></tr>
+        <tr><td><b>HK hedge funds & OFCs</b></td><td>Hong Kong</td><td>Prime-adjacent custody, admin, Type 13 depositary services</td></tr>
         <tr><td><b>India AIF managers (1,829 funds)</b></td><td>India</td><td>Kotak Alts, Edelweiss, ChrysCapital, 360 ONE et al. — full-stack admin+TA+custody; global-LP reporting as the hook</td></tr>
         <tr><td><b>GIFT City FMEs</b></td><td>India (IFSC)</td><td>Greenfield: every new FME needs the entire stack; no incumbents</td></tr>
         <tr><td><b>Japan/Korea alternative entrants</b></td><td>JP / KR</td><td>Asset Management Nation new entrants; pension alternatives allocations rising</td></tr>
@@ -761,8 +768,8 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
     <div class="card"><h4>Gap 1 · Front-to-back platform modernisation</h4><p>EY: only 33% of asset servicers fully fund digital initiatives; just 21% have digitalised most workflows. State Street's Alpha has 35 clients (25 live) — slow conversion. Room exists for a genuinely technology-forward alternative.</p></div>
     <div class="card"><h4>Gap 2 · Private-markets servicing</h4><p>APAC alternatives AUM exceeds $1T in Singapore alone (+14% YoY); India AIF at ~$190B. Most global custodians are optimised for traditional fund flows, not GP-LP structures, waterfalls and private-asset valuation. Northern Trust leads but the market is far from saturated.</p></div>
     <div class="card"><h4>Gap 3 · Digital-asset custody</h4><p>SG DTSP (Jun 2025), HK VASP/ASPIRe (Feb 2025), Japan stablecoin rules (Jun 2026): regulated digital-asset custody is a greenfield. StanChart and HSBC are early movers; the big three are relatively late. First-mover advantage is still available.</p></div>
-    <div class="card"><h4>Gap 4 · Real-time data &amp; AI/analytics</h4><p>Real-time data and AI are top client pressure points (Deloitte). JPM Fusion and BNY's data platform are early but not deeply embedded in APAC. Clients want integrated data solutions, not custody reports; AI/RPA moving from pilot to live in Singapore fund admin.</p></div>
-    <div class="card"><h4>Gap 5 · India AIF &amp; GIFT City fund services</h4><p>AIF commitments ~$190B, projected ~$247B by 2029. SEBI's Sep 2025 overhaul permits custodians to offer fund accounting — opening integrated custody + admin. The CAMS/KFin duopoly is focused on domestic MF, not AIF/cross-border. GIFT City is underpenetrated by global servicers.</p></div>
+    <div class="card"><h4>Gap 4 · Real-time data & AI/analytics</h4><p>Real-time data and AI are top client pressure points (Deloitte). JPM Fusion and BNY's data platform are early but not deeply embedded in APAC. Clients want integrated data solutions, not custody reports; AI/RPA moving from pilot to live in Singapore fund admin.</p></div>
+    <div class="card"><h4>Gap 5 · India AIF & GIFT City fund services</h4><p>AIF commitments ~$190B, projected ~$247B by 2029. SEBI's Sep 2025 overhaul permits custodians to offer fund accounting — opening integrated custody + admin. The CAMS/KFin duopoly is focused on domestic MF, not AIF/cross-border. GIFT City is underpenetrated by global servicers.</p></div>
     <div class="card"><h4>Gap 6 · Local sub-custody vacuum</h4><p>JPMorgan's exit from local custody in HK, Taiwan, Australia and Korea created a vacuum. HSBC/StanChart are absorbing flows, but clients wanting a custodian with local presence <i>and</i> global capability are underserved — a direct opening via local investment or strategic partnership.</p></div>
   </div>
   <div class="warn"><b>Industry pressure points to weaponise in pitches:</b> fee compression forcing value-add differentiation · talent/digital-funding shortfalls at competitors (33%/21% EY stats) · client shift from transactional custody to integrated data platforms · multi-jurisdiction regulatory burden · alternatives-servicing demand outstripping capable supply.</div>
@@ -776,7 +783,7 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
     <p class="lede">Sequence the strategy across three time horizons, with market prioritisation scored on AUM growth, regulatory catalysts, competitive gaps and ability to differentiate.</p>
   </div>
   <div class="grid3">
-    <div class="play"><div class="phase">Horizon 1 · 0–6 months</div><h3>Stabilise &amp; quick wins</h3>
+    <div class="play"><div class="phase">Horizon 1 · 0–6 months</div><h3>Stabilise & quick wins</h3>
       <ul>
         <li>Audit existing APAC client book; flag at-risk mandates.</li>
         <li>Map top 50 named accounts to relationship owners.</li>
@@ -786,7 +793,7 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
         <li>Stand up Singapore VCC fund-admin capability as differentiator.</li>
       </ul>
     </div>
-    <div class="play"><div class="phase">Horizon 2 · 6–18 months</div><h3>Build &amp; differentiate</h3>
+    <div class="play"><div class="phase">Horizon 2 · 6–18 months</div><h3>Build & differentiate</h3>
       <ul>
         <li>Launch private-markets fund-admin capability (PE/VC/hedge).</li>
         <li>Enter India AIF administration + GIFT City fund services.</li>
@@ -796,7 +803,7 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
         <li>Hire senior RMs in Tokyo, Mumbai, Sydney.</li>
       </ul>
     </div>
-    <div class="play"><div class="phase">Horizon 3 · 18–36 months</div><h3>Scale &amp; dominate</h3>
+    <div class="play"><div class="phase">Horizon 3 · 18–36 months</div><h3>Scale & dominate</h3>
       <ul>
         <li>Reach top-5 APAC custody share by AUC.</li>
         <li>Establish India as a full-service hub (custody + admin + TA).</li>
@@ -836,15 +843,15 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
       <tr><td>2025</td><td><b>EPF Malaysia</b></td><td>Malaysia</td><td>JPMorgan</td><td>Custody ~$40B; displaced BNY — "Deal of the Year" 2025</td></tr>
       <tr><td>2024</td><td><b>UOB Asset Management</b></td><td>Singapore</td><td>State Street</td><td>10-year custody + fund admin — "Deal of the Year Asia" 2024</td></tr>
       <tr><td>2025</td><td><b>Columbia Threadneedle</b></td><td>Global/APAC</td><td>State Street</td><td>~$431B AUC/A — fund accounting, admin, custody</td></tr>
-      <tr><td>2024</td><td><b>BT (Westpac)</b></td><td>Australia</td><td>SS&amp;C</td><td>88 managed funds moved from in-house — major TA outsourcing</td></tr>
+      <tr><td>2024</td><td><b>BT (Westpac)</b></td><td>Australia</td><td>SS&C</td><td>88 managed funds moved from in-house — major TA outsourcing</td></tr>
       <tr><td>2024</td><td><b>TDCC</b></td><td>Taiwan</td><td>Citi</td><td>Global custody for centralised platform (~$153B) — structural shift</td></tr>
       <tr><td>2025</td><td><b>Global X ETFs</b></td><td>Hong Kong</td><td>Citi</td><td>Fund services — "Fund Services Deal of the Year" 2025</td></tr>
       <tr><td>2025</td><td><b>BetaShares</b></td><td>Australia</td><td>Citi</td><td>Custody + fund admin; Citi added 24 new AU clients in 18 months</td></tr>
       <tr><td>2025</td><td><b>Income Insurance</b></td><td>Singapore</td><td>JPMorgan</td><td>Custody — "Custody Deal of the Year" 2026</td></tr>
-      <tr><td>2025</td><td><b>GPIF</b></td><td>Japan</td><td>BNY</td><td>Data &amp; analytics — "Data &amp; Analytics Deal of the Year" 2026</td></tr>
+      <tr><td>2025</td><td><b>GPIF</b></td><td>Japan</td><td>BNY</td><td>Data & analytics — "Data & Analytics Deal of the Year" 2026</td></tr>
       <tr><td>2024</td><td><b>NPS Korea</b></td><td>South Korea</td><td>State Street</td><td>~$195B equities + ~$43B alternatives — anchor renewed</td></tr>
       <tr><td>2025</td><td><b>Fiji National Provident Fund</b></td><td>APAC</td><td>Northern Trust</td><td>Custody $4.18B — APAC commitment signal</td></tr>
-      <tr><td>2025</td><td><b>Perennial Partners / Fiducian</b></td><td>Australia</td><td>SS&amp;C / Citi</td><td>TA consolidation + mid-market custody/admin/registry mandates</td></tr>
+      <tr><td>2025</td><td><b>Perennial Partners / Fiducian</b></td><td>Australia</td><td>SS&C / Citi</td><td>TA consolidation + mid-market custody/admin/registry mandates</td></tr>
     </tbody>
   </table></div>
   <div class="grid2 mt">
@@ -883,7 +890,7 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
       <tr><td><b>Executive sponsor</b></td><td>CEO, CFO, CIO</td><td>Strategic fit, reputation, total cost, risk reduction</td><td><span class="pill g">FINAL APPROVAL</span></td></tr>
       <tr><td><b>Primary buyer</b></td><td>COO, Head of Operations</td><td>Operational efficiency, service quality, SLAs, tech integration</td><td><span class="pill g">LEAD — RECOMMENDS</span></td></tr>
       <tr><td><b>Technical evaluator</b></td><td>Head of Fund Services / Technology</td><td>Platform capability, data integration, APIs, reporting depth</td><td><span class="pill r">CAN VETO</span></td></tr>
-      <tr><td><b>Risk &amp; compliance</b></td><td>CRO, Head of Compliance</td><td>Regulatory compliance, governance, BCP/DR, auditability</td><td><span class="pill r">CAN VETO</span></td></tr>
+      <tr><td><b>Risk & compliance</b></td><td>CRO, Head of Compliance</td><td>Regulatory compliance, governance, BCP/DR, auditability</td><td><span class="pill r">CAN VETO</span></td></tr>
       <tr><td><b>Influencer</b></td><td>PMs, Treasury</td><td>Sec-lending revenue, FX execution, collateral management</td><td><span class="pill t">COMMITTEE VOICE</span></td></tr>
       <tr><td><b>Procurement</b></td><td>Vendor management</td><td>Pricing, contract terms, SLAs, due diligence</td><td><span class="pill i">PROCESS GATE</span></td></tr>
     </tbody>
@@ -900,12 +907,12 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
     </div>
     <div class="card"><h4>Decision criteria (ranked)</h4>
       <div class="bars">
-        <div class="bar gold"><span class="bl">1 · Service quality &amp; reliability</span><div class="track"><div class="fill" data-w="100"></div></div><span class="bn">#1</span></div>
-        <div class="bar gold"><span class="bl">2 · Technology &amp; data capability</span><div class="track"><div class="fill" data-w="88"></div></div><span class="bn">#2</span></div>
+        <div class="bar gold"><span class="bl">1 · Service quality & reliability</span><div class="track"><div class="fill" data-w="100"></div></div><span class="bn">#1</span></div>
+        <div class="bar gold"><span class="bl">2 · Technology & data capability</span><div class="track"><div class="fill" data-w="88"></div></div><span class="bn">#2</span></div>
         <div class="bar teal"><span class="bl">3 · Regulatory expertise</span><div class="track"><div class="fill" data-w="76"></div></div><span class="bn">#3</span></div>
         <div class="bar teal"><span class="bl">4 · Pricing / value</span><div class="track"><div class="fill" data-w="64"></div></div><span class="bn">#4</span></div>
         <div class="bar"><span class="bl">5 · Market coverage</span><div class="track"><div class="fill" data-w="52"></div></div><span class="bn">#5</span></div>
-        <div class="bar"><span class="bl">6 · Relationship &amp; trust</span><div class="track"><div class="fill" data-w="42"></div></div><span class="bn">#6</span></div>
+        <div class="bar"><span class="bl">6 · Relationship & trust</span><div class="track"><div class="fill" data-w="42"></div></div><span class="bn">#6</span></div>
         <div class="bar"><span class="bl">7 · ESG capabilities</span><div class="track"><div class="fill" data-w="30"></div></div><span class="bn">#7</span></div>
       </div>
     </div>
@@ -920,7 +927,7 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
     <p class="lede">A structured plan to establish credibility, assess the portfolio, build the team, and generate early pipeline momentum.</p>
   </div>
   <div class="grid2">
-    <div class="play"><div class="phase">Days 1–30 · Listen &amp; assess</div><h3>Portfolio, team, market</h3>
+    <div class="play"><div class="phase">Days 1–30 · Listen & assess</div><h3>Portfolio, team, market</h3>
       <ul>
         <li>1:1s with the full APAC sales team; assess capability and coverage gaps.</li>
         <li>Review top 20 clients: revenue concentration, renewal calendar, at-risk flags.</li>
@@ -929,7 +936,7 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
         <li>Meet Product, Operations, Legal, RM counterparts; set team KPIs and targets.</li>
       </ul>
     </div>
-    <div class="play"><div class="phase">Days 31–60 · Strategise &amp; plan</div><h3>GTM plan &amp; sales infrastructure</h3>
+    <div class="play"><div class="phase">Days 31–60 · Strategise & plan</div><h3>GTM plan & sales infrastructure</h3>
       <ul>
         <li>Draft the multi-year APAC sales strategy against global revenue targets.</li>
         <li>Lock priorities: P1 Singapore/Australia/India; P2 Japan/HK; P3 Korea/Taiwan/China.</li>
@@ -938,7 +945,7 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
         <li>Design team structure; hire plan for Tokyo, Mumbai, Sydney; set pipeline cadence.</li>
       </ul>
     </div>
-    <div class="play"><div class="phase">Days 61–90 · Execute &amp; engage</div><h3>Pipeline &amp; presence</h3>
+    <div class="play"><div class="phase">Days 61–90 · Execute & engage</div><h3>Pipeline & presence</h3>
       <ul>
         <li>Launch outreach to the top 50; submit 3–5 RFP responses (CPS 230, JPM-displacement, India AIF).</li>
         <li>Speak at 2–3 conferences (AsianInvestor, Asia Asset Management, Global Custodian).</li>
@@ -947,7 +954,7 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
         <li>Initiate digital-asset custody readiness assessment (SG DTSP / HK VASP).</li>
       </ul>
     </div>
-    <div class="play"><div class="phase">Days 91–100 · Review &amp; set trajectory</div><h3>Foundation for year one</h3>
+    <div class="play"><div class="phase">Days 91–100 · Review & set trajectory</div><h3>Foundation for year one</h3>
       <ul>
         <li>Present 100-day findings and the APAC strategy to the global executive team.</li>
         <li>Finalise targets, KPIs and compensation; confirm hiring and start recruiting.</li>
@@ -964,20 +971,20 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
 <section class="slide" id="sources" style="min-height:auto">
   <div class="slidehead">
     <div class="kicker">Folio 12 · Appendix</div>
-    <h2>Sources &amp; <b>caveats</b></h2>
+    <h2>Sources & <b>caveats</b></h2>
   </div>
   <div class="card">
     <ul>
-      <li><b>Regulators &amp; industry bodies:</b> MAS (SG), SFC/HKMA/MPFA (HK), APRA/ASIC (AU), FSA (JP), SEBI/RBI/IFSCA (IN), CSRC (CN), FSS/FSC (KR), FSC (TW); AMFI, AMAC, IMAJ, ACSA, Convergence, NRI.</li>
+      <li><b>Regulators & industry bodies:</b> MAS (SG), SFC/HKMA/MPFA (HK), APRA/ASIC (AU), FSA (JP), SEBI/RBI/IFSCA (IN), CSRC (CN), FSS/FSC (KR), FSC (TW); AMFI, AMAC, IMAJ, ACSA, Convergence, NRI.</li>
       <li><b>India verified series:</b> AMFI (MF AUM ₹85.76 lakh cr Jul 2026; SIP ₹32,087 cr Mar 2026; 21.3% AUM/GDP), SEBI Annual Report 2025–26 (AIF ₹16.94 lakh cr; 1,829 AIFs), SEBI Custodian (Amendment) Regulations notified Sep 18, 2025 (net worth ₹75 cr; financial-services enablement — the ₹100 cr figure was the Nov 2024 consultation proposal), custodial AUC ₹278.5 trillion (Sep 2024), IFSCA (GIFT commitments US$26.3B).</li>
-      <li><b>Surveys &amp; research:</b> Deloitte Global Asset Servicing Survey 2025; EY digitalisation statistics; SS&amp;C / Global Custodian outsourcing surveys; industry market-sizing reports (custody CAGR ranges reflect differing definitions).</li>
-      <li><b>Company disclosures &amp; trade press:</b> custodian AUC/A filings (YE-2025), ACSA Australia statistics (Dec 2025), mandate announcements and award citations 2024–2026 (State Street–Mizuho, EPF Malaysia–JPM, TDCC–Citi, BT–SS&amp;C, GPIF–BNY, NPS–State Street et al.).</li>
+      <li><b>Surveys & research:</b> Deloitte Global Asset Servicing Survey 2025; EY digitalisation statistics; SS&C / Global Custodian outsourcing surveys; industry market-sizing reports (custody CAGR ranges reflect differing definitions).</li>
+      <li><b>Company disclosures & trade press:</b> custodian AUC/A filings (YE-2025), ACSA Australia statistics (Dec 2025), mandate announcements and award citations 2024–2026 (State Street–Mizuho, EPF Malaysia–JPM, TDCC–Citi, BT–SS&C, GPIF–BNY, NPS–State Street et al.).</li>
     </ul>
   </div>
   <div class="warn"><b>Caveats.</b> Figures span 2024–2026 reporting dates and multiple currencies; market-size estimates vary by definition (custody vs securities services vs fee-based asset servicing). League-table positions, AUM figures and mandate details should be re-verified against primary sources before external client use. Named-account lists are an indicative prioritisation framework, not confirmed opportunities. Competitive characterisations are directional. Nothing here is investment, legal or tax advice.</div>
 </section>
 
-<div class="footer">APAC Asset Servicing Competitive Intelligence &amp; GTM Knowledge Base · Prepared August 2026 · 8 markets · 20+ competitors profiled · Use ← → keys or the folio rail to present · Companion deep dive available: India Asset Servicing Briefing · Refresh quarterly (regulator statistics, ACSA tables, mandate press).</div>
+<div class="footer">APAC Asset Servicing Competitive Intelligence & GTM Knowledge Base · Prepared August 2026 · 8 markets · 20+ competitors profiled · Use ← → keys or the folio rail to present · Companion deep dive available: India Asset Servicing Briefing · Refresh quarterly (regulator statistics, ACSA tables, mandate press).</div>
 
 </main>
 </div>
@@ -1047,5 +1054,6 @@ const sb=document.getElementById('sidebar');
 document.getElementById('menuBtn').addEventListener('click',()=>sb.classList.toggle('open'));
 links.forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const t=document.getElementById(a.dataset.target);if(t)t.scrollIntoView({behavior:'smooth'});sb.classList.remove('open');}));
 </script>
+<a class="homefab" href="index.html">&#8962; Home</a>
 </body>
 </html>
