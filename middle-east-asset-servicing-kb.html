@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Middle East Asset-Servicing Market — Competitive Intelligence & GTM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E1B2C; --ink2:#16283F; --ink3:#1E344F;
+  --paper:#F4F6F8; --card:#FFFFFF;
+  --gold:#C08A2D; --gold-soft:#F3E9D4;
+  --teal:#2C7A74; --teal-soft:#E2EFED;
+  --violet:#5B4A8A; --violet-soft:#E9E5F3;
+  --line:#D9DFE7; --muted:#5B6B7E; --text:#1B2735;
+  --danger:#A3462E; --danger-soft:#F5E4DD;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Public Sans',sans-serif;background:var(--paper);color:var(--text);font-size:15px;line-height:1.6}
+::selection{background:var(--gold-soft)}
+
+.shell{display:flex;min-height:100vh}
+.sidebar{width:268px;background:var(--ink);color:#C6D2E0;position:fixed;top:0;bottom:0;left:0;display:flex;flex-direction:column;z-index:50;overflow-y:auto}
+.sidebar::-webkit-scrollbar{width:4px}
+.sidebar::-webkit-scrollbar-thumb{background:var(--ink3)}
+.brand{padding:24px 22px 16px;border-bottom:1px solid var(--ink3)}
+.brand .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.22em;color:var(--gold);text-transform:uppercase}
+.brand h1{font-family:'Fraunces',serif;font-weight:400;font-size:19px;color:#fff;margin-top:6px;line-height:1.3}
+.brand .sub{font-size:11px;color:#8FA1B6;margin-top:8px;line-height:1.5}
+.railkey{display:flex;gap:10px;padding:10px 22px;border-bottom:1px solid var(--ink3);font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.06em}
+.railkey span{display:flex;align-items:center;gap:5px;color:#8FA1B6}
+.railkey i{width:8px;height:8px;border-radius:2px;display:inline-block}
+.nav{padding:12px 0 84px;flex:1}
+.nav .navlink{width:100%;text-align:left;background:none;border:none;cursor:pointer;font-family:inherit;display:flex;gap:12px;align-items:baseline;padding:8px 22px;color:#9FB0C4;text-decoration:none;font-size:12.5px;border-left:3px solid transparent;transition:all .18s}
+.nav .navlink .num{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#5B7089;min-width:20px}
+.nav .navlink:hover{color:#fff;background:var(--ink2)}
+.nav .navlink.active{color:#fff;border-left-color:var(--gold);background:var(--ink2)}
+.nav .navlink.active .num{color:var(--gold)}
+.nav .navgroup{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#4F637B;padding:14px 22px 5px}
+.keys{position:fixed;bottom:0;left:0;width:268px;background:var(--ink);border-top:1px solid var(--ink3);padding:11px 22px;font-size:10.5px;color:#6E8098}
+.keys kbd{font-family:'IBM Plex Mono',monospace;background:var(--ink3);border-radius:3px;padding:1px 6px;font-size:10px;color:#B8C6D6}
+
+.main{margin-left:268px;flex:1;min-width:0}
+.progress{position:fixed;top:0;left:268px;right:0;height:3px;z-index:60}
+.progress i{display:block;height:100%;width:0;background:var(--gold);transition:width .15s}
+
+section.slide{min-height:70vh;padding:60px 52px 68px;max-width:1120px;border-bottom:1px solid var(--line)}
+.kicker{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+h2.title{font-family:'Fraunces',serif;font-weight:400;font-size:34px;line-height:1.18;color:var(--ink);margin-bottom:8px;max-width:820px}
+.lede{font-size:16.5px;color:var(--muted);max-width:760px;margin-bottom:30px;line-height:1.65}
+.lede b{color:var(--text)}
+
+.tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.08em;padding:2px 8px;border-radius:3px;vertical-align:2px;margin-left:6px;white-space:nowrap}
+.tag.fact{background:var(--teal-soft);color:var(--teal)}
+.tag.calc{background:#E8ECF3;color:#4A5E78}
+.tag.assess{background:var(--gold-soft);color:#8A6420}
+.tag.gap{background:var(--danger-soft);color:var(--danger)}
+.tag.dlt{background:var(--teal-soft);color:var(--teal)}
+.tag.ai{background:var(--violet-soft);color:var(--violet)}
+.tag.conv{background:var(--gold-soft);color:#8A6420}
+
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:1fr 1fr 1fr}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 22px}
+.card h4{font-family:'Fraunces',serif;font-weight:600;font-size:16.5px;color:var(--ink);margin-bottom:8px}
+.card p{font-size:13.5px;color:var(--muted);line-height:1.6}
+.card.dlt{border-top:3px solid var(--teal)}
+.card.ai{border-top:3px solid var(--violet)}
+.card.conv{border-top:3px solid var(--gold)}
+
+.stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.stat .v{font-family:'Fraunces',serif;font-size:30px;font-weight:600;color:var(--ink);line-height:1.1}
+.stat .l{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.5}
+.stat .s{font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#93A2B4;margin-top:8px}
+
+table.tbl{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:13px}
+table.tbl th{background:var(--ink);color:#D8E1EC;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;text-align:left;padding:11px 14px;font-weight:500}
+table.tbl td{padding:11px 14px;border-top:1px solid var(--line);vertical-align:top;color:var(--text)}
+table.tbl td.mono{font-family:'IBM Plex Mono',monospace;font-size:12px}
+table.tbl tr:hover td{background:#FAFBFC}
+.dim{color:var(--muted)}
+
+.pillrow{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 22px}
+.pill{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:20px;padding:7px 16px;cursor:pointer;transition:all .15s}
+.pill:hover{border-color:var(--gold);color:var(--ink)}
+.pill.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+.note{border-left:3px solid var(--gold);background:var(--gold-soft);border-radius:0 8px 8px 0;padding:14px 18px;font-size:13.5px;color:#5C4A24;margin:22px 0;max-width:820px}
+.note.red{border-left-color:var(--danger);background:var(--danger-soft);color:#6E3A2A}
+.note.teal{border-left-color:var(--teal);background:var(--teal-soft);color:#23504B}
+.note.violet{border-left-color:var(--violet);background:var(--violet-soft);color:#453969}
+.note b{font-weight:700}
+
+.hidden{display:none!important}
+
+/* hero */
+.hero{background:var(--ink);color:#C6D2E0;border-bottom:none;position:relative;overflow:hidden}
+.hero .kicker{color:var(--gold)}
+.hero h2.title{color:#fff;font-size:44px;max-width:900px}
+.hero .lede{color:#9FB0C4;max-width:780px}
+.rails{position:absolute;right:-40px;top:40px;width:420px;opacity:.5;pointer-events:none}
+.hero .stat{background:var(--ink2);border-color:var(--ink3)}
+.hero .stat .v{color:#fff}.hero .stat .l{color:#8FA1B6}.hero .stat .s{color:#5B7089}
+.bigbtn{display:inline-block;margin-top:26px;background:var(--gold);color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:14px 26px;border-radius:6px;border:none;cursor:pointer;font-weight:600;transition:transform .15s}
+.bigbtn:hover{transform:translateY(-2px)}
+
+/* value chain */
+.chainrow{display:flex;align-items:stretch;gap:0;margin:20px 0}
+.chainstep{flex:1;background:var(--card);border:1px solid var(--line);padding:13px 10px;text-align:center;font-size:12px;position:relative;cursor:pointer;transition:all .15s}
+.chainstep:first-child{border-radius:8px 0 0 8px}.chainstep:last-child{border-radius:0 8px 8px 0}
+.chainstep+.chainstep{border-left:none}
+.chainstep b{display:block;font-family:'Fraunces',serif;font-size:13.5px;color:var(--ink);margin-bottom:3px}
+.chainstep span{color:var(--muted);font-size:11px}
+.chainstep.sel{background:var(--ink);border-color:var(--ink)}
+.chainstep.sel b{color:#fff}.chainstep.sel span{color:#9FB0C4}
+.beforeafter{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:18px}
+.ba{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.ba h5{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
+.ba.today h5{color:var(--muted)}
+.ba.dltl{border-top:3px solid var(--teal)}.ba.dltl h5{color:var(--teal)}
+.ba.ail{border-top:3px solid var(--violet)}.ba.ail h5{color:var(--violet)}
+.ba ul{list-style:none}
+.ba li{font-size:13px;color:var(--text);padding:5px 0 5px 16px;position:relative;line-height:1.5}
+.ba li:before{content:"—";position:absolute;left:0;color:var(--line)}
+.ba.dltl li:before{color:var(--teal)}.ba.ail li:before{color:var(--violet)}
+
+/* market cards */
+.mkgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.mk{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 22px;cursor:pointer;transition:all .18s;position:relative}
+.mk:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 6px 18px rgba(14,27,44,.08)}
+.mk.open{border-color:var(--ink);box-shadow:0 6px 18px rgba(14,27,44,.10)}
+.mk .flag{font-size:22px}
+.mk h4{font-family:'Fraunces',serif;font-size:17px;font-weight:600;color:var(--ink);margin:6px 0 2px}
+.mk .stage{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.mk .stage.live{color:var(--teal)}.mk .stage.pilot{color:var(--gold)}.mk .stage.frame{color:var(--violet)}
+.mk p{font-size:12.5px;color:var(--muted);margin-top:8px;line-height:1.55}
+.mkdetail{background:var(--ink);color:#C6D2E0;border-radius:12px;padding:26px 30px;margin-top:18px}
+.mkdetail h3{font-family:'Fraunces',serif;font-weight:400;font-size:24px;color:#fff;margin-bottom:4px}
+.mkdetail .mono{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.mkdetail .cols{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:16px}
+.mkdetail h6{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#7E92A9;margin:12px 0 7px}
+.mkdetail ul{list-style:none}
+.mkdetail li{font-size:13px;padding:4px 0 4px 16px;position:relative;line-height:1.55;color:#C6D2E0}
+.mkdetail li:before{content:"—";position:absolute;left:0;color:var(--gold)}
+.mkdetail .sell{background:var(--ink2);border:1px solid var(--ink3);border-radius:8px;padding:14px 16px;margin-top:14px;font-size:13px}
+.mkdetail .sell b{color:var(--gold)}
+
+/* heatmap */
+.heat{width:100%;border-collapse:collapse;font-size:12.5px;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.heat th{background:var(--ink);color:#D8E1EC;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;padding:10px 10px;font-weight:500}
+.heat td{border-top:1px solid var(--line);padding:10px;text-align:center}
+.heat td.rowh{text-align:left;font-weight:600;color:var(--ink);font-size:12.5px}
+.hcell{display:inline-block;min-width:64px;padding:4px 8px;border-radius:4px;font-family:'IBM Plex Mono',monospace;font-size:10.5px}
+.h3v{background:var(--violet);color:#fff}.h2v{background:var(--violet-soft);color:var(--violet)}
+.h3t{background:var(--teal);color:#fff}.h2t{background:var(--teal-soft);color:var(--teal)}
+.h1{background:#EEF1F5;color:#8794A5}
+
+/* bars */
+.barwrap{margin:8px 0 4px}
+.barrow{display:flex;align-items:center;gap:12px;margin:9px 0}
+.barrow .bl{width:220px;font-size:12.5px;color:var(--text);text-align:right;flex-shrink:0}
+.barrow .track{flex:1;background:#E9EDF2;border-radius:4px;height:22px;position:relative;overflow:hidden}
+.barrow .fill{height:100%;border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#fff;min-width:36px;transition:width .8s ease}
+.f-teal{background:var(--teal)}.f-gold{background:var(--gold)}.f-violet{background:var(--violet)}.f-ink{background:var(--ink3)}
+
+/* timeline */
+.tl{position:relative;margin:26px 0;padding-left:26px;border-left:2px solid var(--line);max-width:860px}
+.tl .ev{position:relative;margin-bottom:22px}
+.tl .ev:before{content:"";position:absolute;left:-33px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--card);border:3px solid var(--gold)}
+.tl .ev.t:before{border-color:var(--teal)}
+.tl .ev.v:before{border-color:var(--violet)}
+.tl .d{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:.08em}
+.tl .ev.t .d{color:var(--teal)}.tl .ev.v .d{color:var(--violet)}
+.tl h5{font-family:'Fraunces',serif;font-size:16px;font-weight:600;color:var(--ink);margin:2px 0 3px}
+.tl p{font-size:13px;color:var(--muted);max-width:720px}
+.tl .so{font-size:12.5px;color:var(--text);margin-top:4px}
+.tl .so b{color:var(--teal)}
+
+/* play cards */
+.play{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px 24px;margin-bottom:14px;cursor:pointer;transition:border-color .15s}
+.play:hover{border-color:var(--gold)}
+.play .top{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
+.play h4{font-family:'Fraunces',serif;font-size:18px;font-weight:600;color:var(--ink)}
+.play .meta{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted)}
+.play .body{display:none;margin-top:14px;border-top:1px solid var(--line);padding-top:14px}
+.play.open .body{display:block}
+.play .body .row{display:grid;grid-template-columns:150px 1fr;gap:10px;font-size:13.5px;padding:5px 0}
+.play .body .row b{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:2px}
+
+/* segment engine */
+.seg{display:none}
+.seg.on{display:block}
+.flow{display:grid;grid-template-columns:1fr 42px 1fr 42px 1fr;align-items:stretch;gap:0;margin:16px 0}
+.flow .fbox{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.flow .fbox h6{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.flow .fbox.pain h6{color:var(--danger)}
+.flow .fbox.dltb{border-top:3px solid var(--teal)}.flow .fbox.dltb h6{color:var(--teal)}
+.flow .fbox.aib{border-top:3px solid var(--violet)}.flow .fbox.aib h6{color:var(--violet)}
+.flow ul{list-style:none}
+.flow li{font-size:12.5px;padding:4px 0 4px 14px;position:relative;line-height:1.5;color:var(--text)}
+.flow li:before{content:"—";position:absolute;left:0;color:var(--line)}
+.flow .arr{display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:20px}
+.mandate{background:var(--ink);color:#C6D2E0;border-radius:10px;padding:18px 22px;margin-top:14px;font-size:13.5px}
+.mandate b{color:var(--gold)}
+.mandate .mono{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#7E92A9;display:block;margin-bottom:6px}
+
+/* sources */
+.srcs{columns:2;column-gap:34px;font-size:12.5px}
+.srcs .s{break-inside:avoid;padding:8px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+.srcs .s b{color:var(--ink);font-weight:600}
+.srcs a{color:var(--teal);text-decoration:none;word-break:break-all}
+.srcs a:hover{text-decoration:underline}
+
+footer{padding:34px 52px;color:var(--muted);font-size:12px;max-width:1120px}
+
+@media (max-width:1080px){
+  .sidebar{display:none}.main{margin-left:0}.progress{left:0}.keys{display:none}
+  section.slide{padding:44px 22px 52px}
+  .g2,.g3,.g4,.mkgrid,.beforeafter{grid-template-columns:1fr}
+  .mkdetail .cols{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr}
+  .flow .arr{transform:rotate(90deg);padding:6px 0}
+  .hero h2.title{font-size:32px}
+  .srcs{columns:1}
+  .chainrow{flex-wrap:wrap}
+  .chainstep{min-width:46%}
+  .barrow .bl{width:130px;font-size:11px}
+}
+
+/* home nav (injected) */
+.homelink{display:inline-flex;align-items:center;gap:7px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#C08A2D;text-decoration:none;margin-bottom:10px;border:1px solid rgba(192,138,45,.35);border-radius:5px;padding:5px 10px;transition:all .15s}
+.homelink:hover{background:#C08A2D;color:#0E1B2C}
+.homefab{display:none;position:fixed;bottom:18px;right:18px;z-index:90;background:#0E1B2C;color:#E0B565;border:1px solid rgba(192,138,45,.55);border-radius:24px;padding:11px 18px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+@media (max-width:1080px){.homefab{display:inline-flex;align-items:center;gap:6px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar">
+  <div class="brand">
+    <a class="homelink" href="index.html">&#8598; Command Centre</a>
+    <div class="eyebrow">Companion Module · Middle East KB</div>
+    <h1>Middle East Asset Servicing</h1>
+    <div class="sub">Competitive intelligence & GTM for the GCC asset-servicing market — custody, fund admin, SWF mandates and the six plays that convert them. Prepared for the MD, Regional Head of Sales, Middle East.</div>
+  </div>
+  <div class="railkey">
+    <span><i style="background:var(--teal)"></i>FACT</span>
+    <span><i style="background:var(--gold)"></i>ASSESSMENT</span>
+    <span><i style="background:var(--danger)"></i>DATA GAP</span>
+  </div>
+  <nav class="nav" id="nav">
+    <div class="navgroup">The Market</div>
+    <a class="navlink" href="#s01"><span class="num">01</span>Market Sizing — Overview</a>
+    <a class="navlink" href="#s02"><span class="num">02</span>Sizing & SWF Ranking</a>
+    <a class="navlink" href="#s03"><span class="num">03</span>Custody Landscape</a>
+    <div class="navgroup">The Shift</div>
+    <a class="navlink" href="#s04"><span class="num">04</span>Fund Administration</a>
+    <a class="navlink" href="#s05"><span class="num">05</span>Regulatory Radar</a>
+    <a class="navlink" href="#s06"><span class="num">06</span>Tokenisation & DLT</a>
+    <div class="navgroup">The Buyers</div>
+    <a class="navlink" href="#s07"><span class="num">07</span>Sovereign Wealth Funds</a>
+    <a class="navlink" href="#s08"><span class="num">08</span>Buyer Maps</a>
+    <div class="navgroup">Selling It</div>
+    <a class="navlink" href="#s09"><span class="num">09</span>Competitive Intelligence</a>
+    <a class="navlink" href="#s10"><span class="num">10</span>Six GTM Plays</a>
+    <div class="navgroup">Discipline</div>
+    <a class="navlink" href="#s11"><span class="num">11</span>Risks & Caveats</a>
+    <a class="navlink" href="#s12"><span class="num">12</span>Source Library</a>
+  </nav>
+</aside>
+<div class="keys">Navigate: <kbd>J</kbd>/<kbd>K</kbd> or scroll · Data as of Sep 2026</div>
+
+<main class="main">
+<div class="progress"><i id="pbar"></i></div>
+<!-- 01 HERO -->
+<section class="slide hero" id="s01">
+  <div class="kicker">Companion Module · Middle East KB · Data as of Sep 2026</div>
+  <h2 class="title">Middle East Asset-Servicing Market — Competitive Intelligence & GTM</h2>
+  <p class="lede">The Gulf is the fastest-growing pool of institutional capital on earth. <b>GCC AUM hit $2.2 trillion</b>, sovereign wealth funds manage <b>$4.9 trillion</b>, and Saudi Arabia's asset-management industry just crossed <b>$266 billion</b> — up 20.8% in a single year. Two simultaneous regulatory resets (Saudi QFI removal, Feb 2026; UAE SCA&rarr;CMA, Jan 2026) are tearing open the buyer landscape. This module maps the custody, fund-admin and mandate opportunity — and the six plays that convert it. <span class="tag fact">FACT</span> <span class="tag assess">ASSESSMENT</span></p>
+  <div class="grid g4" style="margin-top:8px">
+    <div class="stat"><div class="v">$2.2T</div><div class="l">GCC asset-management AUM (2024)</div><div class="s">+9% YoY · BCG</div></div>
+    <div class="stat"><div class="v">$4.9T</div><div class="l">Middle East SWF assets (2024 peak)</div><div class="s">Projected $7.3T then $18T by 2030</div></div>
+    <div class="stat"><div class="v">$266.4B</div><div class="l">Saudi AMI — largest in GCC</div><div class="s">+20.8% in 2024 · 26% of GDP · Fitch</div></div>
+    <div class="stat"><div class="v">+215%</div><div class="l">ADGM AUM growth, Q3 2024 YoY</div><div class="s">1,500+ entities · 200+ fund managers</div></div>
+  </div>
+  <a class="bigbtn" href="#s09">View the Six GTM Plays &rarr;</a>
+</section><!-- 02 MARKET SIZING DETAIL -->
+<section class="slide" id="s02">
+  <div class="kicker">01 · Market Sizing</div>
+  <h2 class="title">A capital pool growing faster than the servicing capacity around it</h2>
+  <p class="lede">Gulf asset management grew <b>$2.2 trillion in AUM</b> on a +9% trend, with Saudi Arabia and the UAE as the principal retail-mutual-fund growth engines. Layered on top sits <b>$4.9 trillion of sovereign-wealth-fund assets</b> — a historic peak — projected to climb toward <b>$18 trillion by 2030</b>. The servicing infrastructure is racing to catch up. <span class="tag fact">FACT</span></p>
+
+  <div class="grid g2">
+    <div class="card conv"><h4>GCC asset management <span class="tag fact">FACT</span></h4><p>GCC AUM reached <b>$2.2 trillion in 2024</b>, +9% YoY, against global AUM of $128 trillion (+12%); the Middle East & Africa region grew 10%. Saudi Arabia and the UAE are the principal growth drivers in retail mutual funds.</p></div>
+    <div class="card conv"><h4>Sovereign-wealth-fund gravity <span class="tag fact">FACT</span></h4><p>Five largest Gulf SWFs collectively manage <b>~$4.349 trillion</b>. Middle East SWF AUM hit a historic peak of $4.9T in 2024 (PwC), projected $7.3T, with Gulf SWFs forecast to control <b>$18 trillion by 2030</b> — a ~50% increase (Deloitte/ORF). Globally, SWF assets crossed $15T in Dec 2025; combined SWFs + public pensions + central-bank assets = $60T.</p></div>
+  </div>
+
+  <h3 style="font-family:'Fraunces',serif;font-weight:400;font-size:21px;color:var(--ink);margin:28px 0 4px">Sovereign Wealth Funds — AUM ranking</h3>
+  <p class="lede" style="margin-bottom:18px">The seven largest Gulf funds — the dominant buyer and mandate-generation base for the region. <span class="tag fact">FACT</span></p>
+  <table class="tbl">
+    <thead><tr><th>Fund</th><th>Country</th><th>AUM (USD)</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td><b>ADIA</b></td><td>UAE (Abu Dhabi)</td><td class="mono">~$1.19T</td><td>Global SWF tracker 2025 <span class="tag fact">FACT</span></td></tr>
+      <tr><td><b>KIA</b></td><td>Kuwait</td><td class="mono">~$1.0T</td><td>Global SWF tracker <span class="tag fact">FACT</span></td></tr>
+      <tr><td><b>PIF</b></td><td>Saudi Arabia</td><td class="mono">$925B</td><td>PIF 2024 Annual Report, Aug 2025; targeting $1T+ <span class="tag fact">FACT</span></td></tr>
+      <tr><td><b>QIA</b></td><td>Qatar</td><td class="mono">~$580B</td><td>Global SWF tracker <span class="tag fact">FACT</span></td></tr>
+      <tr><td><b>ICD</b></td><td>UAE (Dubai)</td><td class="mono">~$400B</td><td>AED 1.47T as of 2024 <span class="tag fact">FACT</span></td></tr>
+      <tr><td><b>Mubadala</b></td><td>UAE (Abu Dhabi)</td><td class="mono">~$385B</td><td>AED 1.4T in 2025, +17% <span class="tag fact">FACT</span></td></tr>
+      <tr><td><b>ADQ</b></td><td>UAE (Abu Dhabi)</td><td class="mono">~$240B</td><td><span class="tag fact">FACT</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="grid g2" style="margin-top:22px">
+    <div class="stat"><div class="v">$266.4B</div><div class="l">Saudi AMI, 2024 — +20.8%, crossing SAR 1 trillion; 26% of GDP, largest in GCC</div><div class="s">Fitch, April 2025 · projected >$400B in 2026</div></div>
+    <div class="stat"><div class="v">$4T+</div><div class="l">GCC listed equity market cap, end-2024 — led by Tadawul ~$2.4T</div><div class="s">ADGM AUM +215% YoY</div></div>
+  </div>
+
+  <div class="note teal">
+    <b>Saudi depth:</b> PIF signed MoUs with BlackRock, Franklin Templeton, Neuberger Berman and Northern Trust AM totalling ~$12 billion. Bank-affiliated asset managers held 63.5% of industry revenue in 2024; ~50% of Saudi AUM sits in private funds (real estate and equities). The government targets AUM at <b>40% of GDP by 2030</b> (from ~23% in 1H25). <span class="tag fact">FACT</span>
+  </div>
+  <div class="note">
+    <b>Read-through:</b> The gap between the capital being amassed and the local servicing capacity to administer it is the central commercial opportunity in this module. <span class="tag assess">ASSESSMENT</span>
+  </div>
+</section><!-- 03 CUSTODY LANDSCAPE -->
+<section class="slide" id="s03">
+  <div class="kicker">02 · Custody Landscape</div>
+  <h2 class="title">A two-tier market: global custodians on cross-border, local banks onshore</h2>
+  <p class="lede">Global custodians — HSBC, Standard Chartered, State Street, BNY, Citi, BNP Paribas, Northern Trust — dominate cross-border and institutional mandates, while local banks (FAB, QNB, SNB) hold the onshore retail and exchange-clearing franchise. The boundary is shifting as everyone invests into KSA. <span class="tag assess">ASSESSMENT</span> <span class="tag fact">FACT</span></p>
+
+  <p class="lede"><b>Click a custodian card to expand the mandate detail.</b></p>
+  <div class="mkgrid">
+    <div class="mk" data-mk="hsbc"><div class="stage live">REGIONAL LEADER</div><h4>HSBC</h4><p>Saudi AUC $86B &rarr; $224B in 2025 (~35% share); 7 of 10 largest Saudi AMs on the network.</p></div>
+    <div class="mk" data-mk="scb"><div class="stage live">KEY CHALLENGER</div><h4>Standard Chartered</h4><p>Direct custody in KSA & Egypt; only end-to-end Islamic solutions provider; best sub-custodian ME 2025.</p></div>
+    <div class="mk" data-mk="ss"><div class="stage frame">STRATEGIC ALLIANCES</div><h4>State Street</h4><p>QNB alliance for Qatar; FAB sub-custody across 5 GCC markets — "largest sub-custody transfer in ME history".</p></div>
+    <div class="mk" data-mk="bny"><div class="stage pilot">DIGITAL ENTRANT</div><h4>BNY</h4><p>Digital-asset custody in Abu Dhabi via Finstreet (May 2026); BTC/ETH now, stablecoins & RWA next.</p></div>
+    <div class="mk" data-mk="fab"><div class="stage live">LOCAL CHAMPION</div><h4>First Abu Dhabi Bank</h4><p>Best sub-custodian ME 2023; broadest local custody; onboards State Street's sub-custody book.</p></div>
+    <div class="mk" data-mk="struct"><div class="stage frame">MARKET STRUCTURE</div><h4>Investment signal</h4><p>100% of custodians surveyed plan to invest further in KSA (up from 83% in 2024).</p></div>
+  </div>
+  <div class="mkdetail hidden" id="mkdetail"></div>
+
+  <div class="note violet">
+    <b>Competitive read:</b> HSBC's incumbency is deep but contested — Standard Chartered is the only player offering complete end-to-end Islamic solutions, and BNY has staked the digital-custody beachhead inside ADGM. The Saudi CMA's local-entity requirement is the moat that keeps the field narrow. <span class="tag assess">ASSESSMENT</span>
+  </div>
+</section><!-- 04 FUND ADMINISTRATION -->
+<section class="slide" id="s04">
+  <div class="kicker">03 · Fund Administration</div>
+  <h2 class="title">Saudi fund assets racing past $250B — and capacity is the bottleneck</h2>
+  <p class="lede">KSA fund assets are "reaching north of $250 billion" in 2025, expected to hit <b>$350 billion by 2026</b>, with private placement funds nearly tripling since 2023. Every custodian and fund administrator is investing more in Saudi operations — and 60%+ plan to expand headcount and services in 2025. <span class="tag fact">FACT</span></p>
+
+  <div class="grid g3">
+    <div class="stat"><div class="v">$250B+</div><div class="l">KSA fund assets, 2025 — expected $350B by 2026</div><div class="s">Private placements ~3× since 2023</div></div>
+    <div class="stat"><div class="v">100%</div><div class="l">of custodians/admins investing more in KSA ops</div><div class="s">Up from 83% in 2024 · ORC survey</div></div>
+    <div class="stat"><div class="v">60%+</div><div class="l">plan to expand KSA fund-admin headcount & services in 2025</div><div class="s"><span class="tag fact">FACT</span></div></div>
+  </div>
+
+  <h3 style="font-family:'Fraunces',serif;font-weight:400;font-size:21px;color:var(--ink);margin:30px 0 4px">Value-add services demanded by Saudi funds</h3>
+  <div class="barwrap" style="margin-top:14px">
+    <div class="barrow"><div class="bl">Tax reclaim support</div><div class="track"><div class="fill f-teal" style="width:84%">42%</div></div></div>
+    <div class="barrow"><div class="bl">Securities lending</div><div class="track"><div class="fill f-gold" style="width:66%">33%</div></div></div>
+    <div class="barrow"><div class="bl">Fund-level performance reporting</div><div class="track"><div class="fill f-violet" style="width:34%">17%</div></div></div>
+  </div>
+  <p class="dim" style="font-size:12px;margin-top:6px">% of custodians/fund admins offering each value-add service. <span class="tag fact">FACT</span></p>
+
+  <div class="grid g2" style="margin-top:24px">
+    <div class="card dlt"><h4>Saudi REIT market <span class="tag fact">FACT</span></h4><p>Regulated under the REITs Instructions (CMA, October 2016). Closed-ended structure, min <b>SAR 100M</b> capital, &ge;75% assets in developed income-generating real estate, &ge;200 public unitholders, &ge;50% public ownership, <b>&ge;90% net income distributed annually</b>, borrowing capped at 50% of total asset value. REIT managers must appoint a <b>CMA-licensed independent custodian</b> + specialised property management company. Units register with Edaa (Depositary Centre) and trade on Tadawul.</p></div>
+    <div class="card conv"><h4>DIFC & ADGM fund structures <span class="tag fact">FACT</span></h4><p>Both operate under English common law (DIFC/DFSA est. 2004; ADGM/FSRA est. 2013/2015). Three fund categories: Exempt Funds (professional, ~$50K min), Qualified Investor Funds (QIFs, ~$500K min), Public Funds (retail). <b>ADGM offers the Protected Cell Company (PCC)</b> structure — unavailable in DIFC — plus a dedicated VC Manager Regime (VCFM) with zero regulatory capital. Base capital: DIFC Exempt/QIF = $70,000; ADGM Exempt/QIF = $50,000.</p></div>
+  </div>
+
+  <div class="note teal">
+    <b>Cross-border distribution:</b> A funds passporting regime runs between mainland UAE, DIFC and ADGM. Since April 2024, foreign fund promotion in the UAE is limited to private offerings to professional investors — and retail funds must be domiciled in the UAE, prompting global managers to domicile in ADGM/DIFC. ADGM FSRA Consultation Paper No. 12 of 2025 proposes lighter regimes for Small Threshold Fund Managers (&lt;$200M committed) and Institutional Fund Managers. <span class="tag fact">FACT</span>
+  </div>
+</section><!-- 05 REGULATORY RADAR -->
+<section class="slide" id="s05">
+  <div class="kicker">04 · Regulatory Radar</div>
+  <h2 class="title">Two simultaneous resets are tearing the buyer landscape open</h2>
+  <p class="lede">Saudi Arabia is removing the QFI regime entirely (effective 1 Feb 2026), while the UAE reconstitutes its Securities & Commodities Authority as a Capital Market Authority (1 Jan 2026) — the most comprehensive overhaul of federal securities regulation since 2000. Together they redefine who can buy, who must be local, and where digital assets sit. <span class="tag fact">FACT</span></p>
+
+  <div class="tl">
+    <div class="ev"><div class="d">1 FEB 2026 · SAUDI CMA</div><h5>QFI regime removed entirely</h5><p>From 6 Jan 2026, the Qualified Foreign Investor regime is abolished, effective 1 Feb 2026 — all foreign investors can invest directly in Tadawul Main Market shares. Capital Market Institutions Regulations amended (26 May 2025): custody/dealing/managing must be established in the Kingdom as joint stock companies or subsidiaries.</p><div class="so"><b>Implication:</b> the local-presence moat widens even as market access opens. <span class="tag fact">FACT</span></div></div>
+    <div class="ev t"><div class="d">MAR 2026 · SAUDI CMA</div><h5>Two new fund frameworks</h5><p>Simplified Investment Funds (SIFs) and Financing Investment Funds (FIFs) introduced. Edaa introduced Omnibus Accounts for shares (Oct 2024 amendments).</p><div class="so"><b>New fund vehicles = new servicing demand.</b> <span class="tag fact">FACT</span></div></div>
+    <div class="ev"><div class="d">1 JAN 2026 · UAE</div><h5>SCA &rarr; Capital Market Authority transformation</h5><p>Under Federal Decree-Law No. 32/33 of 2025, the SCA is reconstituted as the CMA — the most comprehensive overhaul of UAE federal securities regulation since 2000. Virtual assets brought within the CMA's capital-markets perimeter; CMA jurisdiction extends to financial activities in the free zones (ADGM, DIFC) and extraterritorially. Administrative fines up to <b>AED 200M</b>; criminal penalties up to AED 250M and imprisonment. Existing SCA licensees must regularise by <b>1 Jan 2027</b>.</p><div class="so"><b>Compliance window = sales window.</b> <span class="tag fact">FACT</span></div></div>
+    <div class="ev t"><div class="d">10 JUN 2025 · ADGM FSRA</div><h5>Digital-asset framework streamlined</h5><p>ADGM FSRA implemented amendments to its digital-asset framework, consolidating its position as a leading digital-asset jurisdiction.</p><div class="so"><b>ADGM is the regional DLT anchor.</b> <span class="tag fact">FACT</span></div></div>
+    <div class="ev"><div class="d">2030 · VISION 2030</div><h5>Saudi capital-markets deepening</h5><p>PIF targeting $1T+ AUM (achieved $925B in 2024). Government targets AUM at 40% of GDP by 2030 (from ~23% in 1H25). The Financial Sector Development Program aims to deepen capital markets.</p><div class="so"><b>Structural mandate pipeline.</b> <span class="tag fact">FACT</span></div></div>
+  </div>
+
+  <div class="note red">
+    <b>Don't miss the deadline:</b> Existing UAE SCA licensees must regularise under the new CMA regime by 1 January 2027 — a hard stop that defines the remediation and onboarding pipeline for every licensee in the free zones and onshore. <span class="tag fact">FACT</span>
+  </div>
+</section><!-- 06 TOKENISATION & DLT -->
+<section class="slide" id="s06">
+  <div class="kicker">05 · Tokenisation & DLT</div>
+  <h2 class="title">Abu Dhabi is staking the regional claim on regulated digital-asset custody</h2>
+  <p class="lede">The UAE Central Bank's digital dirham is underway with cross-border CBDC pilots; SAMA is exploring digital currency; and ADGM's FSRA framework has drawn both BNY and Standard Chartered into digital-asset custody inside the Emirate. The money layer and the asset layer are being built in parallel. <span class="tag fact">FACT</span></p>
+
+  <div class="grid g3">
+    <div class="card dlt"><h4>UAE digital dirham <span class="tag dlt">DLT</span></h4><p>UAE Central Bank digital dirham project underway, with <b>cross-border CBDC pilots</b> alongside India and other partners — the money-layer foundation for tokenised settlement in the region.</p></div>
+    <div class="card dlt"><h4>SAMA digital currency <span class="tag dlt">DLT</span></h4><p>SAMA (Saudi Central Bank) exploring digital currency projects; PIF investing in tech infrastructure including blockchain. Saudi is building the asset side before the settlement side.</p></div>
+    <div class="card dlt"><h4>ADGM DLT framework <span class="tag dlt">DLT</span></h4><p>ADGM FSRA's comprehensive digital-asset framework (amended 10 Jun 2025) is the regional anchor — recognised as a leading digital-asset jurisdiction, drawing BNY and Standard Chartered custody operations.</p></div>
+  </div>
+
+  <h3 style="font-family:'Fraunces',serif;font-weight:400;font-size:21px;color:var(--ink);margin:30px 0 4px">Digital-custody beachheads in the Gulf</h3>
+  <p class="lede" style="margin-bottom:16px">Two global custodians have already landed regulated digital-asset custody inside the UAE. <span class="tag fact">FACT</span></p>
+  <table class="tbl">
+    <thead><tr><th>Provider</th><th>Move</th><th>Scope</th><th>Rail</th></tr></thead>
+    <tbody>
+      <tr><td><b>BNY</b></td><td>Expanded digital-asset custody into Abu Dhabi (May 2026)</td><td>BTC & ETH custody now; stablecoins & tokenised RWA as next phase</td><td class="mono">ADGM framework · Finstreet + ADI Foundation partnership</td></tr>
+      <tr><td><b>Standard Chartered</b></td><td>Launched digital asset custody in UAE</td><td>Digital-asset custody live; expanded transfer-agent services (ViTAL) across DIFC, Qatar, UAE</td><td class="mono">UAE regulatory framework</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note violet">
+    <b>AI on the ops floor:</b> PIF's AI investments include Alat (regional tech champion); Saudi runs the National Strategy for Data and AI (NSDAI); the UAE appointed a Minister of State for AI. Global custodians are deploying AI in the region — BNY Eliza, State Street Alpha, Citi Custody+. The convergence of DLT rails + AI operations is the next servicing frontier. <span class="tag fact">FACT</span> <span class="tag ai">AI</span>
+  </div>
+</section><!-- 07 SOVEREIGN WEALTH FUNDS -->
+<section class="slide" id="s07">
+  <div class="kicker">06 · Sovereign Wealth Funds</div>
+  <h2 class="title">The $4.9T buyer base — and where it is heading</h2>
+  <p class="lede">Gulf SWFs crossed <b>$4.9 trillion</b> in 2024 and are projected to control <b>$18 trillion by 2030</b>. They are simultaneously the largest buyers of asset-servicing and the largest generators of new mandates — particularly PIF, whose Vision 2030 deployment pressure and ~$12B of manager MoUs are creating fresh servicing relationships. <span class="tag fact">FACT</span> <span class="tag assess">ASSESSMENT</span></p>
+
+  <h3 style="font-family:'Fraunces',serif;font-weight:400;font-size:21px;color:var(--ink);margin:8px 0 14px">SWF AUM comparison</h3>
+  <div class="barwrap">
+    <div class="barrow"><div class="bl">ADIA (UAE)</div><div class="track"><div class="fill f-ink" style="width:100%">$1.19T</div></div></div>
+    <div class="barrow"><div class="bl">KIA (Kuwait)</div><div class="track"><div class="fill f-ink" style="width:84%">$1.0T</div></div></div>
+    <div class="barrow"><div class="bl">PIF (Saudi)</div><div class="track"><div class="fill f-gold" style="width:78%">$925B</div></div></div>
+    <div class="barrow"><div class="bl">QIA (Qatar)</div><div class="track"><div class="fill f-teal" style="width:49%">$580B</div></div></div>
+    <div class="barrow"><div class="bl">ICD (Dubai)</div><div class="track"><div class="fill f-teal" style="width:34%">$400B</div></div></div>
+    <div class="barrow"><div class="bl">Mubadala (UAE)</div><div class="track"><div class="fill f-violet" style="width:32%">$385B</div></div></div>
+    <div class="barrow"><div class="bl">ADQ (UAE)</div><div class="track"><div class="fill f-violet" style="width:20%">$240B</div></div></div>
+  </div>
+  <p class="dim" style="font-size:12px;margin-top:6px">Bars scaled to ADIA ($1.19T). <span class="tag fact">FACT</span></p>
+
+  <div class="grid g3" style="margin-top:26px">
+    <div class="card conv"><h4>PIF (Saudi Arabia) <span class="tag fact">FACT</span></h4><p>$925B AUM (2024), targeting $1T+. <b>~70% externally managed</b> <span class="tag assess">ASSESSMENT</span>. Mandate sizes: $5–50B+ per manager relationship. Pain points: local capability building, Vision 2030 deployment pressure, multi-asset complexity. Switching triggers: new asset-class entry, localisation requirements, performance reviews.</p></div>
+    <div class="card conv"><h4>ADIA (Abu Dhabi) <span class="tag fact">FACT</span></h4><p>~$1.19T AUM. <b>~60% externally managed</b> across 20+ asset classes <span class="tag assess">ASSESSMENT</span>. Decisions by investment committees; long-term relationships. Pain points: multi-jurisdictional custody, complex reporting, private-markets servicing.</p></div>
+    <div class="card conv"><h4>Mubadala (Abu Dhabi) <span class="tag fact">FACT</span></h4><p>~$385B AUM, +17% growth. Active across PE, VC, real estate, infrastructure. Pain points: alternative-asset servicing, cross-border fund admin. <span class="tag assess">ASSESSMENT</span></p></div>
+  </div>
+
+  <div class="note">
+    <b>The mandate math:</b> PIF alone signed MoUs with BlackRock, Franklin Templeton, Neuberger Berman and Northern Trust AM totalling ~$12 billion — each new manager relationship carries custody, fund-admin and reporting requirements. Multiply across ADIA's 20+ asset classes and Mubadala's alternatives book, and the SWF servicing pipeline is the single richest seam in the region. <span class="tag assess">ASSESSMENT</span>
+  </div>
+</section><!-- 08 BUYER MAPS -->
+<section class="slide" id="s08">
+  <div class="kicker">07 · Buyer Maps</div>
+  <h2 class="title">Four buyer archetypes — and what makes each switch</h2>
+  <p class="lede">Beyond the SWFs, the buyer base spans local and regional asset managers, insurers and family offices. Each has distinct decision-makers, pain points and switching triggers. Use the pills to compare. <span class="tag assess">ASSESSMENT</span></p>
+
+  <div class="pillrow" id="segpills">
+    <button class="pill on" data-seg="swf">Sovereign Wealth Funds</button>
+    <button class="pill" data-seg="am">Asset Managers</button>
+    <button class="pill" data-seg="ins">Insurance</button>
+    <button class="pill" data-seg="fo">Family Offices</button>
+  </div>
+
+  <div class="seg on" data-seg="swf">
+    <div class="flow">
+      <div class="fbox pain"><h6>Decision-makers</h6><ul><li>CIO</li><li>Head of Operations</li><li>Head of Investment Operations</li></ul></div>
+      <div class="arr">&rarr;</div>
+      <div class="fbox pain"><h6>Pain points</h6><ul><li>Multi-jurisdictional custody</li><li>Complex reporting</li><li>Local regulatory compliance</li><li>Private-markets servicing</li></ul></div>
+      <div class="arr">&rarr;</div>
+      <div class="fbox pain"><h6>Switching triggers</h6><ul><li>New asset-class entry</li><li>Localisation mandate</li><li>Performance reviews</li><li>Regulatory changes</li></ul></div>
+    </div>
+    <div class="mandate"><span class="mono">The mandate it produces</span><b>SWF mandate servicing:</b> multi-asset, multi-jurisdictional custody + fund admin + reporting for portfolios of $5–50B+. Buyers: PIF, ADIA, Mubadala, QIA, KIA, ICD, ADQ. <span class="tag assess">ASSESSMENT</span></div>
+  </div>
+
+  <div class="seg" data-seg="am">
+    <div class="flow">
+      <div class="fbox pain"><h6>Decision-makers</h6><ul><li>CEO</li><li>COO</li><li>Head of Operations</li></ul></div>
+      <div class="arr">&rarr;</div>
+      <div class="fbox pain"><h6>Pain points</h6><ul><li>Fund-administration capacity</li><li>Regulatory compliance</li><li>Distribution infrastructure</li></ul></div>
+      <div class="arr">&rarr;</div>
+      <div class="fbox pain"><h6>Switching triggers</h6><ul><li>AUM growth exceeding capacity</li><li>Regulatory requirements</li><li>Cost pressure</li></ul></div>
+    </div>
+    <div class="mandate"><span class="mono">The mandate it produces</span><b>Fund-admin & custody scale-up:</b> buyers Al Rajhi Capital, NCB Capital, SNB Capital, SAB Invest, Mulkia Investment, Jadwa Investment. <span class="tag assess">ASSESSMENT</span></div>
+  </div>
+
+  <div class="seg" data-seg="ins">
+    <div class="flow">
+      <div class="fbox pain"><h6>Decision-makers</h6><ul><li>CFO</li><li>CIO</li><li>Head of Investments</li></ul></div>
+      <div class="arr">&rarr;</div>
+      <div class="fbox pain"><h6>Pain points</h6><ul><li>Investment accounting</li><li>Regulatory reporting</li><li>Asset-liability matching</li></ul></div>
+      <div class="arr">&rarr;</div>
+      <div class="fbox pain"><h6>Switching triggers</h6><ul><li>Regulatory changes</li><li>Portfolio restructuring</li><li>Cost optimisation</li></ul></div>
+    </div>
+    <div class="mandate"><span class="mono">The mandate it produces</span><b>Insurance investment servicing:</b> buyers Saudi Re, Tawuniya, Bupa Arabia, ADNIC, Oman Insurance. <span class="tag assess">ASSESSMENT</span></div>
+  </div>
+
+  <div class="seg" data-seg="fo">
+    <div class="flow">
+      <div class="fbox pain"><h6>Decision-makers</h6><ul><li>Family patriarch</li><li>CEO</li><li>CIO</li></ul></div>
+      <div class="arr">&rarr;</div>
+      <div class="fbox pain"><h6>Pain points</h6><ul><li>Multi-asset custody</li><li>Cross-border reporting</li><li>Succession planning</li></ul></div>
+      <div class="arr">&rarr;</div>
+      <div class="fbox pain"><h6>Switching triggers</h6><ul><li>Generational transition</li><li>New asset class</li><li>Governance overhaul</li></ul></div>
+    </div>
+    <div class="mandate"><span class="mono">The mandate it produces</span><b>Family-office multi-asset servicing:</b> prominent Saudi, Emirati and Qatari family offices seeking consolidated cross-border custody and reporting. <span class="tag assess">ASSESSMENT</span></div>
+  </div>
+
+  <div class="note red">
+    <b>Data gap:</b> Buyer-map switching triggers and mandate-size ranges are sales-assessment estimates, not disclosed figures — calibrate against live pipeline. <span class="tag gap">DATA GAP</span>
+  </div>
+</section><!-- 09 COMPETITIVE INTELLIGENCE -->
+<section class="slide" id="s09">
+  <div class="kicker">08 · Competitive Intelligence</div>
+  <h2 class="title">Mandate wins, market moves and the convergence catalysts</h2>
+  <p class="lede">HSBC's Saudi AUC grew +160% in a year; Standard Chartered launched direct custody in KSA and Egypt; State Street reshaped Qatar via QNB; BNY landed the digital-custody beachhead. The market is consolidating around players with local presence plus digital ambition. <span class="tag fact">FACT</span></p>
+
+  <table class="tbl">
+    <thead><tr><th>Player</th><th>Key mandate win / move</th><th>Signal</th></tr></thead>
+    <tbody>
+      <tr><td><b>HSBC</b></td><td>Saudi AUC $86B &rarr; $224B (+160%); named "Middle East's best for securities services 2026" (Euromoney)</td><td class="mono">Incumbency deepening · 7/10 largest Saudi AMs on network</td></tr>
+      <tr><td><b>Standard Chartered</b></td><td>Launched direct custody in KSA (early 2025) & Egypt (Aug 2025); best sub-custodian ME 2025; world's best for securities services 2025</td><td class="mono">Only end-to-end Islamic solutions provider</td></tr>
+      <tr><td><b>State Street</b></td><td>QNB strategic alliance for Qatar custody ($65B AUC); FAB sub-custody transfer across 5 GCC markets (2022)</td><td class="mono">"Largest sub-custody transfer in ME history"</td></tr>
+      <tr><td><b>BNY</b></td><td>Digital-asset custody in Abu Dhabi via Finstreet partnership (May 2026)</td><td class="mono">First-mover in regulated digital custody, ME</td></tr>
+      <tr><td><b>Northern Trust</b></td><td>PIF MoU participant; regional expansion</td><td class="mono">Anchored to PIF mandate pipeline</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="font-family:'Fraunces',serif;font-weight:400;font-size:21px;color:var(--ink);margin:30px 0 14px">Market dynamics driving the pipeline</h3>
+  <div class="grid g2">
+    <div class="card conv"><h4>Regulatory opening <span class="tag fact">FACT</span></h4><p>Saudi CMA QFI removal (Feb 2026) opens Tadawul to all foreign investors; UAE CMA transformation (Jan 2026) is the most significant regulatory overhaul since 2000. 100% of surveyed custodians are investing more in KSA (up from 83%).</p></div>
+    <div class="card conv"><h4>Mandate growth pipeline <span class="tag fact">FACT</span></h4><p>Gulf SWFs projected to hit $18T by 2030 — a massive mandate growth pipeline. ADGM AUM +215% YoY makes it the fastest-growing fund domicile in the region.</p></div>
+  </div>
+
+  <div class="note teal">
+    <b>Where the field is heading:</b> The winners combine (a) local-entity presence to satisfy CMA rules, (b) digital-asset readiness inside ADGM, and (c) an Islamic-solutions capability for the regional default. HSBC holds (a); Standard Chartered holds (a)+(c); BNY holds (b). No single player yet holds all three — that is the open lane. <span class="tag assess">ASSESSMENT</span>
+  </div>
+</section><!-- 10 SIX GTM PLAYS -->
+<section class="slide" id="s10">
+  <div class="kicker">09 · Six GTM Plays</div>
+  <h2 class="title">Six plays that convert the Middle East opportunity into mandates</h2>
+  <p class="lede">Each play pairs a buyer, a trigger, a proposition, proof points and a landmine. <b>Click any card to expand.</b> <span class="tag assess">ASSESSMENT</span></p>
+
+  <div class="play">
+    <div class="top"><h4>Play 1 — Saudi Market Access & Custody</h4><span class="meta">BUYER: GLOBAL AMs ENTERING KSA · TRIGGER: QFI REMOVAL</span></div>
+    <div class="body">
+      <div class="row"><b>Buyer</b><span>Global asset managers entering KSA; QFIs (now all foreign investors post-Feb 2026)</span></div>
+      <div class="row"><b>Trigger</b><span>QFI regime removal (Feb 2026); Vision 2030 capital inflows; PIF MoU-driven mandate creation</span></div>
+      <div class="row"><b>Proposition</b><span>End-to-end KSA market access — custody, settlement, FX, local expertise, CMA licensing support</span></div>
+      <div class="row"><b>Proof points</b><span>HSBC's $224B Saudi AUC; 7/10 largest Saudi AMs use HSBC; 100% of custodians investing more in KSA <span class="tag fact">FACT</span></span></div>
+      <div class="row"><b>Landmine</b><span>Local-presence requirements are strict — joint stock company or subsidiary structure mandatory. <span class="tag assess">ASSESSMENT</span></span></div>
+    </div>
+  </div>
+
+  <div class="play">
+    <div class="top"><h4>Play 2 — Sovereign Wealth Fund Servicing</h4><span class="meta">BUYER: PIF · ADIA · MUBADALA · QIA · KIA</span></div>
+    <div class="body">
+      <div class="row"><b>Buyer</b><span>PIF, ADIA, Mubadala, QIA, KIA</span></div>
+      <div class="row"><b>Trigger</b><span>AUM growth (SWFs crossed $4.9T); new asset-class entry; multi-jurisdictional complexity</span></div>
+      <div class="row"><b>Proposition</b><span>Multi-asset, multi-jurisdictional custody + fund admin + reporting for SWF portfolios</span></div>
+      <div class="row"><b>Proof points</b><span>Gulf SWFs manage $4.9T; projected $18T by 2030; PIF targeting $1T+ <span class="tag fact">FACT</span></span></div>
+      <div class="row"><b>Landmine</b><span>SWF relationships are long-cycle sales; internal management growing; don't underestimate the political dimension. <span class="tag assess">ASSESSMENT</span></span></div>
+    </div>
+  </div>
+
+  <div class="play">
+    <div class="top"><h4>Play 3 — DIFC/ADGM Fund Domiciliation</h4><span class="meta">BUYER: GLOBAL FUND MANAGERS · UAE PRESENCE</span></div>
+    <div class="body">
+      <div class="row"><b>Buyer</b><span>Global fund managers establishing UAE presence</span></div>
+      <div class="row"><b>Trigger</b><span>UAE retail-fund rules (Apr 2024); ADGM 215% AUM growth; passporting regime</span></div>
+      <div class="row"><b>Proposition</b><span>Full fund setup — domicile, TA, custody, distribution connectivity across UAE free zones</span></div>
+      <div class="row"><b>Proof points</b><span>ADGM 1,500+ entities, 200+ fund managers; DIFC established framework; PCC structure unique to ADGM <span class="tag fact">FACT</span></span></div>
+      <div class="row"><b>Landmine</b><span>Don't confuse DIFC and ADGM — different regulators, different rules, different capital requirements. <span class="tag assess">ASSESSMENT</span></span></div>
+    </div>
+  </div>
+
+  <div class="play">
+    <div class="top"><h4>Play 4 — Saudi REIT Servicing</h4><span class="meta">BUYER: REIT MANAGERS · REAL-ESTATE FUND MANAGERS</span></div>
+    <div class="body">
+      <div class="row"><b>Buyer</b><span>REIT managers, real-estate fund managers</span></div>
+      <div class="row"><b>Trigger</b><span>Growing REIT market; CMA REIT regulations; mandatory independent-custodian requirement</span></div>
+      <div class="row"><b>Proposition</b><span>Independent custodian + fund admin + property-valuation support for Saudi REITs</span></div>
+      <div class="row"><b>Proof points</b><span>Closed-ended structure, SAR 100M min capital, 90% distribution requirement <span class="tag fact">FACT</span></span></div>
+      <div class="row"><b>Landmine</b><span>Must appoint a CMA-licensed independent custodian (not affiliated with the fund manager). <span class="tag assess">ASSESSMENT</span></span></div>
+    </div>
+  </div>
+
+  <div class="play">
+    <div class="top"><h4>Play 5 — Digital Asset Custody, ME</h4><span class="meta">BUYER: SWFs · EXCHANGES · TOKENISED ISSUERS</span></div>
+    <div class="body">
+      <div class="row"><b>Buyer</b><span>SWFs allocating to digital assets; regional crypto exchanges; tokenised-securities issuers</span></div>
+      <div class="row"><b>Trigger</b><span>BNY Abu Dhabi digital custody (May 2026); ADGM DLT framework; SCA/CMA virtual-asset regulation</span></div>
+      <div class="row"><b>Proposition</b><span>Regulated digital-asset custody within ADGM framework; BTC/ETH &rarr; stablecoins &rarr; tokenised RWA</span></div>
+      <div class="row"><b>Proof points</b><span>BNY-Finstreet partnership; Standard Chartered UAE digital custody; ADGM FSRA framework <span class="tag fact">FACT</span></span></div>
+      <div class="row"><b>Landmine</b><span>Regulatory landscape still evolving — UAE CMA transition (Jan 2027 deadline for existing licensees). <span class="tag assess">ASSESSMENT</span></span></div>
+    </div>
+  </div>
+
+  <div class="play">
+    <div class="top"><h4>Play 6 — Cross-Border Islamic Solutions</h4><span class="meta">BUYER: ISLAMIC AMs · SWFs · FAMILY OFFICES</span></div>
+    <div class="body">
+      <div class="row"><b>Buyer</b><span>Islamic asset managers, sovereign funds, family offices</span></div>
+      <div class="row"><b>Trigger</b><span>Standard Chartered's end-to-end Islamic custody proposition; growing Islamic finance market</span></div>
+      <div class="row"><b>Proposition</b><span>Sharia-compliant custody, cash management and fund administration across the GCC</span></div>
+      <div class="row"><b>Proof points</b><span>Standard Chartered as only complete end-to-end Islamic solutions provider <span class="tag fact">FACT</span></span></div>
+      <div class="row"><b>Landmine</b><span>Don't assume one-size-fits-all — Sharia compliance varies by scholar/board. <span class="tag assess">ASSESSMENT</span></span></div>
+    </div>
+  </div>
+
+  <div class="note">
+    <b>Prioritisation:</b> Plays 1 and 2 are the largest-pool, near-term mandates (Saudi access + SWF servicing). Play 3 is the volume play (fund domiciliation). Plays 5 and 6 are the differentiators — digital custody and Islamic solutions are where a competitor can still claim a category the incumbents haven't consolidated. <span class="tag assess">ASSESSMENT</span>
+  </div>
+</section><!-- 11 RISKS & CAVEATS -->
+<section class="slide" id="s11">
+  <div class="kicker">10 · Risks & Caveats</div>
+  <h2 class="title">Where the thesis can break — and what to watch</h2>
+  <p class="lede">The Middle East opportunity is real but concentrated and politically mediated. Four risks discipline every forecast in this module. <span class="tag assess">ASSESSMENT</span></p>
+
+  <div class="grid g2">
+    <div class="card" style="border-top:3px solid var(--danger)"><h4>Regulatory transition <span class="tag fact">FACT</span></h4><p>UAE CMA requires existing licensees to regularise by 1 Jan 2027 — a hard stop that could disrupt service continuity for clients mid-migration.</p></div>
+    <div class="card" style="border-top:3px solid var(--danger)"><h4>Localisation requirements <span class="tag fact">FACT</span></h4><p>KSA mandates a local entity structure (joint stock company or subsidiary) for custody/dealing/managing — a cost and timeline barrier that narrows the field.</p></div>
+    <div class="card" style="border-top:3px solid var(--gold)"><h4>Geopolitical risk <span class="tag assess">ASSESSMENT</span></h4><p>Regional tensions could affect capital flows and the pace of foreign-investor participation — hard to forecast, material when it moves.</p></div>
+    <div class="card" style="border-top:3px solid var(--gold)"><h4>Concentration risk <span class="tag assess">ASSESSMENT</span></h4><p>The top five SWFs dominate the buyer landscape — a small number of relationships carry an outsized share of the mandate pipeline.</p></div>
+  </div>
+
+  <div class="note red">
+    <b>Honest caveat:</b> SWF relationship economics, internal-vs-external management splits, and mandate-size ranges in this module are assessments, not disclosed figures. PIF's ~70% externally managed and ADIA's ~60% externally managed are estimates — verify against live RFPs before sizing a pipeline. The $18T-by-2030 SWF projection is a third-party forecast (Deloitte/ORF), not a commitment. <span class="tag gap">DATA GAP</span>
+  </div>
+  <div class="note violet">
+    <b>What we do not yet know:</b> the precise servicing share BNY's Abu Dhabi digital-custody operation will capture; how the UAE CMA's extraterritorial reach into ADGM/DIFC will interact with the free zones' existing regulators; and the take-up rate of the new Saudi SIF/FIF fund vehicles after March 2026. These are live data gaps to monitor. <span class="tag gap">DATA GAP</span>
+  </div>
+</section><!-- 12 SOURCE LIBRARY -->
+<section class="slide" id="s12">
+  <div class="kicker">11 · Source Library</div>
+  <h2 class="title">Sources & provenance</h2>
+  <p class="lede">Every FACT tag in this module traces to one of the sources below. ASSESSMENT and DATA GAP tags denote sales judgement or unverified estimates. <span class="tag fact">FACT</span> <span class="tag assess">ASSESSMENT</span> <span class="tag gap">DATA GAP</span></p>
+  <div class="srcs">
+    <div class="s"><b>BCG — 23rd Global Asset Management report:</b> GCC AUM $2.2T (2024), +9% YoY; global AUM $128T (+12%); MEA +10%.</div>
+    <div class="s"><b>PwC:</b> Middle East SWF AUM historic peak $4.9T (2024), projected $7.3T.</div>
+    <div class="s"><b>Deloitte / ORF:</b> Gulf SWFs projected to control $18T by 2030 (~50% increase).</div>
+    <div class="s"><b>Global SWF tracker (2025):</b> ADIA ~$1.19T; KIA ~$1.0T; QIA ~$580B; ADQ ~$240B.</div>
+    <div class="s"><b>PIF 2024 Annual Report (Aug 2025):</b> PIF AUM $925B; MoUs with BlackRock, Franklin Templeton, Neuberger Berman, Northern Trust AM (~$12B).</div>
+    <div class="s"><b>Mubadala:</b> AED 1.4T in 2025 (~$385B), +17%; ICD AED 1.47T as of 2024 (~$400B).</div>
+    <div class="s"><b>Fitch (April 2025):</b> Saudi AMI +20.8% in 2024, crossing SAR 1T ($266.4B), 26% of GDP, largest in GCC.</div>
+    <div class="s"><b>Fitch (Oct 2025):</b> Saudi AMI projected to exceed $400B in 2026.</div>
+    <div class="s"><b>ADGM:</b> +215% total AUM growth Q3 2024 YoY; 1,500+ registered entities, 200+ fund managers.</div>
+    <div class="s"><b>Euromoney:</b> HSBC named "Middle East's best for securities services 2026"; Standard Chartered "World's Best Bank for Securities Services 2025".</div>
+    <div class="s"><b>Global Finance:</b> Standard Chartered "Best Sub-Custodian Bank in the Middle East for 2025" (country winner Oman, Qatar, UAE); FAB best sub-custodian ME 2023.</div>
+    <div class="s"><b>HSBC:</b> Saudi AUC $86B &rarr; $224B (2025), ~35% market share; in Saudi since 2001; ADGM arranging custody licence Aug 2022; custodian network 96 markets; $10.8T global AUC (Dec 2021).</div>
+    <div class="s"><b>Standard Chartered:</b> direct custody KSA (early 2025) & Egypt (Aug 2025); settlement bank for DFM & Nasdaq Dubai; ViTAL TA across DIFC/Qatar/UAE; digital-asset custody UAE.</div>
+    <div class="s"><b>State Street / QNB:</b> strategic agreement for Qatar custody; QNB Custody $65B AUC; FAB sub-custody transfer across 5 GCC markets (2022).</div>
+    <div class="s"><b>BNY / Finstreet / ADI Foundation (May 2026):</b> digital-asset custody in Abu Dhabi; BTC/ETH now, stablecoins & tokenised RWA next; within ADGM framework.</div>
+    <div class="s"><b>Saudi CMA:</b> QFI regime removal (6 Jan 2026, eff. 1 Feb 2026); CMI Regulations amended (26 May 2025); SIFs & FIFs (Mar 2026); REITs Instructions (Oct 2016); Edaa Omnibus Accounts (Oct 2024).</div>
+    <div class="s"><b>UAE Federal Decree-Law No. 32/33 of 2025:</b> SCA &rarr; CMA (1 Jan 2026); fines to AED 200M, criminal penalties to AED 250M; regularisation by 1 Jan 2027.</div>
+    <div class="s"><b>ADGM FSRA:</b> digital-asset framework amendments (10 Jun 2025); Consultation Paper No. 12 of 2025 (Small Threshold & Institutional Fund Managers).</div>
+    <div class="s"><b>DIFC / DFSA (est. 2004) & ADGM / FSRA (est. 2013/2015):</b> English common-law fund regimes; PCC (ADGM only); VCFM zero capital; base-capital figures.</div>
+    <div class="s"><b>UAE Central Bank:</b> digital dirham project; cross-border CBDC pilots with India.</div>
+    <div class="s"><b>SAMA:</b> digital currency exploration; PIF tech infrastructure incl. blockchain.</div>
+    <div class="s"><b>Saudi Vision 2030 / FSDP:</b> AUM target 40% of GDP by 2030 (from ~23% in 1H25); PIF $1T+ target.</div>
+    <div class="s"><b>ORC custodian survey (2025):</b> 100% plan to invest further in KSA (up from 83% in 2024); 60%+ to expand KSA fund-admin headcount; value-add mix (42% / 33% / 17%).</div>
+    <div class="s"><b>Saudi AMI structure:</b> bank-affiliated AMs 63.5% of industry revenue (2024); ~50% of AUM in private funds (real estate & equities).</div>
+    <div class="s"><b>GCC listed equity market cap:</b> surpassed $4T end-2024, led by Tadawul ~$2.4T.</div>
+    <div class="s"><b>AI / operations:</b> PIF Alat; Saudi NSDAI; UAE Minister of State for AI; BNY Eliza, State Street Alpha, Citi Custody+.</div>
+    <div class="s"><b>Global SWF assets:</b> crossed $15T Dec 2025; combined SWFs + public pensions + central-bank assets = $60T.</div>
+  </div>
+</section>
+<footer>Global Securities Services · Sales Command Centre &mdash; Middle East Asset-Servicing Module. Data as of Sep 2026. FACT tags denote sourced figures; ASSESSMENT tags denote sales judgement; DATA GAP tags denote unverified estimates. Prepared for internal sales enablement.</footer>
+</main>
+</div>
+<a class="homefab" href="index.html">&#8962; Home</a>
+
+<script>
+// nav + progress
+const links=[...document.querySelectorAll('.navlink')];
+const secs=[...document.querySelectorAll('section.slide')];
+const pbar=document.getElementById('pbar');
+function onScroll(){
+  const h=document.documentElement;
+  pbar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+  let cur=secs[0].id;
+  for(const s of secs){if(s.getBoundingClientRect().top<160)cur=s.id}
+  links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+cur));
+}
+document.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+// j/k navigation
+document.addEventListener('keydown',e=>{
+  if(e.key!=='j'&&e.key!=='k')return;
+  const tops=secs.map(s=>s.getBoundingClientRect().top);
+  if(e.key==='j'){const n=secs.find((s,i)=>tops[i]>80);if(n)n.scrollIntoView({behavior:'smooth'})}
+  else{const prev=[...secs].reverse().find((s)=>s.getBoundingClientRect().top<-80);if(prev)prev.scrollIntoView({behavior:'smooth'})}
+});
+
+// segments (buyer-map pills)
+const pills=[...document.querySelectorAll('#segpills .pill')];
+const segsE=[...document.querySelectorAll('.seg')];
+pills.forEach(p=>p.addEventListener('click',()=>{
+  pills.forEach(x=>x.classList.remove('on'));p.classList.add('on');
+  segsE.forEach(s=>s.classList.toggle('on',s.dataset.seg===p.dataset.seg));
+}));
+
+// plays
+document.querySelectorAll('.play').forEach(p=>p.addEventListener('click',()=>p.classList.toggle('open')));
+
+// market detail (custody cards)
+const MK={
+hsbc:{name:'HSBC — Regional Market Leader',mono:'INCUMBENT · DEEPENING',
+ rails:['Saudi Arabia AUC: $86B → <b>$224B in 2025</b>, ~35% market share across QFI participation and securities lending','UAE: transaction volumes +33%, AUC +24% in 2025; Kuwait AUC +31%; Qatar assets +12%','In Saudi Arabia since 2001; Head of Securities Services chairs the CMA Custody Committee','7 of 10 largest Saudi asset managers use HSBC custody services','Obtained arranging custody licence in ADGM (Aug 2022); custodian network in 96 markets; $10.8T global AUC (Dec 2021)','Custodian for the first-ever securities-lending transaction in Saudi Arabia; settled first QFI trade and first SBL trade'],
+ means:['HSBC holds the deepest local incumbency in the region — its Saudi share and CMA committee chairmanship create switching-cost moats','ADGM licence + 96-market network means it can bundle cross-border custody with onshore access — the default for global managers entering KSA','The QFI removal does not displace HSBC; it expands the addressable AUC pool it already serves'],
+ sell:'<b>Sell against:</b> HSBC\'s scale is a strength and a vulnerability — challengers win on Islamic solutions (StanChart), digital custody (BNY) and fund-admin capacity. Do not compete on raw Saudi AUC; compete on capability gaps HSBC has not closed.'},
+scb:{name:'Standard Chartered — Key Challenger',mono:'CHALLENGER · SCALING',
+ rails:['Named "Best Sub-Custodian Bank in the Middle East for 2025" (Global Finance); country winner in Oman, Qatar, UAE; presence in Bahrain','Launched <b>direct custody operations in Saudi Arabia (early 2025)</b> and Egypt (Aug 2025)','First international bank to act as settlement bank for DFM exchange and Nasdaq Dubai','<b>Only provider offering complete end-to-end Islamic solutions</b> (custody, cash management, fund admin)','Launched digital-asset custody in UAE; expanded transfer-agent services (ViTAL) across DIFC, Qatar, UAE','Named "World\'s Best Bank for Securities Services 2025" (Euromoney)'],
+ means:['StanChart is the only player with a complete Islamic-solutions stack — the regional default for Sharia-compliant mandates','Direct KSA + Egypt launches give it the only end-to-end MEA footprint among global custodians','Digital-asset custody in UAE + ViTAL TA expansion = a fund-domiciliation servicing bundle that competes with HSBC'],
+ sell:'<b>Sell against / alongside:</b> StanChart is the natural partner for Islamic and Egypt-extension mandates. Its gap is onshore Saudi incumbency — pair it where HSBC is constrained by conflicts or capacity.'},
+ss:{name:'State Street — Strategic Alliances',mono:'ALLIANCE MODEL · NETWORKED',
+ rails:['Signed strategic agreement with <b>QNB Group</b> to launch new custody servicing model in Qatar; QNB Custody has $65B AUC','Offices in Abu Dhabi, Dubai, Muscat, Riyadh; servicing the region 30+ years','Appointed <b>FAB as sub-custodian</b> across Kuwait, Bahrain, Oman, Saudi Arabia, UAE (2022) — "largest sub-custody transfer in history of Middle East"'],
+ means:['State State runs the region through alliances rather than owned footprint — lower capital, broader reach','The QNB + FAB combination covers Qatar onshore plus five GCC markets through one sub-custody backbone','Model suits managers who want State Street global connectivity without a standalone local build'],
+ sell:'<b>Sell against:</b> alliance models carry handoff risk at the sub-custody seam. Compete on owned-footprint reliability where the client needs single-throat accountability.'},
+bny:{name:'BNY — Digital Asset Custody Entrant',mono:'FIRST-MOVER · DIGITAL',
+ rails:['Expanded digital-asset custody into Abu Dhabi through partnership with Finstreet and ADI Foundation (May 2026)','Initially supports <b>BTC and ETH custody</b>; stablecoins and tokenised RWA as next phase','Operating within ADGM\'s regulatory framework'],
+ means:['BNY is the first global custodian to land regulated digital-asset custody inside ADGM — a category claim competitors will have to catch','BTC/ETH → stablecoins → tokenised RWA is a staged roadmap that mirrors the asset-layer build-out','ADGM framework gives regulatory clarity rivals operating offshore lack'],
+ sell:'<b>Sell now:</b> digital-custody readiness to SWFs allocating to digital assets, regional exchanges and tokenised-securities issuers. BNY owns the lane until StanChart/HSBC close the gap.'},
+fab:{name:'First Abu Dhabi Bank — Local Champion',mono:'ONSHORE FRANCHISE',
+ rails:['Named best sub-custodian in the Middle East by Global Finance (2023)','Broadest custody services in the region','Onboards State Street\'s sub-custody business across five GCC markets'],
+ means:['FAB holds the onshore retail and exchange-clearing franchise that global custodians need as their local backbone','As State Street\'s sub-custodian it is the default local layer for cross-border mandates','Local-bank status is the structural moat the CMA localisation rules reinforce'],
+ sell:'<b>Position:</b> FAB is a partner layer, not a competitor, for most global custodians — but for local banks and insurers it is the direct onshore custody competitor.'},
+struct:{name:'Market Structure & Investment Signal',mono:'STRUCTURAL · CONCENTRATING',
+ rails:['Global custodians (HSBC, StanChart, State Street, BNY, Citi, BNP Paribas, Northern Trust) dominate cross-border and institutional mandates','Local banks (FAB, QNB, SNB) hold onshore retail and exchange-clearing franchise','<b>100% of custodians surveyed by ORC in 2025</b> plan to invest further in KSA operations, up from 83% in 2024'],
+ means:['The market is concentrating around players with both local presence and digital ambition','The KSA local-entity requirement is the moat keeping the field narrow — new entrants face a structural barrier','Universal reinvestment signal means capacity, not demand, is the binding constraint'],
+ sell:'<b>Sell now:</b> the field is narrow and investing — early capacity-build in KSA fund admin and digital custody converts straight to mandate share.'}
+};
+const mks=[...document.querySelectorAll('.mk')];
+const md=document.getElementById('mkdetail');
+mks.forEach(m=>m.addEventListener('click',()=>{
+  const k=m.dataset.mk;
+  const open=m.classList.contains('open');
+  mks.forEach(x=>x.classList.remove('open'));
+  if(open){md.classList.add('hidden');return}
+  m.classList.add('open');
+  const d=MK[k];
+  md.innerHTML='<div class="mono">'+d.mono+'</div><h3>'+d.name+'</h3><div class="cols"><div><h6>The rails <span class="tag fact" style="vertical-align:1px">FACT</span></h6><ul>'+d.rails.map(r=>'<li>'+r+'</li>').join('')+'</ul></div><div><h6>What it means <span class="tag assess" style="vertical-align:1px">ASSESSMENT</span></h6><ul>'+d.means.map(r=>'<li>'+r+'</li>').join('')+'</ul><div class="sell">'+d.sell+'</div></div></div>';
+  md.classList.remove('hidden');
+  md.scrollIntoView({behavior:'smooth',block:'nearest'});
+}));
+</script>
+</body>
+</html>
