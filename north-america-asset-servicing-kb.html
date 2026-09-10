@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>North America Asset-Servicing Market — Competitive Intelligence & GTM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#0E1B2C; --ink2:#16283F; --ink3:#1E344F;
+  --paper:#F4F6F8; --card:#FFFFFF;
+  --gold:#C08A2D; --gold-soft:#F3E9D4;
+  --teal:#2C7A74; --teal-soft:#E2EFED;
+  --violet:#5B4A8A; --violet-soft:#E9E5F3;
+  --line:#D9DFE7; --muted:#5B6B7E; --text:#1B2735;
+  --danger:#A3462E; --danger-soft:#F5E4DD;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Public Sans',sans-serif;background:var(--paper);color:var(--text);font-size:15px;line-height:1.6}
+::selection{background:var(--gold-soft)}
+
+.shell{display:flex;min-height:100vh}
+.sidebar{width:268px;background:var(--ink);color:#C6D2E0;position:fixed;top:0;bottom:0;left:0;display:flex;flex-direction:column;z-index:50;overflow-y:auto}
+.sidebar::-webkit-scrollbar{width:4px}
+.sidebar::-webkit-scrollbar-thumb{background:var(--ink3)}
+.brand{padding:24px 22px 16px;border-bottom:1px solid var(--ink3)}
+.brand .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.22em;color:var(--gold);text-transform:uppercase}
+.brand h1{font-family:'Fraunces',serif;font-weight:400;font-size:19px;color:#fff;margin-top:6px;line-height:1.3}
+.brand .sub{font-size:11px;color:#8FA1B6;margin-top:8px;line-height:1.5}
+.railkey{display:flex;gap:10px;padding:10px 22px;border-bottom:1px solid var(--ink3);font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.06em}
+.railkey span{display:flex;align-items:center;gap:5px;color:#8FA1B6}
+.railkey i{width:8px;height:8px;border-radius:2px;display:inline-block}
+.nav{padding:12px 0 84px;flex:1}
+.nav .navlink{width:100%;text-align:left;background:none;border:none;cursor:pointer;font-family:inherit;display:flex;gap:12px;align-items:baseline;padding:8px 22px;color:#9FB0C4;text-decoration:none;font-size:12.5px;border-left:3px solid transparent;transition:all .18s}
+.nav .navlink .num{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#5B7089;min-width:20px}
+.nav .navlink:hover{color:#fff;background:var(--ink2)}
+.nav .navlink.active{color:#fff;border-left-color:var(--gold);background:var(--ink2)}
+.nav .navlink.active .num{color:var(--gold)}
+.nav .navgroup{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#4F637B;padding:14px 22px 5px}
+.keys{position:fixed;bottom:0;left:0;width:268px;background:var(--ink);border-top:1px solid var(--ink3);padding:11px 22px;font-size:10.5px;color:#6E8098}
+.keys kbd{font-family:'IBM Plex Mono',monospace;background:var(--ink3);border-radius:3px;padding:1px 6px;font-size:10px;color:#B8C6D6}
+
+.main{margin-left:268px;flex:1;min-width:0}
+.progress{position:fixed;top:0;left:268px;right:0;height:3px;z-index:60}
+.progress i{display:block;height:100%;width:0;background:var(--gold);transition:width .15s}
+
+section.slide{min-height:70vh;padding:60px 52px 68px;max-width:1120px;border-bottom:1px solid var(--line)}
+.kicker{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+h2.title{font-family:'Fraunces',serif;font-weight:400;font-size:34px;line-height:1.18;color:var(--ink);margin-bottom:8px;max-width:820px}
+.lede{font-size:16.5px;color:var(--muted);max-width:760px;margin-bottom:30px;line-height:1.65}
+.lede b{color:var(--text)}
+
+.tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.08em;padding:2px 8px;border-radius:3px;vertical-align:2px;margin-left:6px;white-space:nowrap}
+.tag.fact{background:var(--teal-soft);color:var(--teal)}
+.tag.calc{background:#E8ECF3;color:#4A5E78}
+.tag.assess{background:var(--gold-soft);color:#8A6420}
+.tag.gap{background:var(--danger-soft);color:var(--danger)}
+.tag.dlt{background:var(--teal-soft);color:var(--teal)}
+.tag.ai{background:var(--violet-soft);color:var(--violet)}
+.tag.conv{background:var(--gold-soft);color:#8A6420}
+
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:1fr 1fr 1fr}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 22px}
+.card h4{font-family:'Fraunces',serif;font-weight:600;font-size:16.5px;color:var(--ink);margin-bottom:8px}
+.card p{font-size:13.5px;color:var(--muted);line-height:1.6}
+.card.dlt{border-top:3px solid var(--teal)}
+.card.ai{border-top:3px solid var(--violet)}
+.card.conv{border-top:3px solid var(--gold)}
+
+.stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.stat .v{font-family:'Fraunces',serif;font-size:30px;font-weight:600;color:var(--ink);line-height:1.1}
+.stat .l{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.5}
+.stat .s{font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#93A2B4;margin-top:8px}
+
+table.tbl{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:13px}
+table.tbl th{background:var(--ink);color:#D8E1EC;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;text-align:left;padding:11px 14px;font-weight:500}
+table.tbl td{padding:11px 14px;border-top:1px solid var(--line);vertical-align:top;color:var(--text)}
+table.tbl td.mono{font-family:'IBM Plex Mono',monospace;font-size:12px}
+table.tbl tr:hover td{background:#FAFBFC}
+.dim{color:var(--muted)}
+
+.pillrow{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 22px}
+.pill{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:20px;padding:7px 16px;cursor:pointer;transition:all .15s}
+.pill:hover{border-color:var(--gold);color:var(--ink)}
+.pill.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+.note{border-left:3px solid var(--gold);background:var(--gold-soft);border-radius:0 8px 8px 0;padding:14px 18px;font-size:13.5px;color:#5C4A24;margin:22px 0;max-width:820px}
+.note.red{border-left-color:var(--danger);background:var(--danger-soft);color:#6E3A2A}
+.note.teal{border-left-color:var(--teal);background:var(--teal-soft);color:#23504B}
+.note.violet{border-left-color:var(--violet);background:var(--violet-soft);color:#453969}
+.note b{font-weight:700}
+
+.hidden{display:none!important}
+
+/* hero */
+.hero{background:var(--ink);color:#C6D2E0;border-bottom:none;position:relative;overflow:hidden}
+.hero .kicker{color:var(--gold)}
+.hero h2.title{color:#fff;font-size:44px;max-width:900px}
+.hero .lede{color:#9FB0C4;max-width:780px}
+.rails{position:absolute;right:-40px;top:40px;width:420px;opacity:.5;pointer-events:none}
+.hero .stat{background:var(--ink2);border-color:var(--ink3)}
+.hero .stat .v{color:#fff}.hero .stat .l{color:#8FA1B6}.hero .stat .s{color:#5B7089}
+.bigbtn{display:inline-block;margin-top:26px;background:var(--gold);color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:14px 26px;border-radius:6px;border:none;cursor:pointer;font-weight:600;transition:transform .15s}
+.bigbtn:hover{transform:translateY(-2px)}
+
+/* value chain */
+.chainrow{display:flex;align-items:stretch;gap:0;margin:20px 0}
+.chainstep{flex:1;background:var(--card);border:1px solid var(--line);padding:13px 10px;text-align:center;font-size:12px;position:relative;cursor:pointer;transition:all .15s}
+.chainstep:first-child{border-radius:8px 0 0 8px}.chainstep:last-child{border-radius:0 8px 8px 0}
+.chainstep+.chainstep{border-left:none}
+.chainstep b{display:block;font-family:'Fraunces',serif;font-size:13.5px;color:var(--ink);margin-bottom:3px}
+.chainstep span{color:var(--muted);font-size:11px}
+.chainstep.sel{background:var(--ink);border-color:var(--ink)}
+.chainstep.sel b{color:#fff}.chainstep.sel span{color:#9FB0C4}
+.beforeafter{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:18px}
+.ba{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.ba h5{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
+.ba.today h5{color:var(--muted)}
+.ba.dltl{border-top:3px solid var(--teal)}.ba.dltl h5{color:var(--teal)}
+.ba.ail{border-top:3px solid var(--violet)}.ba.ail h5{color:var(--violet)}
+.ba ul{list-style:none}
+.ba li{font-size:13px;color:var(--text);padding:5px 0 5px 16px;position:relative;line-height:1.5}
+.ba li:before{content:"—";position:absolute;left:0;color:var(--line)}
+.ba.dltl li:before{color:var(--teal)}.ba.ail li:before{color:var(--violet)}
+
+/* market cards */
+.mkgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.mk{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 22px;cursor:pointer;transition:all .18s;position:relative}
+.mk:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 6px 18px rgba(14,27,44,.08)}
+.mk.open{border-color:var(--ink);box-shadow:0 6px 18px rgba(14,27,44,.10)}
+.mk .flag{font-size:22px}
+.mk h4{font-family:'Fraunces',serif;font-size:17px;font-weight:600;color:var(--ink);margin:6px 0 2px}
+.mk .stage{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.mk .stage.live{color:var(--teal)}.mk .stage.pilot{color:var(--gold)}.mk .stage.frame{color:var(--violet)}
+.mk p{font-size:12.5px;color:var(--muted);margin-top:8px;line-height:1.55}
+.mkdetail{background:var(--ink);color:#C6D2E0;border-radius:12px;padding:26px 30px;margin-top:18px}
+.mkdetail h3{font-family:'Fraunces',serif;font-weight:400;font-size:24px;color:#fff;margin-bottom:4px}
+.mkdetail .mono{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.mkdetail .cols{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:16px}
+.mkdetail h6{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#7E92A9;margin:12px 0 7px}
+.mkdetail ul{list-style:none}
+.mkdetail li{font-size:13px;padding:4px 0 4px 16px;position:relative;line-height:1.55;color:#C6D2E0}
+.mkdetail li:before{content:"—";position:absolute;left:0;color:var(--gold)}
+.mkdetail .sell{background:var(--ink2);border:1px solid var(--ink3);border-radius:8px;padding:14px 16px;margin-top:14px;font-size:13px}
+.mkdetail .sell b{color:var(--gold)}
+
+/* heatmap */
+.heat{width:100%;border-collapse:collapse;font-size:12.5px;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.heat th{background:var(--ink);color:#D8E1EC;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;padding:10px 10px;font-weight:500}
+.heat td{border-top:1px solid var(--line);padding:10px;text-align:center}
+.heat td.rowh{text-align:left;font-weight:600;color:var(--ink);font-size:12.5px}
+.hcell{display:inline-block;min-width:64px;padding:4px 8px;border-radius:4px;font-family:'IBM Plex Mono',monospace;font-size:10.5px}
+.h3v{background:var(--violet);color:#fff}.h2v{background:var(--violet-soft);color:var(--violet)}
+.h3t{background:var(--teal);color:#fff}.h2t{background:var(--teal-soft);color:var(--teal)}
+.h1{background:#EEF1F5;color:#8794A5}
+
+/* bars */
+.barwrap{margin:8px 0 4px}
+.barrow{display:flex;align-items:center;gap:12px;margin:9px 0}
+.barrow .bl{width:220px;font-size:12.5px;color:var(--text);text-align:right;flex-shrink:0}
+.barrow .track{flex:1;background:#E9EDF2;border-radius:4px;height:22px;position:relative;overflow:hidden}
+.barrow .fill{height:100%;border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#fff;min-width:36px;transition:width .8s ease}
+.f-teal{background:var(--teal)}.f-gold{background:var(--gold)}.f-violet{background:var(--violet)}.f-ink{background:var(--ink3)}
+
+/* timeline */
+.tl{position:relative;margin:26px 0;padding-left:26px;border-left:2px solid var(--line);max-width:860px}
+.tl .ev{position:relative;margin-bottom:22px}
+.tl .ev:before{content:"";position:absolute;left:-33px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--card);border:3px solid var(--gold)}
+.tl .ev.t:before{border-color:var(--teal)}
+.tl .ev.v:before{border-color:var(--violet)}
+.tl .d{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:.08em}
+.tl .ev.t .d{color:var(--teal)}.tl .ev.v .d{color:var(--violet)}
+.tl h5{font-family:'Fraunces',serif;font-size:16px;font-weight:600;color:var(--ink);margin:2px 0 3px}
+.tl p{font-size:13px;color:var(--muted);max-width:720px}
+.tl .so{font-size:12.5px;color:var(--text);margin-top:4px}
+.tl .so b{color:var(--teal)}
+
+/* play cards */
+.play{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px 24px;margin-bottom:14px;cursor:pointer;transition:border-color .15s}
+.play:hover{border-color:var(--gold)}
+.play .top{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
+.play h4{font-family:'Fraunces',serif;font-size:18px;font-weight:600;color:var(--ink)}
+.play .meta{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted)}
+.play .body{display:none;margin-top:14px;border-top:1px solid var(--line);padding-top:14px}
+.play.open .body{display:block}
+.play .body .row{display:grid;grid-template-columns:150px 1fr;gap:10px;font-size:13.5px;padding:5px 0}
+.play .body .row b{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:2px}
+
+/* segment engine */
+.seg{display:none}
+.seg.on{display:block}
+.flow{display:grid;grid-template-columns:1fr 42px 1fr 42px 1fr;align-items:stretch;gap:0;margin:16px 0}
+.flow .fbox{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.flow .fbox h6{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.flow .fbox.pain h6{color:var(--danger)}
+.flow .fbox.dltb{border-top:3px solid var(--teal)}.flow .fbox.dltb h6{color:var(--teal)}
+.flow .fbox.aib{border-top:3px solid var(--violet)}.flow .fbox.aib h6{color:var(--violet)}
+.flow ul{list-style:none}
+.flow li{font-size:12.5px;padding:4px 0 4px 14px;position:relative;line-height:1.5;color:var(--text)}
+.flow li:before{content:"—";position:absolute;left:0;color:var(--line)}
+.flow .arr{display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:20px}
+.mandate{background:var(--ink);color:#C6D2E0;border-radius:10px;padding:18px 22px;margin-top:14px;font-size:13.5px}
+.mandate b{color:var(--gold)}
+.mandate .mono{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#7E92A9;display:block;margin-bottom:6px}
+
+/* sources */
+.srcs{columns:2;column-gap:34px;font-size:12.5px}
+.srcs .s{break-inside:avoid;padding:8px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+.srcs .s b{color:var(--ink);font-weight:600}
+.srcs a{color:var(--teal);text-decoration:none;word-break:break-all}
+.srcs a:hover{text-decoration:underline}
+
+footer{padding:34px 52px;color:var(--muted);font-size:12px;max-width:1120px}
+
+@media (max-width:1080px){
+  .sidebar{display:none}.main{margin-left:0}.progress{left:0}.keys{display:none}
+  section.slide{padding:44px 22px 52px}
+  .g2,.g3,.g4,.mkgrid,.beforeafter{grid-template-columns:1fr}
+  .mkdetail .cols{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr}
+  .flow .arr{transform:rotate(90deg);padding:6px 0}
+  .hero h2.title{font-size:32px}
+  .srcs{columns:1}
+  .chainrow{flex-wrap:wrap}
+  .chainstep{min-width:46%}
+  .barrow .bl{width:130px;font-size:11px}
+}
+
+/* home nav (injected) */
+.homelink{display:inline-flex;align-items:center;gap:7px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#C08A2D;text-decoration:none;margin-bottom:10px;border:1px solid rgba(192,138,45,.35);border-radius:5px;padding:5px 10px;transition:all .15s}
+.homelink:hover{background:#C08A2D;color:#0E1B2C}
+.homefab{display:none;position:fixed;bottom:18px;right:18px;z-index:90;background:#0E1B2C;color:#E0B565;border:1px solid rgba(192,138,45,.55);border-radius:24px;padding:11px 18px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+@media (max-width:1080px){.homefab{display:inline-flex;align-items:center;gap:6px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar">
+  <div class="brand">
+    <a class="homelink" href="index.html">&#8598; Command Centre</a>
+    <div class="eyebrow">Companion Module · North America KB</div>
+    <h1>North America<br>Asset Servicing</h1>
+    <div class="sub">Competitive intelligence & GTM for the US + Canada custody, fund-administration and transfer-agency market. Prepared for the MD, Regional Head of Sales, North America. Data as of Sep 2026.</div>
+  </div>
+  <div class="railkey">
+    <span><i style="background:var(--teal)"></i>DLT</span>
+    <span><i style="background:var(--violet)"></i>AI</span>
+    <span><i style="background:var(--gold)"></i>Custody</span>
+  </div>
+  <nav class="nav" id="nav">
+    <div class="navgroup">The Market</div>
+    <a class="navlink" href="#s01"><span class="num">01</span>Market Sizing</a>
+    <a class="navlink" href="#s02"><span class="num">02</span>Custody Landscape</a>
+    <a class="navlink" href="#s03"><span class="num">03</span>Fund Administration</a>
+    <a class="navlink" href="#s04"><span class="num">04</span>Regulatory</a>
+    <div class="navgroup">The Shift</div>
+    <a class="navlink" href="#s05"><span class="num">05</span>Tokenisation & DLT</a>
+    <a class="navlink" href="#s06"><span class="num">06</span>AI & Operations</a>
+    <a class="navlink" href="#s07"><span class="num">07</span>ETF Market</a>
+    <a class="navlink" href="#s08"><span class="num">08</span>Buyer Maps</a>
+    <div class="navgroup">The Plays</div>
+    <a class="navlink" href="#s09"><span class="num">09</span>Competitive Intelligence</a>
+    <a class="navlink" href="#s10"><span class="num">10</span>Six GTM Plays</a>
+    <a class="navlink" href="#s11"><span class="num">11</span>Risks & Caveats</a>
+    <a class="navlink" href="#s12"><span class="num">12</span>Source Library</a>
+  </nav>
+</aside>
+<div class="main">
+<div class="progress"><i id="pbar"></i></div>
+<section class="slide hero" id="s01">
+  <div class="kicker">01 · Market Sizing — US + Canada</div>
+  <h2 class="title">The deepest pool of investable assets on earth &mdash; and the most contested custody market.</h2>
+  <p class="lede">North America holds the world&rsquo;s largest concentration of fund assets, retirement capital and alternatives &mdash; safeguarded by four custodians whose combined $180T of AUC/A exceeds global annual GDP. <b style="color:#7FC7C0">The prize is scale.</b> <b style="color:#B3A5DB">The battleground is technology.</b> BNY leads, State Street is closing the gap, and every mandate now turns on front-to-back platforms, AI-driven ops and digital-asset readiness.</p>
+  <div class="grid g4" style="margin-top:26px">
+    <div class="stat"><div class="v">$39.2T</div><div class="l">US-registered investment-company net assets at year-end 2024 <span class="tag fact">FACT</span></div><div class="s">ICI 2025 Investment Company Fact Book, Ch. 2</div></div>
+    <div class="stat"><div class="v">$49.1T</div><div class="l">Total US retirement assets, year-end 2025 (up from $45.1T YE2024) <span class="tag fact">FACT</span></div><div class="s">ICI Quarterly Retirement Market Data Q4 2025</div></div>
+    <div class="stat"><div class="v">$15.7T</div><div class="l">US ETF AUM as of May 2026, up from $10.3T at YE2024 <span class="tag fact">FACT</span></div><div class="s">ETFGI; ICI Fact Book 2025 Ch.4</div></div>
+    <div class="stat"><div class="v">$180T</div><div class="l">Combined AUC/A of the world&rsquo;s four largest custodians (BNY, State Street, JPMorgan, Citi) <span class="tag fact">FACT</span></div><div class="s">Global Custodian, &ldquo;A new era of custody&rdquo; (Jan 2026)</div></div>
+  </div>
+  <div class="note teal" style="margin-top:28px;background:#16283F;border-left-color:var(--gold);color:#C6D2E0"><b style="color:var(--gold)">The sales thesis in one line:</b> North America is a market where the leaders are so large that share moves one basis point at a time &mdash; except when an operating-model shift forces a re-platforming decision. T+1, the pending SEC Safeguarding Rule, tokenised-fund issuance and agentic-AI ops are four such shifts landing simultaneously, and each one is a mandate trigger.</div>
+  <button class="bigbtn" onclick="document.getElementById('s10').scrollIntoView({behavior:'smooth'})">Show me the six GTM plays &rarr;</button>
+</section>
+<section class="slide" id="s01b">
+  <div class="kicker">01 · Market Sizing — Fund Industry Breakdown</div>
+  <h2 class="title">Where the $39.2T actually sits.</h2>
+  <p class="lede">Registered investment companies, retirement assets, pensions and alternatives &mdash; the components that custody, fund-administration and TA providers compete to service. Figures year-end 2024 unless noted.</p>
+  <table class="tbl" style="margin-top:8px">
+    <tr><th>Segment</th><th>Total Net Assets</th><th># Funds</th><th>Label</th></tr>
+    <tr><td><b>Mutual Funds</b></td><td class="mono">$28.5T</td><td>8,355</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td><b>ETFs</b></td><td class="mono">$10.3T</td><td>3,882</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>Closed-End Funds</td><td class="mono">~$279B (est.)</td><td>&mdash;</td><td><span class="tag gap">DATA GAP</span></td></tr>
+    <tr><td>UITs</td><td class="mono">~$90B (est.)</td><td>3,719</td><td><span class="tag gap">DATA GAP</span></td></tr>
+    <tr><td><b>Total Registered Investment Companies</b></td><td class="mono"><b>$39.2T</b></td><td>16,338</td><td><span class="tag fact">FACT</span></td></tr>
+  </table>
+  <div class="grid g4" style="margin-top:20px">
+    <div class="stat"><div class="v">$23.5T</div><div class="l">Equity funds &mdash; 60% of all investment-company assets</div><div class="s">ICI Fact Book 2025</div></div>
+    <div class="stat"><div class="v">$7.0T</div><div class="l">Bond funds &mdash; 18% of total</div><div class="s">ICI Fact Book 2025</div></div>
+    <div class="stat"><div class="v">$6.9T</div><div class="l">Money-market funds &mdash; 24% of MF net assets</div><div class="s">ICI Fact Book 2025</div></div>
+    <div class="stat"><div class="v">56%</div><div class="l">US households owning funds &mdash; 74M households / 125M+ investors</div><div class="s">ICI Fact Book 2025</div></div>
+  </div>
+  <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:18px;color:var(--ink);margin:30px 0 10px">US Retirement Market (YE2024 / YE2025)</h3>
+  <table class="tbl">
+    <tr><th>Category</th><th>Assets</th><th>As of</th><th>Label</th></tr>
+    <tr><td><b>Total US Retirement Assets</b></td><td class="mono">$45.1T &rarr; $49.1T</td><td>Dec 2024 / Dec 2025</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>IRAs</td><td class="mono">$16.2T &rarr; $19.2T</td><td>Jun 2024 / Dec 2025</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>DC Plans (total)</td><td class="mono">$14.2T</td><td>Dec 2025</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>401(k) Plans</td><td class="mono">$8.9T &rarr; $10.1T</td><td>Dec 2024 / Dec 2025</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>Government DB Plans (federal, state, local)</td><td class="mono">$10.0T</td><td>Dec 2025</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>Private-sector DB Plans</td><td class="mono">$3.1T</td><td>Dec 2025</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>Retirement as % of household financial assets</td><td class="mono">34%</td><td>Dec 2025</td><td><span class="tag fact">FACT</span></td></tr>
+  </table>
+  <div class="note"><b>Source:</b> ICI 2025 Investment Company Fact Book Ch. 2 & 3 (mutual funds $28.5T, ETFs $10.3T; record ETF net issuance $1.1T in 2024); ICI Quarterly Retirement Market Data Q4 2025; CRS Report IF13193/IF13194. <span class="tag fact">FACT</span></div>
+</section>
+<section class="slide" id="s01c">
+  <div class="kicker">01 · Market Sizing — Pensions, Canada & Alternatives</div>
+  <h2 class="title">Pension giants, a Canadian mirror, and the alternatives engine.</h2>
+  <p class="lede">Public pensions are flagship custody and securities-lending mandates; Canadian funds are a parallel ~$2.76T market served by the same Big 4; and North America hosts 57% of global private-capital AUM.</p>
+  <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:18px;color:var(--ink);margin:0 0 10px">Key US Public Pension Funds</h3>
+  <table class="tbl">
+    <tr><th>Pension Fund</th><th>Net Assets</th><th>FY Return</th><th>As of</th><th>Label</th></tr>
+    <tr><td><b>CalPERS</b> (largest US DB public pension)</td><td class="mono">$506.6B &rarr; $563.0B</td><td>9.3% / 11.6%</td><td>Jun 30, 2024 / 2025</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td><b>CalSTRS</b> (largest educator-only pension globally)</td><td class="mono">$343.5B</td><td>8.4%</td><td>Jun 30, 2024</td><td><span class="tag fact">FACT</span></td></tr>
+  </table>
+  <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:18px;color:var(--ink);margin:24px 0 10px">Canadian Fund Industry (YE2024)</h3>
+  <table class="tbl">
+    <tr><th>Segment</th><th>AUM (CAD)</th><th>2024 Growth</th><th>Label</th></tr>
+    <tr><td>Canadian Mutual Funds (IFIC)</td><td class="mono">$2.242T</td><td>+15.7% ($303.7B)</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>Canadian ETFs (IFIC) &mdash; all-time high</td><td class="mono">$518B</td><td>+35.5% ($135.6B)</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td><b>Canadian MF + ETF combined</b></td><td class="mono">~$2.76T</td><td>Record annual growth</td><td><span class="tag calc">CALCULATED</span></td></tr>
+    <tr><td>Alternative MFs / ETFs</td><td class="mono">$28.4B / $19.3B</td><td>&mdash;</td><td><span class="tag fact">FACT</span></td></tr>
+  </table>
+  <div class="grid g2" style="margin-top:20px">
+    <div class="stat"><div class="v">$473.3B</div><div class="l">CDPQ (Caisse de d&eacute;p&ocirc;t et placement du Qu&eacute;bec) net assets, 9.4% return, Dec 31 2024 <span class="tag fact">FACT</span></div><div class="s">lacaisse.com</div></div>
+    <div class="stat"><div class="v">$279.4B</div><div class="l">OTPP (Ontario Teachers&rsquo;) net assets, 6.7% return (2025), Dec 31 2025 <span class="tag fact">FACT</span></div><div class="s">otpp.com</div></div>
+  </div>
+  <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:18px;color:var(--ink);margin:24px 0 10px">US Alternatives (Hedge Funds + Private Capital)</h3>
+  <table class="tbl">
+    <tr><th>Category</th><th>AUM</th><th>Notes</th><th>Label</th></tr>
+    <tr><td><b>North America Private Capital AUM</b></td><td class="mono">$7.7T</td><td>57% of global private-capital AUM (Jun 2023)</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>Global Hedge Fund AUM</td><td class="mono">$4.9T</td><td>+8% YTD; 10% return to Q3 2024</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>North America Hedge Fund AUM</td><td class="mono">~$3.95T</td><td>~81% of global hedge-fund AUM</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td><b>NA Alternatives (incl. hedge funds)</b></td><td class="mono">~62% of global</td><td>NA consolidating alternatives share</td><td><span class="tag fact">FACT</span></td></tr>
+  </table>
+  <div class="grid g2" style="margin-top:20px">
+    <div class="stat"><div class="v">~$60T+</div><div class="l">Estimated total US + Canada investable fund assets (registered funds + pensions + alternatives). Significant overlap between retirement assets and fund AUM. <span class="tag calc">CALCULATED</span></div><div class="s">Aggregated from ICI, IFIC, Preqin</div></div>
+    <div class="stat"><div class="v">$7.7T</div><div class="l">NA private-capital AUM &mdash; the fastest-growing servicing segment; CalPERS is raising its private-assets target from 33%&rarr;40% <span class="tag fact">FACT</span></div><div class="s">Preqin 2024; CalPERS</div></div>
+  </div>
+  <div class="note"><b>Sources:</b> CalPERS FY2024 ACFR & Facts at a Glance FY2024-25; CalSTRS FY2023-24; CDPQ 2024 results; OTPP 2024/2025 results; IFIC 2024 Investment Funds Report; Preqin Alternatives in North America 2024 & 2025 Global Report: Hedge Funds. <span class="tag fact">FACT</span></div>
+</section>
+<section class="slide" id="s02">
+  <div class="kicker">02 · Custody Landscape</div>
+  <h2 class="title">BNY leads. State Street is closing the gap. Citi and JPMorgan are growing fastest.</h2>
+  <p class="lede">The world&rsquo;s four largest custodians safeguard $180T of AUC/A. State Street has cut BNY&rsquo;s lead by 30% in a single year, while Citi (+22% YoY) and JPMorgan (+18% YoY) posted the strongest growth. The race is no longer about safekeeping &mdash; it is about platforms, data and digital-asset readiness.</p>
+  <table class="tbl" style="margin-top:8px">
+    <tr><th>Rank</th><th>Custodian</th><th>AUC/A Q4 2024</th><th>AUC/A Q2 2026</th><th>YoY Growth</th><th>Label</th></tr>
+    <tr><td>1</td><td><b>BNY</b></td><td class="mono">$52.1T</td><td class="mono">$62.6T</td><td class="mono">+12%</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>2</td><td><b>State Street</b></td><td class="mono">$46.6T</td><td class="mono">$58.0T</td><td class="mono">+18%</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>3</td><td><b>JPMorgan</b></td><td class="mono">$35.3T</td><td class="mono">$44.9T</td><td class="mono">+18%</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>4</td><td><b>Citi</b></td><td class="mono">$25.0T</td><td class="mono">$34.5T</td><td class="mono">+22%</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>5</td><td><b>Northern Trust</b></td><td class="mono">$16.8T</td><td class="mono">&mdash;</td><td class="mono">+9% (FY24)</td><td><span class="tag fact">FACT</span></td></tr>
+  </table>
+  <div class="grid g2" style="margin-top:20px">
+    <div class="card dlt"><h4>State Street closing the gap <span class="tag dlt">SHIFT</span></h4><p>State Street has cut BNY&rsquo;s AUC/A lead by <b>30% over the past year</b>. The gap stood at ~$5.5T (BNY $52.1T vs STT $46.6T at YE2024) and is compressing as State Street&rsquo;s +18% YoY outpaces BNY&rsquo;s +12% YoY. Citi and JPMorgan posted the largest annual growth on a percentage basis. <span class="tag fact">FACT</span></p></div>
+    <div class="card ai"><h4>Why the leaders are pulling away <span class="tag ai">AI</span></h4><p>The top four are converting scale into technology: State Street Alpha ($380B of Q2-2025 wins), BNY Eliza (125+ AI solutions), Citi Custody+ (real-time SEP). Mid-tier custodians without platform/AI investment are losing share &mdash; 8 consecutive quarters of collective AUC/A growth among the top 10. <span class="tag assess">ASSESSMENT</span></p></div>
+  </div>
+  <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:18px;color:var(--ink);margin:24px 0 10px">Securities Services Fee Revenue (Q4 2024 / FY2024)</h3>
+  <table class="tbl">
+    <tr><th>Custodian</th><th>Sec. Services Revenue (Q4)</th><th>FY Revenue</th><th>YoY Growth</th><th>Label</th></tr>
+    <tr><td><b>BNY</b> (Asset Servicing fees)</td><td class="mono">~$1.4B</td><td>$18.6B total revenue</td><td>+11% total</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td><b>JPMorgan</b> (Securities Services)</td><td class="mono">$1.3B</td><td>&mdash;</td><td>+10%</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td><b>Citi</b> (Securities Services)</td><td class="mono">$1.2B</td><td>&mdash;</td><td>+15%</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td><b>State Street</b> (Servicing fees)</td><td class="mono">~$1.4B</td><td>&mdash;</td><td>+11%</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td><b>Northern Trust</b> (Custody & fund admin)</td><td class="mono">&mdash;</td><td>&mdash;</td><td>+9% (AUC/A)</td><td><span class="tag fact">FACT</span></td></tr>
+  </table>
+  <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:18px;color:var(--ink);margin:24px 0 10px">Canadian Custody Players</h3>
+  <table class="tbl">
+    <tr><th>Player</th><th>Model</th><th>Notes</th><th>Label</th></tr>
+    <tr><td><b>CIBC Mellon</b> (BNY JV with CIBC)</td><td>Joint venture</td><td>$1.8T AUC/A at Dec 31 2024; $1.9T at Mar 31 2025</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td><b>RBC Investor Services</b></td><td>Bank-owned</td><td>European asset-servicing parts sold to CACEIS (2022); retains Canadian ops</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td><b>BMO Global Asset Management</b></td><td>Bank-owned</td><td>Asset management + fund services; BMO AM is a State Street Alpha client</td><td><span class="tag fact">FACT</span></td></tr>
+  </table>
+  <div class="note red"><b>The uncomfortable read:</b> scale is winning. Deutsche Bank wound down custody; Soci&eacute;t&eacute; G&eacute;n&eacute;rale declining; Wells Fargo at #15 (&minus;0.7% YoY). Industry consolidation is driving business to the largest custodians &mdash; &ldquo;scale is going to win.&rdquo; A non-platform player without AI or digital-asset capability is structurally disadvantaged in this market. <span class="tag assess">ASSESSMENT</span></div>
+</section>
+<section class="slide" id="s03">
+  <div class="kicker">03 · Fund Administration</div>
+  <h2 class="title">TA, fund accounting and the DTCC backbone &mdash; a concentrated, plumbing-heavy market.</h2>
+  <p class="lede">The US mutual-fund TA/subaccounting market is dominated by SS&C (70.3%) and BNY (16.9%); DTCC&rsquo;s depository holds ~$87T in securities; and State Street is the #1 ETF servicer globally. These are the rails every fund launch and every ETF creation/redemption depends on.</p>
+  <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:18px;color:var(--ink);margin:0 0 10px">Transfer Agency &mdash; US Mutual Fund Subaccounting (2024)</h3>
+  <table class="tbl">
+    <tr><th>TA Platform</th><th>System</th><th>% of Accounts Processed</th><th>Label</th></tr>
+    <tr><td><b>SS&C (DST)</b></td><td>SS&C GlobeOp / TA2000</td><td class="mono">~70.3%</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td><b>BNY Mellon</b></td><td>SuRPAS</td><td class="mono">~16.9%</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>FIS (Sungard)</td><td>InvestOne</td><td class="mono">~8.1%</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>Envision Financial</td><td>Power Agent</td><td class="mono">~4.3%</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>Delta Data</td><td>Phoenix</td><td class="mono">~0.2%</td><td><span class="tag fact">FACT</span></td></tr>
+  </table>
+  <div class="note"><b>Note:</b> Excludes Vanguard and Fidelity, which self-administer >60% of total mutual-fund accounts. <span class="tag fact">FACT</span></div>
+  <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:18px;color:var(--ink);margin:24px 0 10px">BNY &mdash; Largest US Third-Party Subaccounting Provider</h3>
+  <div class="grid g4">
+    <div class="stat"><div class="v">7.6M+</div><div class="l">Investor accounts</div><div class="s">BNY TA Platform</div></div>
+    <div class="stat"><div class="v">160M+</div><div class="l">Active positions</div><div class="s">BNY TA Platform</div></div>
+    <div class="stat"><div class="v">$31.2T</div><div class="l">Platform AUA</div><div class="s">BNY TA Platform</div></div>
+    <div class="stat"><div class="v">35</div><div class="l">Countries; 14 ops centres; 2,000+ experts</div><div class="s">BNY TA Platform</div></div>
+  </div>
+  <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:18px;color:var(--ink);margin:24px 0 10px">DTCC&rsquo;s Role &mdash; the Post-Trade Backbone</h3>
+  <div class="grid g2">
+    <div class="card"><h4>DTCC infrastructure</h4><p><b>DTCC</b> (Depository Trust & Clearing Corporation): premier post-trade market infrastructure, industry-owned and governed. <b>DTC</b> (Depository Trust Company): CSD providing custody and asset servicing for securities from 177 countries/territories. <b>NSCC</b> (National Securities Clearing Corporation): central counterparty for virtually all broker-to-broker equity, corporate-debt and municipal-debt trades. <span class="tag fact">FACT</span></p></div>
+    <div class="card dlt"><h4>Scale & settlement link</h4><p>DTCC depository custody value: <b>~$87T</b> in securities; processed ~$2.4 quadrillion in securities transactions (2021 figure). <b>BNY serves as a DTCC settlement bank</b> for NSCC transactions, linking custody and transfer agency into the core clearing loop. <span class="tag fact">FACT</span></p></div>
+  </div>
+  <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:18px;color:var(--ink);margin:24px 0 10px">Fund Administration Players</h3>
+  <table class="tbl">
+    <tr><th>Provider</th><th>Role / Strength</th><th>Label</th></tr>
+    <tr><td><b>BNY</b></td><td>Largest US TA/subaccounting; integrated custody + TA + fund accounting; $37.7T Asset Servicing AUC/A (YE2024 segment)</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td><b>State Street</b></td><td>Fund admin + custody; ETF servicing (#1 ETF servicer); Alpha front-to-back platform</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td><b>SS&C</b></td><td>Largest third-party fund-admin TA platform (DST/TA2000 ~70% of subaccounting); SS&C GlobeOp</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td><b>Northern Trust</b></td><td>Fund admin + custody; $15.6T Asset Servicing AUC/A; strong in pension/endowment</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td><b>JPMorgan</b></td><td>Securities Services; fund services across alternatives, ETFs</td><td><span class="tag fact">FACT</span></td></tr>
+  </table>
+  <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:18px;color:var(--ink);margin:24px 0 10px">ETF Servicing Dynamics</h3>
+  <div class="grid g2">
+    <div class="card dlt"><h4>State Street &mdash; #1 ETF servicer</h4><p>Full suite: custody, cash, fund accounting, transfer agency, ETF basket services, electronic order taking. Also #1 in digital-asset ETF servicing (Bitcoin/Ethereum ETFs). Creation/redemption runs through the NSCC ETF system; T+1 since May 2024. <span class="tag fact">FACT</span></p></div>
+    <div class="card ai"><h4>The creation/redemption loop</h4><p>Authorized Participants (APs) create/redeem ETF shares directly with the fund &mdash; they are the key buyers of ETF servicing infrastructure. Citi added $425B in assets under administration to its ETF platform (2021&ndash;2023). <span class="tag assess">ASSESSMENT</span></p></div>
+  </div>
+</section>
+<section class="slide" id="s04">
+  <div class="kicker">04 · Regulatory Landscape</div>
+  <h2 class="title">A custody rule still pending, T+1 live, and a crypto framework now open for banks.</h2>
+  <p class="lede">The SEC Safeguarding Rule remains <b>proposed, not finalised</b> &mdash; the single biggest source of structural uncertainty. T+1 has been live since May 2024. And the 2025 regulatory shift (SAB 121 rescinded, OCC IL 1184, GENIUS Act) has opened the door for bank digital-asset custody. Each date below is a sales trigger.</p>
+  <div class="grid g2" style="margin-top:8px">
+    <div class="card"><h4>SEC Safeguarding Rule <span class="tag assess">PROPOSED</span></h4><p>Proposed Feb 15, 2023 (Rule 223-1) to replace the custody rule (Rule 206(4)-2) under the Investment Advisers Act. Expands scope from &ldquo;funds and securities&rdquo; to <b>all client assets</b> (crypto, real estate, derivatives). Requires written adviser-custodian agreements, defines &ldquo;possession or control,&rdquo; comment period reopened to Oct 30, 2023. <b>Status as of Sep 2026: NOT YET FINALISED.</b> If adopted: &ge;$1B RAUM advisers get 12 months; others 18 months. <span class="tag fact">FACT</span></p></div>
+    <div class="card dlt"><h4>DTCC T+1 Settlement <span class="tag fact">LIVE</span></h4><p><b>May 28, 2024</b> &mdash; US transitioned from T+2 to T+1 for most broker-dealer transactions in cash equities, corporate debt and UITs. Canada transitioned May 27, 2024. New Rule 15c6-2 requires allocations, confirmations and affirmations (ACA) by end of trade date. Impact: compressed timelines for corporate actions, FX, reconciliation; cover/protect period shortened from 2 to 1 business day. <span class="tag fact">FACT</span></p></div>
+  </div>
+  <div class="grid g3" style="margin-top:16px">
+    <div class="card dlt"><h4>OCC Digital-Asset Custody <span class="tag dlt">DLT</span></h4><p><b>IL 1170</b> (Jul 2020): national banks may provide crypto custody. <b>IL 1183</b> (2025) reaffirmed. <b>IL 1184</b> (May 7, 2025): banks may buy/sell assets held in custody at customer direction and outsource crypto activities subject to risk management. Joint OCC/Fed/FDIC statement (2025): &ldquo;Crypto-Asset Safekeeping by Banking Organizations.&rdquo; <span class="tag fact">FACT</span></p></div>
+    <div class="card conv"><h4>SAB 121 rescinded & GENIUS Act <span class="tag conv">SHIFT</span></h4><p><b>SAB 121 rescinded (Jan 2025)</b>: removed the accounting barrier that kept custodied crypto on banks&rsquo; balance sheets. <b>GENIUS Act (Jul 2025)</b>: federal standards for stablecoin reserves enacted. Together they cleared the path for bank digital-asset custody. <span class="tag fact">FACT</span></p></div>
+    <div class="card ai"><h4>SEC Crypto / AI stance <span class="tag ai">AI</span></h4><p>2025 shift: new SEC leadership rescinded SAB 121, dropped crypto enforcement actions. Spot Bitcoin ETFs approved (Jan 2024); spot Ethereum ETFs (Jul 2024). SEC proposed AI conflicts-of-interest rule (2023) &mdash; finalisation status uncertain. FINRA AI/ML guidance on supervisory systems, algo trading, communications. <span class="tag gap">DATA GAP</span></p></div>
+  </div>
+  <div class="note teal"><b>The BENJI precedent &mdash; a category opener:</b> On Aug 12, 2026 the SEC Division of Investment Management issued a <b>no-action letter</b> allowing Franklin Templeton&rsquo;s registered funds (mutual funds/ETFs) to hold FOBXX/BENJI tokenised money-market-fund shares for cash management and securities-lending collateral. The relief waives Rule 17f-2 physical-vault provisions, subject to 12 conditions (segregated wallets, daily reconciliation, board approval, 3 annual accountant verifications). This is the first formal SEC accommodation for tokenised-fund custody inside registered vehicles. <span class="tag fact">FACT</span></div>
+  <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:18px;color:var(--ink);margin:24px 0 10px">Key Compliance Deadlines 2024&ndash;2027</h3>
+  <table class="tbl">
+    <tr><th>Date</th><th>Regulation</th><th>Status</th><th>Label</th></tr>
+    <tr><td class="mono">May 28, 2024</td><td>T+1 Settlement (SEC Rule 15c6-1)</td><td>Implemented</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td class="mono">Jan 2025</td><td>SAB 121 rescinded</td><td>Rescinded</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td class="mono">May 7, 2025</td><td>OCC IL 1184 (crypto custody + execution)</td><td>Issued</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td class="mono">Jul 2025</td><td>GENIUS Act (stablecoin reserves)</td><td>Enacted</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td class="mono">Aug 12, 2026</td><td>SEC no-action letter: Franklin BENJI/FOBXX</td><td>Issued</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td class="mono">TBD</td><td>SEC Safeguarding Rule (Rule 223-1)</td><td>Proposed, NOT finalised</td><td><span class="tag assess">ASSESSMENT</span></td></tr>
+    <tr><td class="mono">TBD</td><td>SEC AI conflicts-of-interest rule</td><td>Proposed, status uncertain</td><td><span class="tag gap">DATA GAP</span></td></tr>
+  </table>
+  <div class="note"><b>Sources:</b> SEC Press Release 2023-30 & Proposed Rule IA-6384; Federal Register; K&L Gates analysis; DTCC T+1 Conversion Guide & Functional Changes; SEC Risk Alert T+1; OCC IL 1170/1183/1184 & News Release 2025-42; Joint Crypto Safekeeping Statement (OCC/Fed/FDIC); Franklin Templeton FOBXX prospectus. <span class="tag fact">FACT</span></div>
+</section>
+<section class="slide" id="s05">
+  <div class="kicker">05 · Tokenisation & DLT</div>
+  <h2 class="title">From pilots to production &mdash; BUIDL, BENJI, Kinexys and Project Agora.</h2>
+  <p class="lede">Tokenised RWA value (excl. stablecoins) reached ~$39.2B by Sep 2026, up from ~$8B in Jan 2024. The US is where the largest tokenised funds, the bank-issued token rails (Kinexys, $1.5T processed) and the multi-CBDC wholesale experiment (Project Agora) all converge. The custodian role in each is the sales opening.</p>
+  <div class="grid g4" style="margin-top:8px">
+    <div class="stat"><div class="v">~$39.2B</div><div class="l">Total tokenised RWA distributed asset value (excl. stablecoins), Sep 2026 <span class="tag fact">FACT</span></div><div class="s">RWA.xyz</div></div>
+    <div class="stat"><div class="v">$2.8B</div><div class="l">BlackRock BUIDL peak AUM (mid-2025); BNY custodian & administrator <span class="tag fact">FACT</span></div><div class="s">businesswire.com; securitize.io</div></div>
+    <div class="stat"><div class="v">$1.5T</div><div class="l">JPMorgan Kinexys notional value processed to date; >$2B daily volume <span class="tag fact">FACT</span></div><div class="s">jpmorgan.com</div></div>
+    <div class="stat"><div class="v">~$305B</div><div class="l">Stablecoins (separate); ~3.58M RWA holders excl. stablecoins <span class="tag fact">FACT</span></div><div class="s">RWA.xyz</div></div>
+  </div>
+  <div class="grid g2" style="margin-top:20px">
+    <div class="card dlt"><h4>BlackRock BUIDL <span class="tag dlt">DLT</span></h4><p>Launched Mar 20, 2024 on Ethereum &mdash; BlackRock&rsquo;s first tokenised fund. <b>TA/Tokenisation platform:</b> Securitize. <b>Custodian & Administrator:</b> BNY. <b>Investment Manager:</b> BlackRock Financial Management. Invests in cash, US Treasuries, repos; targets $1 token value with daily dividends paid as new tokens monthly. Min investment $5M; surpassed $500M within 6 weeks; peaked ~$2.88B (mid-2025). BlackRock made a strategic investment in Securitize. <span class="tag fact">FACT</span></p></div>
+    <div class="card dlt"><h4>Franklin Templeton BENJI / FOBXX <span class="tag dlt">DLT</span></h4><p><b>FOBXX</b> (Franklin OnChain US Government Money Fund) &mdash; first US-registered mutual fund to use a public blockchain (Stellar) as its primary system of record, launched Apr 2021. BENJI tokens = on-chain FOBXX shares. <b>TA:</b> Franklin Templeton Investor Services (FTIS). Invests &ge;99.5% in US government securities. FOBXX AUM ~$726.6M (Aug 2026); Franklin total AUM $1.80T. SEC no-action letter Aug 12, 2026 (see Section 04). <span class="tag fact">FACT</span></p></div>
+  </div>
+  <div class="grid g2" style="margin-top:16px">
+    <div class="card dlt"><h4>JPMorgan Kinexys (formerly Onyx) <span class="tag dlt">DLT</span></h4><p>JPM&rsquo;s blockchain unit: Digital Payments, Digital Assets, Liink, Labs. <b>Exceeded $1.5T notional processed</b>; >$2B daily volume; 10x YoY payment growth; clients across five continents. Cross-chain DvP with Ondo + Chainlink (May 2025) settled tokenised Treasuries (OUSG) against USD deposits in real time. Cross-border tokenised-Treasury redemption (May 2026) with Ondo, Mastercard, Ripple &mdash; XRP Ledger processed the asset leg. <span class="tag fact">FACT</span></p></div>
+    <div class="card dlt"><h4>Ondo Finance &mdash; USDY / OUSG <span class="tag dlt">DLT</span></h4><p><b>OUSG</b> (tokenised fund; majority invested in BUIDL): ~$625M (May 2026). <b>USDY</b> (tokenised note backed by US Treasuries + bank demand deposits; Reg S / non-US): ~$2.1B (May 2026). <b>Ondo combined AUM >$2.4B.</b> Ondo is the connective tissue between BUIDL, Kinexys and cross-chain settlement experiments. <span class="tag fact">FACT</span></p></div>
+  </div>
+  <div class="card conv" style="margin-top:16px">
+    <h4>Project Agora &mdash; BIS + Fed + 7 central banks <span class="tag conv">CONVERGENCE</span></h4>
+    <p>Launched Apr 3, 2024 by the BIS Innovation Hub + IIF. Seven central banks (BoE, Bank of France/Eurosystem, BoJ, BoK, Bank of Mexico, SNB, NY Fed) and 40+ private-sector institutions including <b>BNY, Citi, JPMorgan, State Street</b>. Explores tokenised commercial-bank deposits + tokenised wholesale CBDC on a shared programmable platform. <b>Report May 2026:</b> prototype demonstrates atomic, multi-currency settlement of wholesale cross-border payments. <b>Real-Value Testing Jul 2026:</b> 28 institutions completed ~CHF 800,000 across 17 scenarios; settlement finality achievable across all 7 jurisdictions. <span class="tag fact">FACT</span></p>
+  </div>
+  <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:18px;color:var(--ink);margin:24px 0 10px">RWA Market Breakdown (Sep 2026)</h3>
+  <table class="tbl">
+    <tr><th>Category</th><th>Value</th><th>Label</th></tr>
+    <tr><td>Total Distributed Asset Value (excl. stablecoins)</td><td class="mono">$39.15B</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>Represented Asset Value</td><td class="mono">$386.92B</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>Tokenised US Treasuries + MMFs</td><td class="mono">~$10&ndash;13B</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>Private Credit on-chain</td><td class="mono">~$8&ndash;19B (incl. platform-locked)</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>Stablecoins (separate)</td><td class="mono">~$304.88B</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>Tokenised Equities</td><td class="mono">~$500M&ndash;$1B</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>Total RWA Holders</td><td class="mono">3.58M (excl. stablecoins)</td><td><span class="tag fact">FACT</span></td></tr>
+  </table>
+  <div class="note"><b>Additional rails:</b> Goldman Sachs DAP (tokenisation platform for issuance/settlement); State Street first third-party custodian on JPMorgan Digital Debt Service (2025, blockchain bond lifecycle); DTCC digital-settlement pilots (explored DLT for post-trade, participated in ECB wholesale-CBDC experimentation via BNP Paribas); NYSE + Citi + BNY blockchain platform (Jan 2026, planned tokenised stocks & ETFs). Long-term RWA forecasts: $2T (McKinsey) to $30T (Standard Chartered) by 2030&ndash;2034. <span class="tag fact">FACT</span></div>
+</section>
+<section class="slide" id="s06">
+  <div class="kicker">06 · AI & Operations</div>
+  <h2 class="title">AI is the new battleground &mdash; and the cost curves now have published numbers.</h2>
+  <p class="lede">BNY&rsquo;s Eliza, State Street&rsquo;s Alpha and Citi&rsquo;s Custody+ represent three different bets on how operations will be priced: agentic AI embedded across the franchise, a front-to-back data platform, and real-time single-event processing. AI differentiation will determine next-generation custody winners.</p>
+  <div class="grid g3" style="margin-top:8px">
+    <div class="card ai"><h4>BNY Eliza <span class="tag ai">AI</span></h4><p>Enterprise AI platform (named after Eliza Hamilton); Eliza 2.0 launched Sep 2025; used by nearly all BNY employees daily. <b>125+ AI solutions in production</b> (117 at Sep 30 2025, up 75% from Q2); 100+ digital employees deployed. <b>&minus;40% NAV false positives, &minus;5% custody unit costs</b>, 88% faster payment validation, 50% quicker contract processing; 99% of employees trained (20,000 building agents). Partners: Google Cloud (Gemini Enterprise), OpenAI, Microsoft, NVIDIA (first major bank to deploy AI Supercomputer). BNY oversees ~20% of world&rsquo;s investable assets. <span class="tag fact">FACT</span></p></div>
+    <div class="card ai"><h4>State Street Alpha <span class="tag ai">AI</span></h4><p>First front-to-back investment platform; 5-year anniversary in 2024; open-architecture, cloud-native (Alpha Data Platform). <b>35 Alpha clients (25 live)</b>; 7 new mandates in 2024 (4 more in 2025). Alpha contributed ~50% of total AUC/A wins in 2024 and ~$380B of $1.1T new wins in Q2 2025. Front-office software & data revenue: $639M in 2024 (targeting $1B). $60T of assets on Charles River. Clients: Lazard, BMO AM, LGIM, Harris | Oakmark, Columbia Threadneedle, Challenger. <span class="tag fact">FACT</span></p></div>
+    <div class="card ai"><h4>Citi Custody+ <span class="tag ai">AI</span></h4><p>Launched <b>Aug 18, 2026</b> &mdash; modular near- and real-time custody. <b>Single Event Processing (SEP):</b> patented; every asset-servicing transaction through one flow; US rollout complete. <b>80%+ of event volume in real-time</b>; corporate-action processing time cut up to 92%. Digital-asset custody (Bitcoin) expected live &ldquo;later this year&rdquo; on common digital/traditional architecture. Citi Token Services live in US/UK/SG/HK; joined Swift 17-bank tokenised-deposit pilot (Jul 2026). >$2B/yr platform investment; AI-led tax-doc processing cut by up to 70%. <span class="tag fact">FACT</span></p></div>
+  </div>
+  <div class="grid g2" style="margin-top:16px">
+    <div class="stat"><div class="v">125+</div><div class="l">BNY Eliza AI solutions in production; 100+ digital employees; adoption up 175% in 2025 <span class="tag fact">FACT</span></div><div class="s">BNY; American Banker Oct 2025</div></div>
+    <div class="stat"><div class="v">$380B</div><div class="l">State Street Alpha contribution to Q2-2025 AUC/A wins (of $1.1T total) <span class="tag fact">FACT</span></div><div class="s">State Street 2024 Annual Report; Global Custody Pro</div></div>
+  </div>
+  <div class="card" style="margin-top:16px"><h4>Northern Trust & the SEC AI overlay</h4><p><b>Northern Trust</b> is leveraging AI and automation across Asset Servicing (AUC/A $15.6T; total $16.8T; AUM $1.6T), investing in private-markets servicing, ETFs and digital capabilities &mdash; though specific AI product names/metrics are not publicly detailed. <b>SEC proposed AI conflicts-of-interest rule (2023)</b> would require advisers/broker-dealers to eliminate or neutralise conflicts from predictive data analytics/AI &mdash; finalisation status uncertain. Under the SEC&rsquo;s stance the client stays responsible for AI tools, so governance artefacts (model register, testing, audit evidence) are a genuine cost, not a slide. <span class="tag gap">DATA GAP</span></p></div>
+</section>
+<section class="slide" id="s07">
+  <div class="kicker">07 · ETF Market</div>
+  <h2 class="title">$15.7T and compounding &mdash; the US hosts 71% of the global ETF market.</h2>
+  <p class="lede">US ETF AUM grew from $10.3T (YE2024) to $15.7T (May 2026) on record inflows. Active ETFs are the fastest-growing segment ($313B inflows in 2024); spot crypto ETFs opened a new asset class; and State Street, BNY and JPMorgan compete to service the issuance wave. ETF servicing is the most reliable recurring-mandate engine in the market.</p>
+  <div class="grid g4" style="margin-top:8px">
+    <div class="stat"><div class="v">$15.7T</div><div class="l">US ETF AUM, May 2026 (up from $10.3T YE2024) <span class="tag fact">FACT</span></div><div class="s">ETFGI</div></div>
+    <div class="stat"><div class="v">$1.12T</div><div class="l">Record US ETF net inflows in 2024; $837B YTD May 2026 <span class="tag fact">FACT</span></div><div class="s">ETFGI; ICI</div></div>
+    <div class="stat"><div class="v">$313B</div><div class="l">Active ETF net inflows in 2024 &mdash; the fastest-growing segment <span class="tag fact">FACT</span></div><div class="s">Morningstar; ICI</div></div>
+    <div class="stat"><div class="v">71%</div><div class="l">US share of global ETF market ($10.3T of $14.4T, YE2024) <span class="tag fact">FACT</span></div><div class="s">ICI Fact Book 2025 Ch.4</div></div>
+  </div>
+  <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:18px;color:var(--ink);margin:24px 0 10px">Largest US ETF Issuers (May 2026)</h3>
+  <table class="tbl">
+    <tr><th>Rank</th><th>Issuer</th><th>ETF AUM</th><th>Market Share</th><th># ETFs</th><th>Label</th></tr>
+    <tr><td>1</td><td><b>iShares (BlackRock)</b></td><td class="mono">~$4.53T</td><td class="mono">28.9%</td><td>487</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>2</td><td><b>Vanguard</b></td><td class="mono">~$4.49T</td><td class="mono">28.6%</td><td>115</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>3</td><td><b>State Street SPDRs</b></td><td class="mono">~$2.07T</td><td class="mono">13.2%</td><td>179</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>4</td><td>Invesco</td><td class="mono">$631B</td><td class="mono">&mdash;</td><td>&mdash;</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td>5</td><td>JPMorgan</td><td class="mono">$182B</td><td class="mono">~1.6%</td><td>&mdash;</td><td><span class="tag fact">FACT</span></td></tr>
+  </table>
+  <div class="grid g2" style="margin-top:20px">
+    <div class="card dlt"><h4>State Street &mdash; #1 ETF servicer globally <span class="tag dlt">SCALE</span></h4><p>Full suite: custody, cash, fund accounting, transfer agency, ETF basket services, electronic order taking. Also #1 in digital-asset ETF servicing (Bitcoin/Ethereum). SSGA&rsquo;s SPDRs brand posted record $109B ETF inflows in 2024; AUM $4.7T (YE2024). Top-3 S&P 500 ETFs each >$500B AUM: SPY (State Street), VOO (Vanguard), IVV (iShares). Creation/redemption via NSCC ETF system; T+1 since May 2024. <span class="tag fact">FACT</span></p></div>
+    <div class="card conv"><h4>The active & crypto inflection <span class="tag conv">SHIFT</span></h4><p>Active ETFs (JPMorgan, Dimensional, Capital Group) are gaining share vs passive incumbents &mdash; $313B of 2024 inflows. Spot Bitcoin ETFs (IBIT etc.) approved Jan 2024; spot Ethereum ETFs Jul 2024; State Street deepened digital-asset ETF servicing. The <b>ETF share-class structure</b> (mutual fund + ETF share class of same fund) gained traction after SEC approval Sep 2024 &mdash; a structural driver of new servicing demand. <span class="tag assess">ASSESSMENT</span></p></div>
+  </div>
+</section>
+<section class="slide" id="s08">
+  <div class="kicker">08 · Buyer Maps</div>
+  <h2 class="title">Who buys custody, FA and TA &mdash; and what makes them switch.</h2>
+  <p class="lede">Seven buyer segments, each with a distinct decision-maker and a distinct switching trigger. Mandates move on operating-model changes, not relationship reviews &mdash; so the triggers below are the sales pipeline.</p>
+  <table class="tbl" style="margin-top:8px">
+    <tr><th>Buyer Segment</th><th>Examples</th><th>Services Bought</th><th>Decision-Makers</th><th>Label</th></tr>
+    <tr><td><b>Asset Managers</b> (MFs, ETFs)</td><td>BlackRock, Vanguard, Fidelity, Capital Group, T. Rowe Price, Franklin Templeton</td><td>Custody, fund admin, TA, ETF servicing, middle office</td><td>COO, Head of Operations, CTO, Head of Fund Services</td><td><span class="tag assess">ASSESSMENT</span></td></tr>
+    <tr><td><b>Pension Funds</b> (public DB, corporate)</td><td>CalPERS, CalSTRS, state pensions, corporate DB plans</td><td>Custody, securities lending, performance analytics, middle office</td><td>CIO, Head of Operations, Investment Committee</td><td><span class="tag assess">ASSESSMENT</span></td></tr>
+    <tr><td><b>Insurance Companies</b></td><td>MetLife, Prudential, AIG, New York Life</td><td>Custody, fund admin, collateral management, accounting</td><td>Treasurer, CIO, Head of Investments Ops</td><td><span class="tag assess">ASSESSMENT</span></td></tr>
+    <tr><td><b>Hedge Funds / Alternatives</b></td><td>Citadel, Bridgewater, Millennium, Point72, Apollo, Blackstone</td><td>Prime custody, fund admin, middle office, TA (private funds)</td><td>COO, CFO, Head of Operations, CTO</td><td><span class="tag assess">ASSESSMENT</span></td></tr>
+    <tr><td><b>Corporates / Treasuries</b></td><td>Fortune 500 treasury departments</td><td>Cash management, custody of investments, collateral</td><td>Treasurer, Assistant Treasurer, Head of Cash Management</td><td><span class="tag assess">ASSESSMENT</span></td></tr>
+    <tr><td><b>Sovereign Wealth Funds</b></td><td>SWFs investing in NA markets</td><td>Global custody, fund admin, securities lending</td><td>CIO, COO, Head of Operations</td><td><span class="tag assess">ASSESSMENT</span></td></tr>
+    <tr><td><b>Wealth Managers / RIAs</b></td><td>Wirehouses, IBDs, RIA platforms</td><td>Custody (clearing), subaccounting, TA, platform services</td><td>Head of Operations, CTO, Head of Clearing</td><td><span class="tag assess">ASSESSMENT</span></td></tr>
+  </table>
+  <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:18px;color:var(--ink);margin:24px 0 10px">Common Pain Points & Switching Triggers</h3>
+  <table class="tbl">
+    <tr><th>Pain Point</th><th>Detail</th><th>Switching Trigger</th><th>Label</th></tr>
+    <tr><td><b>Technology debt / legacy systems</b></td><td>Accumulated tech debt drives desire to outsource to modern platforms (Alpha, Custody+)</td><td>RFP for front-to-back platform; tech-refresh cycle</td><td><span class="tag assess">ASSESSMENT</span></td></tr>
+    <tr><td><b>Cost pressure / fee compression</b></td><td>Core custody fees declining ~1&ndash;3% annually; need operational leverage</td><td>Benchmarking exercises; multi-provider RFP</td><td><span class="tag assess">ASSESSMENT</span></td></tr>
+    <tr><td><b>T+1 settlement pressure</b></td><td>Compressed timelines require real-time processing, better data</td><td>Post-T+1 operational review; failed-trade analysis</td><td><span class="tag assess">ASSESSMENT</span></td></tr>
+    <tr><td><b>Private-markets growth</b></td><td>Need admin/custody for illiquid, complex private assets</td><td>Private-markets expansion; new fund launches</td><td><span class="tag assess">ASSESSMENT</span></td></tr>
+    <tr><td><b>Digital-asset custody needs</b></td><td>Need integrated traditional + crypto custody</td><td>New digital-asset strategy; regulatory clarity (SAB 121 rescinded)</td><td><span class="tag assess">ASSESSMENT</span></td></tr>
+    <tr><td><b>Regulatory compliance burden</b></td><td>Safeguarding Rule (pending), T+1, crypto rules</td><td>Compliance gap analysis; custodian capability review</td><td><span class="tag assess">ASSESSMENT</span></td></tr>
+    <tr><td><b>Service quality / relationship issues</b></td><td>Onboarding delays, error rates, lack of transparency</td><td>Service failure; SLA breach; competitive pitch</td><td><span class="tag assess">ASSESSMENT</span></td></tr>
+    <tr><td><b>Data & analytics demands</b></td><td>Need real-time portfolio insights, NAV validation</td><td>Platform modernisation; data-strategy review</td><td><span class="tag assess">ASSESSMENT</span></td></tr>
+  </table>
+  <div class="note teal"><b>The pattern:</b> every trigger is either a platform decision, a cost decision, or a new-asset-class decision. Each one is a discrete moment when a buyer will entertain a new provider. The GTM plays in Section 10 are built to be dropped precisely into these moments. <span class="tag assess">ASSESSMENT</span></div>
+</section>
+<section class="slide" id="s09">
+  <div class="kicker">09 · Competitive Intelligence</div>
+  <h2 class="title">Mandate wins, M&A, exits and new entrants &mdash; the live state of play.</h2>
+  <p class="lede">State Street is the most active acquirer and mandate winner (Columbia Threadneedle $431B, Mizuho custody, BBH). Citi launched Custody+ and is entering Bitcoin custody. Morgan Stanley and Fidelity are pursuing national trust bank charters for crypto. The market is consolidating upward.</p>
+  <div class="card" style="margin-top:8px"><h4>AUC/A Gap Dynamics &mdash; the State Street vs. BNY race</h4><p>State Street has cut BNY&rsquo;s AUC/A lead by <b>30% over the past year</b> (as of Jul 2026). BNY remains #1 at $62.6T (Q2 2026), but State Street&rsquo;s faster growth (+18% YoY vs BNY&rsquo;s +12% YoY) is narrowing the gap. The gap stood at ~$5.5T (BNY $52.1T vs STT $46.6T at YE2024) and has been compressing. Citi and JPMorgan posted the largest annual AUC/A growth among the Big 4 on a percentage basis (Citi +22%, JPM +18%). <span class="tag fact">FACT</span></p></div>
+  <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:18px;color:var(--ink);margin:24px 0 10px">Recent Mandate Wins & Changes</h3>
+  <table class="tbl">
+    <tr><th>Date</th><th>Event</th><th>Impact</th><th>Label</th></tr>
+    <tr><td class="mono">2025</td><td><b>State Street wins Columbia Threadneedle</b> ($431B AUC/A)</td><td>Fund accounting, admin, custody &mdash; major transformative mandate</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td class="mono">Dec 2024</td><td>State Street &mdash; Harris | Oakmark goes live on Alpha</td><td>~$104B AUM; middle office; ahead of schedule</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td class="mono">Sep 2024</td><td>State Street wins Challenger (Australia, ~$85B AUM)</td><td>Full custody + Alpha; ~100 staff transferred</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td class="mono">2025</td><td>State Street acquires Mizuho global custody (ex-Japan)</td><td>Expands APAC, Luxembourg, US presence</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td class="mono">2025</td><td>State Street invests in Apex Fintech Solutions</td><td>Digital wealth custody; $200B+ assets on Apex platform</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td class="mono">2025</td><td>State Street partners with Taurus (digital-asset infra)</td><td>Institutional-grade custody, tokenisation, smart-contract capability</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td class="mono">2025</td><td>State Street first third-party custodian on JPM Digital Debt Service</td><td>Blockchain-enabled bond lifecycle management</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td class="mono">2025</td><td>State Street re-enters UK TA market via ZILO partnership</td><td>Insourced TA operations in Luxembourg and Ireland</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td class="mono">Aug 2026</td><td><b>Citi launches Custody+</b> with Bitcoin custody planned</td><td>Real-time custody; SEP technology; digital-asset integration</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td class="mono">Jan 2026</td><td>NYSE + Citi + BNY blockchain tokenised stocks/ETFs platform</td><td>Planned tokenised equities platform</td><td><span class="tag fact">FACT</span></td></tr>
+    <tr><td class="mono">Feb 2026</td><td><b>Morgan Stanley</b> applies for national trust bank charter (crypto custody)</td><td>New entrant in digital-asset custody</td><td><span class="tag fact">FACT</span></td></tr>
+  </table>
+  <div class="grid g2" style="margin-top:20px">
+    <div class="card"><h4>M&A Activity</h4><p><b>State Street</b> acquired BBH Investor Services (2023, consolidated #2 custody), Charles River Development (2019, Alpha foundation), CF Global Trading (2024, agency trading), Mercatus (private markets), Mizuho global custody ex-Japan (2025). <b>BNY</b> acquired Milestone Group (funds tech) and Archer (managed accounts). <b>CACEIS</b> acquired RBC European asset-servicing (2022&ndash;23, &euro;1.2T admin + &euro;0.5T custody). <span class="tag fact">FACT</span></p></div>
+    <div class="card"><h4>Market Exits & New Entrants</h4><p><b>Exits:</b> RBC exited European asset servicing (sold to CACEIS, retains Canadian custody); BBH exited investor services (sold to State Street); Deutsche Bank wound down custody; Soci&eacute;t&eacute; G&eacute;n&eacute;rale declining; Wells Fargo at #15 (&minus;0.7% YoY). <b>New entrants:</b> Morgan Stanley (national trust charter, crypto custody, Feb 2026); Fidelity/FDAS converting to national trust bank (OCC Conditional Approval #1355) &mdash; plans crypto custody, trade execution, stablecoin issuance, staking; specialised crypto custodians Anchorage Digital, Fireblocks, Coinbase Custody. 8 consecutive quarters of collective AUC/A growth among top 10. <span class="tag fact">FACT</span></p></div>
+  </div>
+  <div class="note red"><b>Key takeaways:</b> BNY leads but State Street is closing fast (30% gap reduction; Alpha is the differentiator). Citi and JPMorgan are the growth leaders. AI is the new battleground. Digital-asset custody is opening up (OCC IL 1184, SAB 121 rescinded, GENIUS Act). Tokenisation is moving pilot&rarr;production ($39B+ RWA; BUIDL, BENJI, OUSG/USDY live; Project Agora completed real-value testing). Industry consolidation continues &mdash; scale providers winning at the expense of mid-tier. <span class="tag assess">ASSESSMENT</span></div>
+</section>
+<section class="slide" id="s10">
+  <div class="kicker">10 · Six GTM Plays</div>
+  <h2 class="title">The play library. Click to expand.</h2>
+  <p class="lede">Six ready-made propositions, each mapped to buyer, trigger, proof points and landmine. They extend &mdash; not replace &mdash; the base Command Centre plays. <span class="tag assess">ALL ASSESSMENT</span></p>
+  <div class="play"><div class="top"><h4>1 &middot; Front-to-Back Transformation &mdash; Alpha Platform Pitch <span class="tag ai">AI</span></h4><div class="meta">Buyer: Mid-to-large asset managers ($50B&ndash;$500B AUM) &middot; Markets: US, Canada</div></div>
+    <div class="body">
+      <div class="row"><b>Trigger</b><div>Legacy OMS/PMS replacement; desire to consolidate front, middle and back office onto one platform; accumulated technology debt.</div></div>
+      <div class="row"><b>Proposition</b><div>State Street Alpha delivers a unified front-to-back platform &mdash; Charles River (front office), Alpha Data Platform (middle), custody + fund admin + TA (back). Eliminates technology debt and enables real-time data.</div></div>
+      <div class="row"><b>Proof points</b><div>35 Alpha clients (25 live); Harris | Oakmark went live on Alpha (~$104B AUM); Columbia Threadneedle ($431B mandate); Alpha contributed ~$380B of Q2-2025 wins; front-office software revenue $639M (targeting $1B).</div></div>
+      <div class="row"><b>Landmine</b><div>BNY competes with integrated custody+TA+fund accounting (no separate front-office platform); JPMorgan may bundle with banking. Long implementation cycles (12&ndash;18 months). Client concern about &ldquo;all eggs in one basket&rdquo; with a single provider.</div></div>
+    </div>
+  </div>
+  <div class="play"><div class="top"><h4>2 &middot; AI-Driven Operational Alpha &mdash; Eliza / NAV Optimization <span class="tag ai">AI</span></h4><div class="meta">Buyer: Fund administrators, asset managers struggling with NAV errors & reconciliation breaks</div></div>
+    <div class="body">
+      <div class="row"><b>Trigger</b><div>High NAV false-positive rates; manual reconciliation costs; T+1 compressed timelines; inability to hire ops staff at growth pace.</div></div>
+      <div class="row"><b>Proposition</b><div>BNY&rsquo;s AI-powered NAV validation reduces false positives by 40% and custody unit costs by 5%. Eliza embeds AI across custody, payments and reconciliation with institutional-grade governance &mdash; sell &ldquo;operations as an outcome.&rdquo;</div></div>
+      <div class="row"><b>Proof points</b><div>125+ AI solutions in production; 99% employee adoption; 88% faster payment validation; $62.6T AUC/A data advantage; first bank with NVIDIA AI Supercomputer; 100+ digital employees.</div></div>
+      <div class="row"><b>Landmine</b><div>Citi and State Street are also investing heavily in AI. Clients may be cautious about AI in regulated processes; &ldquo;AI-washing&rdquo; skepticism. Under the SEC&rsquo;s stance the client stays responsible &mdash; sell governance artefacts (model register, testing, audit evidence) as part of the service. Demonstrate specific, auditable outcomes.</div></div>
+    </div>
+  </div>
+  <div class="play"><div class="top"><h4>3 &middot; Real-Time Custody for Always-On Markets &mdash; Citi Custody+ <span class="tag conv">CONVERGENCE</span></h4><div class="meta">Buyer: Institutional investors needing 24/7 settlement, cross-border efficiency, digital-asset integration</div></div>
+    <div class="body">
+      <div class="row"><b>Trigger</b><div>Move to continuous markets; tokenised assets; need for integrated traditional + crypto custody; post-T+1 operational pressure.</div></div>
+      <div class="row"><b>Proposition</b><div>Citi Custody+ delivers real-time asset servicing (patented SEP technology), instant settlements, on-demand FX, digital-asset custody (Bitcoin) and a white-label platform &mdash; all modular. 80%+ of event volume in real-time.</div></div>
+      <div class="row"><b>Proof points</b><div>92% reduction in corporate-action processing time; 62 proprietary custody markets; Citi Token Services live in US/UK/SG/HK; >$2B/yr platform investment; joined Swift 17-bank tokenised-deposit pilot (Jul 2026); AI-led tax-doc processing cut by up to 70%.</div></div>
+      <div class="row"><b>Landmine</b><div>BNY and State Street have larger AUC/A bases. Digital-asset custody (Bitcoin) not yet live &mdash; &ldquo;expects to go live later this year.&rdquo; Citi&rsquo;s AUC/A ($34.5T) is smallest of the Big 4. White-label may cannibalise direct relationships.</div></div>
+    </div>
+  </div>
+  <div class="play"><div class="top"><h4>4 &middot; Tokenisation-Ready Infrastructure &mdash; Digital Asset Custody <span class="tag dlt">DLT</span></h4><div class="meta">Buyer: Asset managers launching tokenised funds; institutions needing crypto custody</div></div>
+    <div class="body">
+      <div class="row"><b>Trigger</b><div>BUIDL launch; SEC BENJI no-action letter (Aug 2026); SAB 121 rescinded; spot crypto-ETF approvals; OCC IL 1184.</div></div>
+      <div class="row"><b>Proposition</b><div>Position as custodian for the tokenised future &mdash; BNY already custodies BUIDL; State Street is first on JPM Digital Debt Service; Citi is launching Bitcoin custody. Offer integrated traditional + digital-asset custody on one framework.</div></div>
+      <div class="row"><b>Proof points</b><div>BNY as BUIDL custodian & administrator; State Street&ndash;Taurus partnership (digital custody/tokenisation); Citi common digital-asset architecture; OCC IL 1184 permits bank crypto custody; $39B+ tokenised-RWA market; BENJI no-action letter validates the model.</div></div>
+      <div class="row"><b>Landmine</b><div>Tokenisation still early-stage; regulatory uncertainty remains (SEC Safeguarding Rule not finalised). Crypto custody sub-custodian risk. Client hesitation on crypto exposure. Specialised crypto custodians (Anchorage, Fireblocks) competing; Fidelity and Morgan Stanley entering via trust charters.</div></div>
+    </div>
+  </div>
+  <div class="play"><div class="top"><h4>5 &middot; ETF Servicing at Scale &mdash; #1 ETF Servicer <span class="tag dlt">SCALE</span></h4><div class="meta">Buyer: ETF issuers (existing & new entrants), active-ETF launches, digital-asset ETFs</div></div>
+    <div class="body">
+      <div class="row"><b>Trigger</b><div>Record ETF inflows ($1.12T in 2024); active-ETF growth; ETF share-class approvals (Sep 2024); crypto-ETF launches.</div></div>
+      <div class="row"><b>Proposition</b><div>State Street is #1 ETF servicer globally &mdash; full suite: custody, fund accounting, TA, ETF basket services, electronic order taking. SSGA is also #3 ETF issuer (SPDRs) with deep product expertise; #1 in digital-asset ETF servicing.</div></div>
+      <div class="row"><b>Proof points</b><div>State Street services include custody, fund accounting, TA, ETF basket services; #1 in digital-asset ETF servicing; SPDRs brand ($2.07T ETF AUM, 13.2% share); record $109B ETF inflows (2024); US ETF AUM $10.3T&rarr;$15.7T.</div></div>
+      <div class="row"><b>Landmine</b><div>BNY is the largest TA/subaccounting provider; JPMorgan and BNY also compete for ETF servicing. Issuers may avoid the servicer that is also a competing ETF issuer (State Street/SPDRs conflict). Active-ETF newcomers may prefer boutique servicers.</div></div>
+    </div>
+  </div>
+  <div class="play"><div class="top"><h4>6 &middot; Private Markets Servicing Expansion &mdash; Alternatives Growth <span class="tag conv">GROWTH</span></h4><div class="meta">Buyer: PE/VC firms, hedge funds, asset managers expanding into private markets</div></div>
+    <div class="body">
+      <div class="row"><b>Trigger</b><div>NA private-capital AUM at $7.7T; CalPERS increasing private assets from 33%&rarr;40%; growth in private credit and private equity.</div></div>
+      <div class="row"><b>Proposition</b><div>Offer integrated custody + fund admin + TA for private-market vehicles. State Street acquired Mercatus (private markets); BNY and Northern Trust expanding private-markets capabilities. Address complexity of illiquid-asset valuation, waterfall calculations and investor reporting.</div></div>
+      <div class="row"><b>Proof points</b><div>State Street private-markets servicing fees +12% (2025); acquired CF Global (agency trading); Mercatus integration; Northern Trust strong in alternatives fund admin; $7.7T NA private-capital AUM; CalPERS raising PE target to 17%.</div></div>
+      <div class="row"><b>Landmine</b><div>Specialised alternatives administrators (SS&C, Citco, Apex) dominate PE/VC fund admin. Private markets require different tech stacks (waterfall, GP/LP accounting). Custodians perceived as public-markets specialists. Longer sales cycles; relationship-driven.</div></div>
+    </div>
+  </div>
+</section>
+<section class="slide" id="s11">
+  <div class="kicker">11 · Risks & Honest Caveats</div>
+  <h2 class="title">What would make this thesis wrong &mdash; say it before the client does.</h2>
+  <p class="lede">Credibility with an MD audience comes from the caveats, not the hype. These are the honest counterweights to the growth narrative above.</p>
+  <div class="grid g2">
+    <div class="card"><h4>The Safeguarding Rule is still pending</h4><p>The SEC&rsquo;s proposed Safeguarding Rule (Rule 223-1) remains <b>not finalised</b> as of Sep 2026. If adopted it expands custody scope to all client assets (crypto, real estate, derivatives) and imposes 12&ndash;18-month compliance windows. Until it lands, digital-asset custody demand is soft &mdash; and when it lands, it will trigger a wave of compliance-driven re-platforming. Sell readiness, not certainty. <span class="tag assess">ASSESSMENT</span></p></div>
+    <div class="card"><h4>Tokenised AUM is still a rounding error</h4><p>~$39B of tokenised RWA against ~$60T+ of NA fund assets. The growth rate is the story, not the stock. BUIDL peaked ~$2.88B. Never present tokenisation as a current revenue pool; present it as an option-value and switching-event machine. Long-term forecasts span $2T (McKinsey) to $30T (Standard Chartered) by 2030&ndash;2034 &mdash; a 15x range that telegraphs real uncertainty. <span class="tag fact">FACT</span></p></div>
+    <div class="card ai"><h4>AI numbers are vendor-disclosed, not audited</h4><p>The &minus;40% / &minus;5% figures come from BNY&rsquo;s own disclosures; peers disclose less, making comparison hard. Quote them as &ldquo;published by BNY,&rdquo; never as industry benchmarks. The SEC&rsquo;s proposed AI conflicts rule is not finalised; FINRA AI guidance citation needs verification. AI failures land on the client under current regulation &mdash; governance is a genuine cost, not a slide. <span class="tag gap">DATA GAP</span></p></div>
+    <div class="card dlt"><h4>Old rails won&rsquo;t die &mdash; they&rsquo;ll coexist for years</h4><p>Traditional TA systems will run alongside blockchain rails for years, with trillions staying on existing infrastructure. The realistic sale is hybrid servicing, which is <i>harder</i> operationally than either pure world &mdash; and that difficulty is precisely the service opportunity. Don&rsquo;t oversell a &ldquo;big bang&rdquo; migration. <span class="tag assess">ASSESSMENT</span></p></div>
+    <div class="card"><h4>Scale could entrench the incumbents</h4><p>8 consecutive quarters of collective AUC/A growth among the top 10, and consolidation is driving business to the largest custodians. A challenger or specialist without platform/AI/digital capability may find the window narrowing rather than opening &mdash; differentiation must be on a flank (private markets, real-time custody, tokenisation) the Big 4 do not yet cover natively. <span class="tag assess">ASSESSMENT</span></p></div>
+    <div class="card"><h4>Conflict risk in ETF servicing</h4><p>State Street is both #1 ETF servicer and #3 ETF issuer (SPDRs). Issuers may avoid the servicer that is also a competing issuer. Active-ETF newcomers may prefer boutique servicers. This is a real competitive constraint on the largest ETF-servicing play. <span class="tag assess">ASSESSMENT</span></p></div>
+  </div>
+  <div class="note"><b>Label discipline, carried over from the base module:</b> every card in this module is tagged <span class="tag fact">FACT</span> (sourced), <span class="tag calc">CALCULATED</span>, <span class="tag assess">ASSESSMENT</span> (strategic judgement) or <span class="tag gap">DATA GAP</span>. Known gaps: no reliable public data on tokenised-fund servicing fees; Northern Trust AI product names/metrics not publicly detailed; SEC AI rule and FINRA AI guidance finalisation status uncertain; Massachusetts fiduciary rule 2025&ndash;2027 status needs verification; closed-end fund and UIT figures are estimates.</div>
+</section>
+<section class="slide" id="s12">
+  <div class="kicker">12 · Source Library</div>
+  <h2 class="title">Provenance.</h2>
+  <p class="lede">Primary and secondary sources behind the FACT-tagged items. Figures were compiled Sep 2026; this space moves monthly &mdash; refresh before external use.</p>
+  <div class="srcs">
+    <div class="s"><b>ICI 2025 Investment Company Fact Book</b> &mdash; Ch.2 mutual funds $28.5T (8,355 funds); Ch.3 ETFs $10.3T (3,637 funds); record ETF net issuance $1.1T in 2024; Ch.4 US ETF market. <a href="https://www.icifactbook.org">icifactbook.org</a></div>
+    <div class="s"><b>ICI Quarterly Retirement Market Data Q4 2025</b> &mdash; total US retirement assets $49.1T (YE2025); IRAs $19.2T; DC plans $14.2T; 401(k) $10.1T; government DB $10.0T. <a href="https://www.iciglobal.org">iciglobal.org</a></div>
+    <div class="s"><b>CRS Report IF13193/IF13194</b> &mdash; US retirement system structure. <a href="https://www.everycrsreport.com">everycrsreport.com</a></div>
+    <div class="s"><b>CalPERS</b> &mdash; FY2024 ACFR ($506.6B, 9.3% return); Facts at a Glance FY2024-25 ($563.0B, 11.6% return). <a href="https://www.calpers.ca.gov">calpers.ca.gov</a></div>
+    <div class="s"><b>CalSTRS</b> &mdash; FY2023-24 financial statements ($343.5B, 8.4% return). <a href="https://www.calstrs.com">calstrs.com</a></div>
+    <div class="s"><b>IFIC 2024 Investment Funds Report</b> &mdash; Canadian MF $2.242T (+15.7%); Canadian ETF $518B (+35.5%). newswire.ca</div>
+    <div class="s"><b>CDPQ</b> &mdash; 2024 results ($473.3B CAD, 9.4% return). <a href="https://www.lacaisse.com">lacaisse.com</a></div>
+    <div class="s"><b>OTPP</b> &mdash; Ontario Teachers&rsquo; 2024 results ($266.3B) & 2025 performance ($279.4B, 6.7%). <a href="https://www.otpp.com">otpp.com</a></div>
+    <div class="s"><b>Preqin</b> &mdash; Alternatives in North America 2024 ($7.7T private capital, 57% of global); 2025 Global Report: Hedge Funds ($4.9T global, ~$3.95B NA). preqin.com</div>
+    <div class="s"><b>Global Custodian</b> &mdash; &ldquo;A new era of custody&rdquo; (Jan 2026, $180T combined); State Street cut BNY lead by 30% (Jul 24 2026). <a href="https://www.globalcustodian.com">globalcustodian.com</a></div>
+    <div class="s"><b>PostTrade 360&deg;</b> &mdash; Q4 2024 & Q2 2026 custodian results; securities-services fee revenue; CACEIS-RBC deal. posttrade360.com</div>
+    <div class="s"><b>BNY</b> &mdash; Q4 2024 earnings ($52.1T); website ($62.6T as of Jun 30 2026); Transfer Agency Platform (7.6M+ accounts, $31.2T AUA); Financial Supplement Q4 2024 (CIBC Mellon). <a href="https://www.bny.com">bny.com</a></div>
+    <div class="s"><b>State Street</b> &mdash; 2024 & 2025 Annual Reports ($46.6T&rarr;$53.8T YE2025); Alpha insights (35 clients, $639M FO revenue, $60T on Charles River); Harris/Oakmark & Columbia Threadneedle press releases. <a href="https://www.statestreet.com">statestreet.com</a></div>
+    <div class="s"><b>JPMorgan</b> &mdash; 2024 Annual Report ($35.3T AUC); Kinexys newsroom ($1.5T notional, >$2B daily). <a href="https://www.jpmorgan.com">jpmorgan.com</a></div>
+    <div class="s"><b>Northern Trust</b> &mdash; 2024 Annual Report ($16.8T total AUC/A, $15.6T Asset Servicing, $1.6T AUM). <a href="https://www.northerntrust.com">northerntrust.com</a></div>
+    <div class="s"><b>SS&C / DST</b> &mdash; KDS/Fund Services subaccounting key metrics (~70.3% SS&C, 16.9% BNY, 8.1% FIS). wsimg.com</div>
+    <div class="s"><b>Ideagen / Audit Analytics</b> &mdash; TA Market Share 2022 (Computershare 25.7%, EQ/AST 20.4%, Continental 12.7%). <a href="https://www.ideagen.com">ideagen.com</a></div>
+    <div class="s"><b>DTCC</b> &mdash; T+1 Conversion Guide & Functional Changes; depository custody ~$87T; ~$2.4Q processed (2021). <a href="https://www.dtcc.com">dtcc.com</a></div>
+    <div class="s"><b>SEC</b> &mdash; Press Release 2023-30; Proposed Rule IA-6384 (Safeguarding Rule reopening); Risk Alert T+1; FOBXX prospectus. <a href="https://www.sec.gov">sec.gov</a></div>
+    <div class="s"><b>OCC</b> &mdash; Interpretive Letters 1170, 1183, 1184; News Release 2025-42; Conditional Approval #1355 (Fidelity/FDAS); Joint Crypto Safekeeping Statement (OCC/Fed/FDIC). <a href="https://www.occ.gov">occ.gov</a></div>
+    <div class="s"><b>BlackRock / BusinessWire</b> &mdash; BUIDL launch press release (Mar 20 2024). businesswire.com; Securitize &mdash; securitize.io</div>
+    <div class="s"><b>Franklin Templeton</b> &mdash; BENJI/FOBXX (Stellar, launched Apr 2021); FOBXX AUM ~$726.6M (Aug 2026); no-action letter Aug 12 2026. The Defiant; ETHNews; assettokenization.com</div>
+    <div class="s"><b>Ondo Finance</b> &mdash; OUSG (~$625M) & USDY (~$2.1B), combined >$2.4B. <a href="https://www.ondo.finance">ondo.finance</a></div>
+    <div class="s"><b>BIS Project Agora</b> &mdash; launch Apr 3 2024; 7 central banks; report May 2026; Real-Value Testing Jul 2026 (~CHF 800,000, 17 scenarios). <a href="https://www.bis.org">bis.org</a>; NY Fed &mdash; newyorkfed.org; IIF &mdash; iif.com</div>
+    <div class="s"><b>RWA.xyz</b> &mdash; distributed asset value $39.15B (Sep 8 2026); represented value $386.92B; stablecoins ~$304.88B; 3.58M holders. rwa.xyz; Merehead; GlobalTokenize</div>
+    <div class="s"><b>ETFGI</b> &mdash; US ETF AUM $15.69T (May 2026); 5,283 funds; 488 providers. etfgi.com; mondovisione.com</div>
+    <div class="s"><b>Morningstar</b> &mdash; US Fund Flows 2024; &ldquo;Where ETF Investors Put Money 2024.&rdquo; morningstar.com; FactSet &mdash; factset.com</div>
+    <div class="s"><b>Citi</b> &mdash; Custody+ press release (Aug 18 2026); Services Investor Day 2024 ($425B ETF AUA added). <a href="https://www.citigroup.com">citigroup.com</a>; Markets Media; decrypt.co</div>
+    <div class="s"><b>BNY Eliza / agentic AI</b> &mdash; 125+ solutions; &minus;40% NAV false positives; &minus;5% custody unit costs; 88% faster payment validation; 99% employee adoption; NVIDIA AI Supercomputer. American Banker (Oct 2025); BNY AI pages; AInvest; TBPN Digest (Mar 2026).</div>
+    <div class="s"><b>Global Custody Pro</b> &mdash; State Street Alpha $380B wins, 28 clients live (Q2 2025); 2026 guide. globalcustody.pro</div>
+    <div class="s"><b>Convergence</b> &mdash; custodian league tables (Wells Fargo #15, &minus;0.7% YoY). convergenceinc.com</div>
+  </div>
+</section>
+<footer>North America Asset-Servicing Market &mdash; Competitive Intelligence & GTM &middot; Companion module to the Global Securities Services Sales Command Centre &middot; Data as of Sep 2026 &middot; All ASSESSMENT items are analyst judgement, not sourced data &middot; Refresh FACT items before client use.</footer>
+</div>
+</div>
+<script>
+
+// nav + progress
+const links=[...document.querySelectorAll('.navlink')];
+const secs=[...document.querySelectorAll('section.slide')];
+const pbar=document.getElementById('pbar');
+function onScroll(){
+  const h=document.documentElement;
+  pbar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+  let cur=secs[0].id;
+  for(const s of secs){if(s.getBoundingClientRect().top<160)cur=s.id}
+  links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+cur));
+}
+document.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+// j/k navigation
+document.addEventListener('keydown',e=>{
+  if(e.key!=='j'&&e.key!=='k')return;
+  const tops=secs.map(s=>s.getBoundingClientRect().top);
+  if(e.key==='j'){const n=secs.find((s,i)=>tops[i]>80);if(n)n.scrollIntoView({behavior:'smooth'})}
+  else{const prev=[...secs].reverse().find((s)=>s.getBoundingClientRect().top<-80);if(prev)prev.scrollIntoView({behavior:'smooth'})}
+});
+
+// plays (click to expand)
+document.querySelectorAll('.play').forEach(p=>p.addEventListener('click',()=>p.classList.toggle('open')));
+
+</script>
+<a class="homefab" href="index.html">&#8962; Home</a>
+</body>
+</html>
