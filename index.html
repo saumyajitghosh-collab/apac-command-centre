@@ -3,57 +3,193 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>APAC Securities Services — Sales Command Centre</title>
+<title>Global Securities Services Sales Command Centre</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#0E1B2C;--ink2:#16283F;--ink3:#1E344F;--gold:#C08A2D;--teal:#2C7A74;--violet:#5B4A8A;--line:#D9DFE7;--muted:#5B6B7E}
+:root{
+  --ink:#0E1B2C; --ink2:#16283F; --ink3:#1E344F;
+  --paper:#F4F6F8; --card:#FFFFFF;
+  --gold:#C08A2D; --gold-soft:#F3E9D4;
+  --teal:#2C7A74; --teal-soft:#E2EFED;
+  --violet:#5B4A8A; --violet-soft:#E9E5F3;
+  --line:#D9DFE7; --muted:#5B6B7E; --text:#1B2735;
+  --danger:#A3462E; --danger-soft:#F5E4DD;
+}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Public Sans',sans-serif;background:var(--ink);color:#C6D2E0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px 20px}
-.wrap{max-width:880px;width:100%}
-.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.24em;color:var(--gold);text-transform:uppercase}
-h1{font-family:'Fraunces',serif;font-weight:400;font-size:40px;color:#fff;margin:12px 0 10px;line-height:1.15}
-.sub{color:#8FA1B6;font-size:15px;max-width:640px;line-height:1.65;margin-bottom:38px}
-.mods{display:grid;gap:14px}
-a.mod{display:block;background:var(--ink2);border:1px solid var(--ink3);border-radius:12px;padding:24px 28px;text-decoration:none;transition:all .18s;position:relative}
-a.mod:hover{border-color:var(--gold);transform:translateY(-2px)}
-.mod .tag{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;padding:3px 9px;border-radius:3px;display:inline-block;margin-bottom:10px}
-.t1{background:rgba(44,122,116,.18);color:#7FC7C0}
-.t2{background:rgba(192,138,45,.16);color:#E0B565}
-.t3{background:rgba(91,74,138,.2);color:#B3A5DB}
-.mod h2{font-family:'Fraunces',serif;font-weight:600;font-size:21px;color:#fff;margin-bottom:6px}
-.mod p{font-size:13px;color:#8FA1B6;line-height:1.6;max-width:600px}
-.mod .go{position:absolute;right:26px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:22px}
-.foot{margin-top:34px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#5B7089;letter-spacing:.06em;line-height:1.8}
-@media(max-width:640px){h1{font-size:28px}.mod .go{display:none}}
+html{scroll-behavior:smooth}
+body{font-family:'Public Sans',sans-serif;background:var(--paper);color:var(--text);font-size:15px;line-height:1.6}
+::selection{background:var(--gold-soft)}
+
+.hero{background:var(--ink);color:#C6D2E0;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 24px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 30% 20%,rgba(192,138,45,.08) 0%,transparent 50%),radial-gradient(ellipse at 70% 80%,rgba(44,122,116,.06) 0%,transparent 50%);pointer-events:none}
+.hero .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;margin-bottom:16px}
+.hero h1{font-family:'Fraunces',serif;font-weight:400;font-size:48px;line-height:1.15;color:#fff;max-width:900px;margin-bottom:14px}
+.hero .sub{font-size:17px;color:#9FB0C4;max-width:700px;margin-bottom:36px;line-height:1.6}
+.hero .stats{display:flex;gap:32px;flex-wrap:wrap;justify-content:center;margin-bottom:40px}
+.hero .stat{text-align:center}
+.hero .stat .v{font-family:'Fraunces',serif;font-size:36px;font-weight:600;color:var(--gold);line-height:1.1}
+.hero .stat .l{font-size:12px;color:#8FA1B6;margin-top:4px;letter-spacing:.04em}
+.hero .scroll-hint{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#5B7089;text-transform:uppercase;margin-top:auto;position:absolute;bottom:24px}
+.hero .scroll-hint::after{content:" ↓";color:var(--gold)}
+
+.modules{padding:60px 24px 80px;max-width:1200px;margin:0 auto}
+.modules .section-label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;text-align:center}
+.modules h2{font-family:'Fraunces',serif;font-weight:400;font-size:32px;color:var(--ink);text-align:center;margin-bottom:8px}
+.modules .lede{text-align:center;font-size:15px;color:var(--muted);max-width:680px;margin:0 auto 40px}
+
+.module-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.module-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:0;overflow:hidden;cursor:pointer;transition:all .2s;text-decoration:none;color:inherit;display:flex;flex-direction:column}
+.module-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 12px 32px rgba(14,27,44,.10)}
+.module-card .mc-head{padding:28px 28px 20px;position:relative}
+.module-card .mc-flag{font-size:28px;margin-bottom:8px}
+.module-card .mc-eyebrow{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.module-card .mc-title{font-family:'Fraunces',serif;font-weight:600;font-size:22px;color:var(--ink);line-height:1.25;margin-bottom:8px}
+.module-card .mc-desc{font-size:13.5px;color:var(--muted);line-height:1.55}
+.module-card .mc-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.module-card .mc-meta span{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.06em;padding:3px 8px;border-radius:3px;background:var(--paper);color:var(--muted)}
+.module-card .mc-footer{padding:16px 28px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;margin-top:auto}
+.module-card .mc-stat{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)}
+.module-card .mc-stat b{color:var(--ink);font-weight:600}
+.module-card .mc-go{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:.1em;text-transform:uppercase}
+.module-card .mc-go::after{content:" →"}
+.module-card.apac{border-top:3px solid var(--gold)}
+.module-card.eu{border-top:3px solid var(--teal)}
+.module-card.na{border-top:3px solid var(--violet)}
+.module-card.me{border-top:3px solid var(--danger)}
+
+.tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.08em;padding:2px 8px;border-radius:3px;vertical-align:2px;white-space:nowrap}
+.tag.fact{background:var(--teal-soft);color:var(--teal)}
+.tag.calc{background:#E8ECF3;color:#4A5E78}
+.tag.assess{background:var(--gold-soft);color:#8A6420}
+.tag.gap{background:var(--danger-soft);color:var(--danger)}
+
+.footer{background:var(--ink);color:#6E8098;padding:40px 24px;text-align:center;font-size:12px;line-height:1.7}
+.footer b{color:var(--gold)}
+.footer .tag{margin:0 2px}
+
+@media(max-width:860px){
+  .module-grid{grid-template-columns:1fr}
+  .hero h1{font-size:34px}
+  .hero .stats{gap:20px}
+  .hero .stat .v{font-size:28px}
+}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="eyebrow">Interactive Knowledge Base · Regional Head of Sales — APAC</div>
-  <h1>APAC Securities Services<br>Sales Command Centre</h1>
-  <p class="sub">Three linked modules covering the market, the region, and the technology shift — custody, fund administration, transfer agency, middle office and data across Asia Pacific. Built as knowledge base cum presentation: scroll to present, click to explore.</p>
-  <div class="mods">
-    <a class="mod" href="india-asset-servicing-briefing.html">
-      <span class="tag t1">Module 01 · Market Deep-Dive</span>
-      <h2>India Briefing</h2>
-      <p>Asset servicing, fund administration &amp; transfer agency in India — where the assets sit, where they're contestable, and where to hunt.</p>
-      <span class="go">→</span>
-    </a>
-    <a class="mod" href="apac-asset-servicing-kb.html">
-      <span class="tag t2">Module 02 · Regional View</span>
-      <h2>APAC Knowledge Base</h2>
-      <p>The regional competitive-intelligence and go-to-market picture across key APAC jurisdictions — segments, plumbing, plays and priorities.</p>
-      <span class="go">→</span>
-    </a>
-    <a class="mod" href="new-rails-dlt-ai-apac.html">
-      <span class="tag t3">Module 03 · Technology Shift</span>
-      <h2>New Rails — DLT &amp; AI</h2>
-      <p>How tokenisation and agentic AI are rewiring the asset-servicing value chain across APAC and India — and how each business case converts into mandates.</p>
-      <span class="go">→</span>
-    </a>
+
+<div class="hero">
+  <div class="eyebrow">Global Securities Services · Sales Command Centre</div>
+  <h1>Sell into the infrastructure transition — across four regions.</h1>
+  <div class="sub">Interactive competitive intelligence and GTM knowledge base for custody, fund administration, transfer agency and digital-asset servicing. Four regional modules covering 30+ markets, 80+ competitors, and the regulatory rails reshaping where mandates move.</div>
+  <div class="stats">
+    <div class="stat"><div class="v">4</div><div class="l">REGIONS</div></div>
+    <div class="stat"><div class="v">30+</div><div class="l">MARKETS</div></div>
+    <div class="stat"><div class="v">80+</div><div class="l">COMPETITORS</div></div>
+    <div class="stat"><div class="v">$180T</div><div class="l">GLOBAL AUC/A (TOP 4)</div></div>
   </div>
-  <div class="foot">COMPILED AUG 2026 · FACT / ASSESSMENT LABELLING THROUGHOUT · REFRESH SOURCED FIGURES BEFORE EXTERNAL USE</div>
+  <div class="scroll-hint">Select a region below</div>
 </div>
+
+<div class="modules">
+  <div class="section-label">Regional Modules</div>
+  <h2>Choose your theatre.</h2>
+  <p class="lede">Each module is a standalone knowledge base — market sizing, custody landscape, regulatory radar, competitive intelligence, buyer maps, and six ready-to-deploy sales plays. Data labelled <span class="tag fact">FACT</span> / <span class="tag calc">CALCULATED</span> / <span class="tag assess">ASSESSMENT</span> / <span class="tag gap">DATA GAP</span> throughout.</p>
+
+  <div class="module-grid">
+
+    <a class="module-card apac" href="india-asset-servicing-briefing.html">
+      <div class="mc-head">
+        <div class="mc-flag">🇮🇳</div>
+        <div class="mc-eyebrow">APAC · India Briefing</div>
+        <div class="mc-title">India Asset-Servicing Market Briefing</div>
+        <div class="mc-desc">FPI custody, fund services, AIF servicing, insurance & NPS, GIFT IFSC. The fastest-growing large market for asset servicing.</div>
+        <div class="mc-meta"><span>₹85.76L Cr MF AUM</span><span>12,243 FPIs</span><span>₹16.94L Cr AIF</span></div>
+      </div>
+      <div class="mc-footer">
+        <div class="mc-stat">14 sections · <b>Mar–Sep 2026</b></div>
+        <div class="mc-go">Open</div>
+      </div>
+    </a>
+
+    <a class="module-card apac" href="apac-asset-servicing-kb.html">
+      <div class="mc-head">
+        <div class="mc-flag">🌏</div>
+        <div class="mc-eyebrow">APAC · Knowledge Base</div>
+        <div class="mc-title">APAC Asset-Servicing Competitive Intelligence & GTM</div>
+        <div class="mc-desc">8 markets, 20+ competitors profiled, buyer maps, sector plays. The regional overview spanning India, China, Japan, Korea, ASEAN, Australia.</div>
+        <div class="mc-meta"><span>8 markets</span><span>20+ competitors</span><span>13 sections</span></div>
+      </div>
+      <div class="mc-footer">
+        <div class="mc-stat">Prepared <b>Sep 2026</b></div>
+        <div class="mc-go">Open</div>
+      </div>
+    </a>
+
+    <a class="module-card apac" href="new-rails-dlt-ai-apac.html">
+      <div class="mc-head">
+        <div class="mc-flag">🔗</div>
+        <div class="mc-eyebrow">APAC · New Rails</div>
+        <div class="mc-title">DLT & AI in APAC Asset Servicing</div>
+        <div class="mc-desc">Tokenisation pilots, agentic AI in operations, regulatory radar through 2027. Where both DLT and AI are moving from pilot to production first.</div>
+        <div class="mc-meta"><span>~$39.2B RWA</span><span>14 sections</span><span>6 sales plays</span></div>
+      </div>
+      <div class="mc-footer">
+        <div class="mc-stat">Compiled <b>Sep 2026</b></div>
+        <div class="mc-go">Open</div>
+      </div>
+    </a>
+
+    <a class="module-card eu" href="europe-asset-servicing-kb.html">
+      <div class="mc-head">
+        <div class="mc-flag">🇪🇺</div>
+        <div class="mc-eyebrow">Europe</div>
+        <div class="mc-title">Europe Asset-Servicing Market — Competitive Intelligence & GTM</div>
+        <div class="mc-desc">UCITS + AIF landscape (EUR 23.4T), custody (BNY, State Street, BNP Paribas, CACEIS), DORA, MiCA, AIFMD II, tokenisation, Brexit impact.</div>
+        <div class="mc-meta"><span>EUR 23.4T AUM</span><span>DORA Jan 2025</span><span>AIFMD II Apr 2026</span></div>
+      </div>
+      <div class="mc-footer">
+        <div class="mc-stat">12 sections · <b>Sep 2026</b></div>
+        <div class="mc-go">Open</div>
+      </div>
+    </a>
+
+    <a class="module-card na" href="north-america-asset-servicing-kb.html">
+      <div class="mc-head">
+        <div class="mc-flag">🇺🇸</div>
+        <div class="mc-eyebrow">North America</div>
+        <div class="mc-title">North America Asset-Servicing Market — Competitive Intelligence & GTM</div>
+        <div class="mc-desc">US fund industry $39.2T, ETFs $15.7T, retirement $49.1T. SEC, T+1, BUIDL, AI ops. State Street cutting BNY's lead by 30%.</div>
+        <div class="mc-meta"><span>$39.2T fund AUM</span><span>$15.7T ETFs</span><span>BUIDL $2.8B</span></div>
+      </div>
+      <div class="mc-footer">
+        <div class="mc-stat">12 sections · <b>Sep 2026</b></div>
+        <div class="mc-go">Open</div>
+      </div>
+    </a>
+
+    <a class="module-card me" href="middle-east-asset-servicing-kb.html">
+      <div class="mc-head">
+        <div class="mc-flag">🕌</div>
+        <div class="mc-eyebrow">Middle East</div>
+        <div class="mc-title">Middle East Asset-Servicing Market — Competitive Intelligence & GTM</div>
+        <div class="mc-desc">GCC $2.2T AUM, SWFs $4.9T. PIF, ADIA, Mubadala. Saudi CMA reforms, UAE CMA transformation, ADGM digital custody, Vision 2030.</div>
+        <div class="mc-meta"><span>$4.9T SWF</span><span>PIF $925B</span><span>ADGM +215% AUM</span></div>
+      </div>
+      <div class="mc-footer">
+        <div class="mc-stat">12 sections · <b>Sep 2026</b></div>
+        <div class="mc-go">Open</div>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<div class="footer">
+  <b>Global Securities Services Sales Command Centre</b> · Interactive competitive intelligence for custody, fund administration, transfer agency and digital-asset servicing<br>
+  4 regions · 30+ markets · 80+ competitors profiled · Prepared Sep 2026<br>
+  All <span class="tag assess">ASSESSMENT</span> items are analyst judgement, not sourced data · Refresh <span class="tag fact">FACT</span> items before client use
+</div>
+
 </body>
 </html>
