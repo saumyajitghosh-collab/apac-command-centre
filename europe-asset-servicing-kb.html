@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Europe Asset-Servicing Market &mdash; Competitive Intelligence & GTM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E1B2C; --ink2:#16283F; --ink3:#1E344F;
+  --paper:#F4F6F8; --card:#FFFFFF;
+  --gold:#C08A2D; --gold-soft:#F3E9D4;
+  --teal:#2C7A74; --teal-soft:#E2EFED;
+  --violet:#5B4A8A; --violet-soft:#E9E5F3;
+  --line:#D9DFE7; --muted:#5B6B7E; --text:#1B2735;
+  --danger:#A3462E; --danger-soft:#F5E4DD;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Public Sans',sans-serif;background:var(--paper);color:var(--text);font-size:15px;line-height:1.6}
+::selection{background:var(--gold-soft)}
+
+.shell{display:flex;min-height:100vh}
+.sidebar{width:268px;background:var(--ink);color:#C6D2E0;position:fixed;top:0;bottom:0;left:0;display:flex;flex-direction:column;z-index:50;overflow-y:auto}
+.sidebar::-webkit-scrollbar{width:4px}
+.sidebar::-webkit-scrollbar-thumb{background:var(--ink3)}
+.brand{padding:24px 22px 16px;border-bottom:1px solid var(--ink3)}
+.brand .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.22em;color:var(--gold);text-transform:uppercase}
+.brand h1{font-family:'Fraunces',serif;font-weight:400;font-size:19px;color:#fff;margin-top:6px;line-height:1.3}
+.brand .sub{font-size:11px;color:#8FA1B6;margin-top:8px;line-height:1.5}
+.railkey{display:flex;gap:10px;padding:10px 22px;border-bottom:1px solid var(--ink3);font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.06em}
+.railkey span{display:flex;align-items:center;gap:5px;color:#8FA1B6}
+.railkey i{width:8px;height:8px;border-radius:2px;display:inline-block}
+.nav{padding:12px 0 84px;flex:1}
+.nav .navlink{width:100%;text-align:left;background:none;border:none;cursor:pointer;font-family:inherit;display:flex;gap:12px;align-items:baseline;padding:8px 22px;color:#9FB0C4;text-decoration:none;font-size:12.5px;border-left:3px solid transparent;transition:all .18s}
+.nav .navlink .num{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#5B7089;min-width:20px}
+.nav .navlink:hover{color:#fff;background:var(--ink2)}
+.nav .navlink.active{color:#fff;border-left-color:var(--gold);background:var(--ink2)}
+.nav .navlink.active .num{color:var(--gold)}
+.nav .navgroup{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#4F637B;padding:14px 22px 5px}
+.keys{position:fixed;bottom:0;left:0;width:268px;background:var(--ink);border-top:1px solid var(--ink3);padding:11px 22px;font-size:10.5px;color:#6E8098}
+.keys kbd{font-family:'IBM Plex Mono',monospace;background:var(--ink3);border-radius:3px;padding:1px 6px;font-size:10px;color:#B8C6D6}
+
+.main{margin-left:268px;flex:1;min-width:0}
+.progress{position:fixed;top:0;left:268px;right:0;height:3px;z-index:60}
+.progress i{display:block;height:100%;width:0;background:var(--gold);transition:width .15s}
+
+section.slide{min-height:70vh;padding:60px 52px 68px;max-width:1120px;border-bottom:1px solid var(--line)}
+.kicker{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+h2.title{font-family:'Fraunces',serif;font-weight:400;font-size:34px;line-height:1.18;color:var(--ink);margin-bottom:8px;max-width:820px}
+.lede{font-size:16.5px;color:var(--muted);max-width:760px;margin-bottom:30px;line-height:1.65}
+.lede b{color:var(--text)}
+
+.tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.08em;padding:2px 8px;border-radius:3px;vertical-align:2px;margin-left:6px;white-space:nowrap}
+.tag.fact{background:var(--teal-soft);color:var(--teal)}
+.tag.calc{background:#E8ECF3;color:#4A5E78}
+.tag.assess{background:var(--gold-soft);color:#8A6420}
+.tag.gap{background:var(--danger-soft);color:var(--danger)}
+.tag.dlt{background:var(--teal-soft);color:var(--teal)}
+.tag.ai{background:var(--violet-soft);color:var(--violet)}
+.tag.conv{background:var(--gold-soft);color:#8A6420}
+
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:1fr 1fr 1fr}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 22px}
+.card h4{font-family:'Fraunces',serif;font-weight:600;font-size:16.5px;color:var(--ink);margin-bottom:8px}
+.card p{font-size:13.5px;color:var(--muted);line-height:1.6}
+.card.dlt{border-top:3px solid var(--teal)}
+.card.ai{border-top:3px solid var(--violet)}
+.card.conv{border-top:3px solid var(--gold)}
+
+.stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.stat .v{font-family:'Fraunces',serif;font-size:30px;font-weight:600;color:var(--ink);line-height:1.1}
+.stat .l{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.5}
+.stat .s{font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#93A2B4;margin-top:8px}
+
+table.tbl{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:13px}
+table.tbl th{background:var(--ink);color:#D8E1EC;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;text-align:left;padding:11px 14px;font-weight:500}
+table.tbl td{padding:11px 14px;border-top:1px solid var(--line);vertical-align:top;color:var(--text)}
+table.tbl td.mono{font-family:'IBM Plex Mono',monospace;font-size:12px}
+table.tbl tr:hover td{background:#FAFBFC}
+.dim{color:var(--muted)}
+
+.pillrow{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 22px}
+.pill{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:20px;padding:7px 16px;cursor:pointer;transition:all .15s}
+.pill:hover{border-color:var(--gold);color:var(--ink)}
+.pill.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+.note{border-left:3px solid var(--gold);background:var(--gold-soft);border-radius:0 8px 8px 0;padding:14px 18px;font-size:13.5px;color:#5C4A24;margin:22px 0;max-width:820px}
+.note.red{border-left-color:var(--danger);background:var(--danger-soft);color:#6E3A2A}
+.note.teal{border-left-color:var(--teal);background:var(--teal-soft);color:#23504B}
+.note.violet{border-left-color:var(--violet);background:var(--violet-soft);color:#453969}
+.note b{font-weight:700}
+
+.hidden{display:none!important}
+
+/* hero */
+.hero{background:var(--ink);color:#C6D2E0;border-bottom:none;position:relative;overflow:hidden}
+.hero .kicker{color:var(--gold)}
+.hero h2.title{color:#fff;font-size:44px;max-width:900px}
+.hero .lede{color:#9FB0C4;max-width:780px}
+.rails{position:absolute;right:-40px;top:40px;width:420px;opacity:.5;pointer-events:none}
+.hero .stat{background:var(--ink2);border-color:var(--ink3)}
+.hero .stat .v{color:#fff}.hero .stat .l{color:#8FA1B6}.hero .stat .s{color:#5B7089}
+.bigbtn{display:inline-block;margin-top:26px;background:var(--gold);color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:14px 26px;border-radius:6px;border:none;cursor:pointer;font-weight:600;transition:transform .15s}
+.bigbtn:hover{transform:translateY(-2px)}
+
+/* market cards */
+.mkgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.mk{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 22px;cursor:pointer;transition:all .18s;position:relative}
+.mk:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 6px 18px rgba(14,27,44,.08)}
+.mk.open{border-color:var(--ink);box-shadow:0 6px 18px rgba(14,27,44,.10)}
+.mk .flag{font-size:22px}
+.mk h4{font-family:'Fraunces',serif;font-size:17px;font-weight:600;color:var(--ink);margin:6px 0 2px}
+.mk .stage{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.mk .stage.live{color:var(--teal)}.mk .stage.pilot{color:var(--gold)}.mk .stage.frame{color:var(--violet)}
+.mk p{font-size:12.5px;color:var(--muted);margin-top:8px;line-height:1.55}
+.mkdetail{background:var(--ink);color:#C6D2E0;border-radius:12px;padding:26px 30px;margin-top:18px}
+.mkdetail h3{font-family:'Fraunces',serif;font-weight:400;font-size:24px;color:#fff;margin-bottom:4px}
+.mkdetail .mono{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.mkdetail .cols{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:16px}
+.mkdetail h6{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#7E92A9;margin:12px 0 7px}
+.mkdetail ul{list-style:none}
+.mkdetail li{font-size:13px;padding:4px 0 4px 16px;position:relative;line-height:1.55;color:#C6D2E0}
+.mkdetail li:before{content:"\2014";position:absolute;left:0;color:var(--gold)}
+.mkdetail .sell{background:var(--ink2);border:1px solid var(--ink3);border-radius:8px;padding:14px 16px;margin-top:14px;font-size:13px}
+.mkdetail .sell b{color:var(--gold)}
+
+/* heatmap */
+.heat{width:100%;border-collapse:collapse;font-size:12.5px;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.heat th{background:var(--ink);color:#D8E1EC;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;padding:10px 10px;font-weight:500}
+.heat td{border-top:1px solid var(--line);padding:10px;text-align:center}
+.heat td.rowh{text-align:left;font-weight:600;color:var(--ink);font-size:12.5px}
+.hcell{display:inline-block;min-width:64px;padding:4px 8px;border-radius:4px;font-family:'IBM Plex Mono',monospace;font-size:10.5px}
+.h3v{background:var(--violet);color:#fff}.h2v{background:var(--violet-soft);color:var(--violet)}
+.h3t{background:var(--teal);color:#fff}.h2t{background:var(--teal-soft);color:var(--teal)}
+.h1{background:#EEF1F5;color:#8794A5}
+
+/* bars */
+.barwrap{margin:8px 0 4px}
+.barrow{display:flex;align-items:center;gap:12px;margin:9px 0}
+.barrow .bl{width:220px;font-size:12.5px;color:var(--text);text-align:right;flex-shrink:0}
+.barrow .track{flex:1;background:#E9EDF2;border-radius:4px;height:22px;position:relative;overflow:hidden}
+.barrow .fill{height:100%;border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#fff;min-width:36px;transition:width .8s ease}
+.f-teal{background:var(--teal)}.f-gold{background:var(--gold)}.f-violet{background:var(--violet)}.f-ink{background:var(--ink3)}
+
+/* timeline */
+.tl{position:relative;margin:26px 0;padding-left:26px;border-left:2px solid var(--line);max-width:860px}
+.tl .ev{position:relative;margin-bottom:22px}
+.tl .ev:before{content:"";position:absolute;left:-33px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--card);border:3px solid var(--gold)}
+.tl .ev.t:before{border-color:var(--teal)}
+.tl .ev.v:before{border-color:var(--violet)}
+.tl .d{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:.08em}
+.tl .ev.t .d{color:var(--teal)}.tl .ev.v .d{color:var(--violet)}
+.tl h5{font-family:'Fraunces',serif;font-size:16px;font-weight:600;color:var(--ink);margin:2px 0 3px}
+.tl p{font-size:13px;color:var(--muted);max-width:720px}
+.tl .so{font-size:12.5px;color:var(--text);margin-top:4px}
+.tl .so b{color:var(--teal)}
+
+/* play cards */
+.play{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px 24px;margin-bottom:14px;cursor:pointer;transition:border-color .15s}
+.play:hover{border-color:var(--gold)}
+.play .top{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
+.play h4{font-family:'Fraunces',serif;font-size:18px;font-weight:600;color:var(--ink)}
+.play .meta{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted)}
+.play .body{display:none;margin-top:14px;border-top:1px solid var(--line);padding-top:14px}
+.play.open .body{display:block}
+.play .body .row{display:grid;grid-template-columns:150px 1fr;gap:10px;font-size:13.5px;padding:5px 0}
+.play .body .row b{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:2px}
+
+/* sources */
+.srcs{columns:2;column-gap:34px;font-size:12.5px}
+.srcs .s{break-inside:avoid;padding:8px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+.srcs .s b{color:var(--ink);font-weight:600}
+.srcs a{color:var(--teal);text-decoration:none;word-break:break-all}
+.srcs a:hover{text-decoration:underline}
+
+footer{padding:34px 52px;color:var(--muted);font-size:12px;max-width:1120px}
+
+@media (max-width:1080px){
+  .sidebar{display:none}.main{margin-left:0}.progress{left:0}.keys{display:none}
+  section.slide{padding:44px 22px 52px}
+  .g2,.g3,.g4,.mkgrid{grid-template-columns:1fr}
+  .mkdetail .cols{grid-template-columns:1fr}
+  .hero h2.title{font-size:32px}
+  .srcs{columns:1}
+  .barrow .bl{width:130px;font-size:11px}
+}
+
+/* home nav (injected) */
+.homelink{display:inline-flex;align-items:center;gap:7px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#C08A2D;text-decoration:none;margin-bottom:10px;border:1px solid rgba(192,138,45,.35);border-radius:5px;padding:5px 10px;transition:all .15s}
+.homelink:hover{background:#C08A2D;color:#0E1B2C}
+.homefab{display:none;position:fixed;bottom:18px;right:18px;z-index:90;background:#0E1B2C;color:#E0B565;border:1px solid rgba(192,138,45,.55);border-radius:24px;padding:11px 18px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+@media (max-width:1080px){.homefab{display:inline-flex;align-items:center;gap:6px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar">
+  <div class="brand">
+    <a class="homelink" href="index.html">&#8598; Command Centre</a>
+    <div class="eyebrow">Companion Module &middot; Europe KB</div>
+    <h1>Europe Asset Servicing</h1>
+    <div class="sub">Competitive intelligence & go-to-market for European custody, fund administration and tokenisation. Prepared for the MD, Regional Head of Securities Services Sales.</div>
+  </div>
+  <div class="railkey">
+    <span><i style="background:var(--teal)"></i>DLT</span>
+    <span><i style="background:var(--violet)"></i>AI</span>
+    <span><i style="background:var(--gold)"></i>Regulation</span>
+  </div>
+  <nav class="nav" id="nav">
+    <div class="navgroup">Market</div>
+    <a class="navlink" href="#s01"><span class="num">01</span>Market Sizing</a>
+    <a class="navlink" href="#s02"><span class="num">02</span>Custody Landscape</a>
+    <a class="navlink" href="#s03"><span class="num">03</span>Fund Administration</a>
+    <div class="navgroup">Regulation & Tech</div>
+    <a class="navlink" href="#s04"><span class="num">04</span>Regulatory Radar</a>
+    <a class="navlink" href="#s05"><span class="num">05</span>Tokenisation & DLT</a>
+    <a class="navlink" href="#s06"><span class="num">06</span>AI & Operations</a>
+    <div class="navgroup">Context</div>
+    <a class="navlink" href="#s07"><span class="num">07</span>Brexit Impact</a>
+    <a class="navlink" href="#s08"><span class="num">08</span>Buyer Maps</a>
+    <a class="navlink" href="#s09"><span class="num">09</span>Competitive Intelligence</a>
+    <div class="navgroup">Action</div>
+    <a class="navlink" href="#s10"><span class="num">10</span>Six GTM Plays</a>
+    <a class="navlink" href="#s11"><span class="num">11</span>Risks & Caveats</a>
+    <a class="navlink" href="#s12"><span class="num">12</span>Source Library</a>
+  </nav>
+</aside>
+<div class="keys">Navigate: <kbd>J</kbd>/<kbd>K</kbd> or scroll &middot; Data as of Sep 2026</div>
+
+<main class="main">
+<div class="progress"><i id="pbar"></i></div>
+
+<!-- 01 MARKET SIZING -->
+<section class="slide hero" id="s01">
+  <svg class="rails" viewBox="0 0 420 300" fill="none">
+    <path d="M0 60 H420" stroke="#2C7A74" stroke-width="2" stroke-dasharray="2 6"/>
+    <path d="M0 120 H420" stroke="#5B4A8A" stroke-width="2" stroke-dasharray="2 6"/>
+    <path d="M0 90 H420" stroke="#C08A2D" stroke-width="1"/>
+    <circle cx="120" cy="60" r="5" fill="#2C7A74"/><circle cx="250" cy="120" r="5" fill="#5B4A8A"/>
+    <circle cx="330" cy="90" r="6" fill="#C08A2D"/><circle cx="60" cy="90" r="4" fill="#C08A2D"/>
+    <path d="M0 200 H420" stroke="#1E344F" stroke-width="10"/>
+    <path d="M0 230 H420" stroke="#1E344F" stroke-width="10"/>
+  </svg>
+  <div class="kicker">01 &middot; Market Sizing</div>
+  <h2 class="title">Europe is the world&rsquo;s deepest regulated fund market &mdash; and the rules governing it are being rewritten.</h2>
+  <p class="lede">European UCITS + AIF net assets reached <b style="color:#7FC7C0">EUR 23.4 trillion</b> at end-2024, up 13.1% YoY, inside a total AuM pool of <b style="color:#B3A5DB">EUR 33 trillion</b> when discretionary mandates are included. Six regulatory regimes &mdash; DORA, MiCA, AIFMD II, CSDR Refit, EMIR Refit, SFDR &mdash; land on a 2025&ndash;2027 calendar that forces every custodian, administrator and depositary to re-paper clients and re-platform operations. Whoever sells European asset servicing over the next 24 months is selling into a compliance-driven mandate reshuffle.</p>
+  <div class="grid g4" style="margin-top:26px">
+    <div class="stat"><div class="v">EUR 23.4 tn</div><div class="l">UCITS + AIF net assets, end-2024 (+13.1% YoY) <span class="tag fact">FACT</span></div><div class="s">EFAMA Q4 2024 Statistical Release</div></div>
+    <div class="stat"><div class="v">EUR 33 tn</div><div class="l">Total European AuM incl. discretionary mandates (+11.7% YoY) <span class="tag fact">FACT</span></div><div class="s">EFAMA Asset Management in Europe 2025</div></div>
+    <div class="stat"><div class="v">EUR 685 bn</div><div class="l">net inflows in 2024 &mdash; nearly 3&times; the EUR 235 bn of 2023 <span class="tag fact">FACT</span></div><div class="s">EFAMA Fact Book 2025</div></div>
+    <div class="stat"><div class="v">EUR 10.3 tn</div><div class="l">European pension fund AUM, first time above EUR 10 tn (+6.2% YoY) <span class="tag fact">FACT</span></div><div class="s">IPE Top 1000 Pension Funds 2025</div></div>
+  </div>
+
+  <div class="grid g2" style="margin-top:30px">
+    <div>
+      <h4 style="font-family:'Fraunces',serif;font-size:18px;color:var(--ink);margin-bottom:10px">UCITS vs AIF split & fund count</h4>
+      <table class="tbl">
+        <tr><th>Segment</th><th>Net assets</th><th>YoY</th><th># Funds</th></tr>
+        <tr><td>UCITS</td><td class="mono">EUR 15.3 tn</td><td class="mono">+15.8%</td><td class="mono">~37,083</td></tr>
+        <tr><td>AIFs</td><td class="mono">EUR 8.2 tn</td><td class="mono">+8.4%</td><td class="mono">~30,841</td></tr>
+        <tr><td><b>Total</b></td><td class="mono"><b>EUR 23.4 tn</b></td><td class="mono"><b>+13.1%</b></td><td class="mono"><b>~67,924</b></td></tr>
+      </table>
+      <div class="dim" style="font-size:11px;margin-top:8px">UCITS share reached 65% of the fund market, up from 60% in 2014. <span class="tag fact">FACT</span> &mdash; EFAMA Fact Book 2025</div>
+    </div>
+    <div>
+      <h4 style="font-family:'Fraunces',serif;font-size:18px;color:var(--ink);margin-bottom:10px">Where assets are <i>managed</i> (not domiciled)</h4>
+      <div class="barwrap">
+        <div class="barrow"><div class="bl">United Kingdom</div><div class="track"><div class="fill f-ink" style="width:31%">31%</div></div></div>
+        <div class="barrow"><div class="bl">France</div><div class="track"><div class="fill f-ink" style="width:18%">18%</div></div></div>
+        <div class="barrow"><div class="bl">Germany</div><div class="track"><div class="fill f-ink" style="width:13%">13%</div></div></div>
+        <div class="barrow"><div class="bl">Switzerland</div><div class="track"><div class="fill f-ink" style="width:12%">12%</div></div></div>
+        <div class="barrow"><div class="bl">Netherlands</div><div class="track"><div class="fill f-ink" style="width:5%">5%</div></div></div>
+        <div class="barrow"><div class="bl">Italy</div><div class="track"><div class="fill f-ink" style="width:3%">3%</div></div></div>
+      </div>
+      <div class="dim" style="font-size:11px;margin-top:8px">~82% of European investment-fund assets managed in these six countries. Investment funds = EUR 19,162 bn (58%); discretionary mandates = EUR 13,859 bn (42%). <span class="tag fact">FACT</span> &mdash; EFAMA AMiE 2025</div>
+    </div>
+  </div>
+
+  <h4 style="font-family:'Fraunces',serif;font-size:18px;color:var(--ink);margin:34px 0 12px">Country-level fund domicile (end-2024, EUR bn)</h4>
+  <table class="tbl">
+    <tr><th>Country</th><th>UCITS + AIF net assets</th><th>UCITS</th><th>AIFs</th><th># Funds</th></tr>
+    <tr><td>Luxembourg</td><td class="mono">5,820</td><td class="mono">4,777</td><td class="mono">1,043</td><td class="mono">13,599</td></tr>
+    <tr><td>Ireland</td><td class="mono">4,993</td><td class="mono">4,043</td><td class="mono">949</td><td class="mono">8,903</td></tr>
+    <tr><td>Germany</td><td class="mono">2,808</td><td class="mono">549</td><td class="mono">2,259</td><td class="mono">7,797</td></tr>
+    <tr><td>France</td><td class="mono">2,502</td><td class="mono">977</td><td class="mono">1,525</td><td class="mono">10,933</td></tr>
+    <tr><td>United Kingdom</td><td class="mono">2,152</td><td class="mono">1,535</td><td class="mono">617</td><td class="mono">3,274</td></tr>
+    <tr><td>Switzerland</td><td class="mono">986</td><td class="mono">780</td><td class="mono">207</td><td class="mono">1,239</td></tr>
+    <tr><td><b>Europe Total</b></td><td class="mono"><b>23,423</b></td><td class="mono"><b>15,242</b></td><td class="mono"><b>8,182</b></td><td class="mono"><b>67,924</b></td></tr>
+  </table>
+  <div class="note teal" style="margin-top:18px"><b>Domicile gravity:</b> Luxembourg (25% share) dominates cross-border UCITS distribution; Ireland (21% share) is the primary European ETF domicile (~80% of European ETF AUM). These two hubs are where the mandate reshuffle lands first. <span class="tag fact">FACT</span> &mdash; EFAMA &ldquo;Our industry in numbers&rdquo;</div>
+</section>
+
+<!-- 02 CUSTODY LANDSCAPE -->
+<section class="slide" id="s02">
+  <div class="kicker">02 &middot; Custody Landscape</div>
+  <h2 class="title">US banks dominate globally; French banks own the European custody book.</h2>
+  <p class="lede">The custody market splits on a fault line: BNY, State Street, JPMorgan and Citi lead on <b>global</b> AUC/A, but the assets physically held <b>in Europe</b> concentrate in French G-SIB hands &mdash; BNP Paribas, CACEIS and Soci&eacute;t&eacute; G&eacute;n&eacute;rale. KPMG&rsquo;s 43-bank survey finds the top 10 banks hold >78% of depositary assets under depositary (AuD). This is a consolidating market: CACEIS absorbed RBC Investor Services; BNP Paribas is acquiring HSBC&rsquo;s German custody and depositary business.</p>
+
+  <table class="tbl">
+    <tr><th>Provider</th><th>Global AUC/A</th><th>Notes</th></tr>
+    <tr><td><b>BNY</b></td><td class="mono">~$52+ tn (end-2024)</td><td>Largest global custodian; rebranded from &ldquo;BNY Mellon&rdquo; (2024); phased transition to strategic platforms model. ~9% YoY AUC/A growth.</td></tr>
+    <tr><td><b>State Street</b></td><td class="mono">~$49+ tn (end-2024)</td><td>11% YoY AUC/A growth; Alpha front-to-back platform is the differentiator. Only major custodian citing a client-transition drop in 2024.</td></tr>
+    <tr><td><b>JPMorgan</b></td><td class="mono">$34+ tn (AUC)</td><td>#1 by fund-level custody (Convergence league tables, 13.5% share). Securities Services revenue $1.3 bn/quarter, +10%.</td></tr>
+    <tr><td><b>Citi</b></td><td class="mono">$24.2 tn (mid-2024)</td><td>Fastest-growing of the top 4 (+15% securities services revenue); strong in emerging markets & cross-border.</td></tr>
+    <tr><td><b>BNP Paribas Sec. Services</b></td><td class="mono">EUR 14.3 tn (Mar-2025)</td><td>Largest AUC <i>in Europe</i> ($12.2 tn European); acquiring HSBC&rsquo;s German custody/depositary business.</td></tr>
+    <tr><td><b>Northern Trust</b></td><td class="mono">$17.4 tn (end-Q3 2024)</td><td>Alternatives / private markets & asset-owner focus; expanding CLO and ELTIF capabilities.</td></tr>
+    <tr><td><b>CACEIS</b></td><td class="mono">EUR 5.3 tn AUC / 3.4 tn AUA</td><td>100% Europe-focused &ldquo;consolidator&rdquo;; completed RBC IS integration Jun 2024.</td></tr>
+  </table>
+  <div class="dim" style="font-size:11px;margin-top:8px">PostTrade 360&deg; custodian reports; Funds Europe administrator survey 2025; CACEIS; BNP Paribas Securities Services. <span class="tag fact">FACT</span></div>
+
+  <div class="grid g2" style="margin-top:30px">
+    <div class="card conv"><h4>European market concentration</h4><p>KPMG Luxembourg survey (43 banks, 2023 data): top 10 hold <b>>78%</b> of AuD (EUR 5 tn total); top 5 hold <b>68%</b> of AuC (EUR 2.4 tn). ECB paper (2019 data): the three largest EU custodians with >EUR 1 tn AuC are all subsidiaries of French G-SIBs. <span class="tag fact">FACT</span> &mdash; KPMG Depositary & Custodian Survey 2024; ECB Occasional Paper 256</p></div>
+    <div class="card conv"><h4>European custody rankings (by AuC/A in Europe)</h4><p>Funds Europe 2025: <b>BNP Paribas #1</b> ($14.3 tn); <b>State Street #2</b> ($9.4 tn); <b>CACEIS #3</b> ($8.6 tn). Euroclear & Clearstream &mdash; the two EU CSDs &mdash; sit at the settlement/collateral core of the chain. <span class="tag fact">FACT</span> &mdash; Funds Europe, March 2025</p></div>
+  </div>
+
+  <div class="note"><b>Read-through for the seller:</b> HSBC&rsquo;s retreat (German custody sold to BNPP; fund-admin divestments underway) is the single biggest displacement event in the cycle &mdash; displaced clients are in play for any provider with German depositary capacity. <span class="tag assess">ASSESSMENT</span></div>
+</section>
+
+<!-- 03 FUND ADMINISTRATION -->
+<section class="slide" id="s03">
+  <div class="kicker">03 &middot; Fund Administration & Transfer Agency</div>
+  <h2 class="title">A three-way contest in Luxembourg &mdash; and a closing TA oligopoly.</h2>
+  <p class="lede">Monterey Insight&rsquo;s 2024 report (covering >22,000 funds/sub-funds as of 31 Dec 2023) names the same trio at the top of every Luxembourg service line: <b>State Street, JPMorgan, CACEIS</b>. CACEIS moved up to #3 across administrator, depositary and transfer-agent rankings after absorbing RBC Investor Services, eliminating a competitor and tightening an already oligopolistic TA market.</p>
+
+  <table class="tbl">
+    <tr><th>Service line</th><th>#1</th><th>#2</th><th>#3</th></tr>
+    <tr><td>Fund Administrator</td><td><b>State Street</b> (since 2017)</td><td>JPMorgan Bank</td><td>CACEIS &uarr; (from #4, swapping with BNY)</td></tr>
+    <tr><td>Custodian / Depositary</td><td><b>State Street</b></td><td>JPMorgan</td><td>CACEIS &uarr; (from #4, swapping with BNP Paribas)</td></tr>
+    <tr><td>Transfer Agent</td><td><b>IFDS / State Street</b></td><td>CACEIS &uarr; (from #4)</td><td>&mdash;</td></tr>
+  </table>
+  <div class="dim" style="font-size:11px;margin-top:8px">Paperjam / Monterey Insight Luxembourg Fund Report. <span class="tag fact">FACT</span></div>
+
+  <div class="grid g3" style="margin-top:28px">
+    <div class="card conv"><h4>CACEIS post-RBC</h4><p>>7,000 staff across 18 countries; Luxembourg unit alone manages EUR 727 bn AUC / EUR 1.026 tn AUA with 2,067 staff. RBC IS European operations (France, Luxembourg, Belgium, Ireland, Switzerland) fully integrated by 1 Jun 2024. <span class="tag fact">FACT</span></p></div>
+    <div class="card conv"><h4>TA market structure</h4><p>Effectively a <b>duopoly / oligopoly</b> &mdash; CACEIS and State Street (IFDS) dominate Luxembourg TA, with BNY and JPMorgan also significant. The RBC acquisition consolidated CACEIS&rsquo;s #3 position. <span class="tag assess">ASSESSMENT</span></p></div>
+    <div class="card conv"><h4>Apex / GAM deal</h4><p>Apex Group acquired GAM&rsquo;s ManCo/TA operations in Ireland, Luxembourg and UK (Q4 2024), expanding the independent-administrator footprint &mdash; a challenger model gaining ground outside the bank-owned trio. <span class="tag fact">FACT</span></p></div>
+  </div>
+
+  <h4 style="font-family:'Fraunces',serif;font-size:18px;color:var(--ink);margin:32px 0 12px">Luxembourg vs Ireland as fund domiciles</h4>
+  <div class="mkgrid">
+    <div class="mk"><span class="flag">&#127463;&#127467;</span><div class="stage live">DOMINANT CROSS-BORDER UCITS</div><h4>Luxembourg</h4><p>EUR 5.82 tn, 25% market share. Dominant in UCITS cross-border distribution, SIF/SICAR/AIF structures and ELTIFs; >13,500 funds.</p></div>
+    <div class="mk"><span class="flag">&#127470;&#127466;</span><div class="stage live">PRIMARY ETF DOMICILE</div><h4>Ireland</h4><p>EUR 4.99 tn, 21% market share. ~80% of European ETF AUM domiciled here; ICAV structure popular; >8,900 funds.</p></div>
+    <div class="mk"><span class="flag">&#127760;</span><div class="stage frame">CROSS-BORDER HUBS</div><h4>Distribution rails</h4><p>UCITS passport enables EU/EEA distribution; AIFs marketed via AIFMD passport or National Private Placement Regimes. LU & IE are the primary hubs.</p></div>
+  </div>
+  <div class="dim" style="font-size:11px;margin-top:10px">EFAMA; Monterey Insight; regulatory framework. <span class="tag fact">FACT</span></div>
+</section>
+
+<!-- 04 REGULATORY RADAR -->
+<section class="slide" id="s04">
+  <div class="kicker">04 &middot; Regulatory Radar 2025&ndash;2027</div>
+  <h2 class="title">Six regimes, one calendar &mdash; the re-papering window.</h2>
+  <p class="lede">DORA is already live (17 Jan 2025); AIFMD II transposition lands 16 Apr 2026; MiCA&rsquo;s grandfathering ends 1 Jul 2026; CSDR Refit&rsquo;s remaining provisions apply from 17 Jan 2026. Every EU financial entity must re-paper vendor contracts, rebuild ICT third-party registers and re-paper depositary terms. This is the demand pulse behind the mandate reshuffle.</p>
+
+  <div class="tl">
+    <div class="ev t"><div class="d">17 JAN 2025 &middot; LIVE</div><h5>DORA &mdash; Digital Operational Resilience Act</h5><p>Regulation (EU) 2022/2554 applied. ICT risk management, third-party risk, resilience testing, incident reporting and CTPP oversight. Registers of information due to ESAs by 30 Apr 2025. BaFin rescinded KAIT/VAIT/ZAIT circulars; BAIT fully repealed 31 Dec 2026. UK parallel: PS21/3 deadline 31 Mar 2025; PS24/16 critical third parties from 1 Jan 2025.</p><div class="so"><b>Source:</b> ESMA; EUR-Lex; Jones Day; Morgan Lewis; Mayer Brown <span class="tag fact">FACT</span></div></div>
+    <div class="ev t"><div class="d">30 DEC 2024 &middot; LIVE</div><h5>MiCA &mdash; Markets in Crypto-Assets</h5><p>Regulation (EU) 2023/1114. Phase 1 (30 Jun 2024): ART/EMT stablecoin issuer rules. Phase 2 (30 Dec 2024): full CASP authorisation regime. Grandfathering ends <b>1 Jul 2026</b>. iXBRL white-paper format from 23 Dec 2025. Ireland set a 12-month transition ending 29 Dec 2025.</p><div class="so"><b>Source:</b> EUR-Lex; ESMA; Central Bank of Ireland <span class="tag fact">FACT</span></div></div>
+    <div class="ev"><div class="d">16 APR 2026 &middot; TRANSPOSITION</div><h5>AIFMD II &mdash; Alternative Investment Fund Managers Directive</h5><p>Directive (EU) 2024/927. New loan-origination regime (leverage limits: open-ended 175%, closed-ended 300%; 20% single-borrower cap; 5% risk retention); depositary cross-border appointment; CSDs in custody chain; liquidity-management tools. Supervisory reporting from 16 Apr 2027. Grandfathering for loan-originating AIFs ends 16 Apr 2029. Depositary cross-border permitted only if home-state market < EUR 50 bn aggregate AUC.</p><div class="so"><b>Source:</b> Clifford Chance; DLA Piper; Sidley; McDermott; Debevoise <span class="tag fact">FACT</span></div></div>
+    <div class="ev"><div class="d">17 JAN 2026 &middot; REMAINING PROVISIONS</div><h5>CSDR Refit</h5><p>Regulation (EU) 2023/2845. Mandatory buy-ins suspended &mdash; now a &ldquo;last resort&rdquo; the Commission may activate only if cash penalties fail AND fails threaten EU stability. ESMA to report on T+1 opportunity by 17 Jan 2025 and biennially after. Cash penalties live since 1 Feb 2022; ESMA consulting on rate increases (up to 6&times;, up to 25&times; after 6th fail day).</p><div class="so"><b>Source:</b> Norton Rose Fulbright; Linklaters; SGSS <span class="tag fact">FACT</span></div></div>
+    <div class="ev"><div class="d">29 APR 2024 / 30 SEP 2024 &middot; LIVE</div><h5>EMIR REFIT &mdash; Derivatives Reporting</h5><p>EU EMIR new RTS/ITS from 29 Apr 2024; outstanding derivatives re-reported by 26 Oct 2024. UK EMIR from 30 Sep 2024; back-reporting ended 31 Mar 2025. ISO 20022 XML; +74 reporting fields; UPI mandatory; UTI generation rules.</p><div class="so"><b>Source:</b> ESMA; FCA; Sidley; Taylor Wessing <span class="tag fact">FACT</span></div></div>
+    <div class="ev"><div class="d">SINCE JAN 2021 &middot; ONGOING</div><h5>SFTR &mdash; Securities Financing Transactions Regulation</h5><p>Regulation (EU) 2015/2365. Reporting fully applicable since Jan 2021 across banks, CCPs/CSDs, UCITS ManCos/AIFMs/insurers/pension funds, NFCs. ISO 20022 XML; validation rules updated March 2023.</p><div class="so"><b>Source:</b> ESMA; FMA Liechtenstein <span class="tag fact">FACT</span></div></div>
+    <div class="ev v"><div class="d">IN REVIEW</div><h5>SFDR &mdash; Sustainable Finance Disclosure Regulation</h5><p>Regulation (EU) 2019/2088 remains in force; ongoing ESA consultations on PAI indicators and Article 6/8/9 fund classification; ESMA/ESA review ongoing. <span class="tag gap">DATA GAP</span> &mdash; latest 2025&ndash;2026 SFDR amendments not separately sourced in this pass; primary research recommended before client-facing use.</p></div>
+  </div>
+
+  <h4 style="font-family:'Fraunces',serif;font-size:18px;color:var(--ink);margin:30px 0 12px">Regulatory deadline summary (2025&ndash;2027)</h4>
+  <table class="tbl">
+    <tr><th>Regulation</th><th>Key date</th><th>Milestone</th></tr>
+    <tr><td>DORA</td><td class="mono">17 Jan 2025</td><td>Application date (fully in force)</td></tr>
+    <tr><td>DORA</td><td class="mono">30 Apr 2025</td><td>National authorities report registers to ESAs</td></tr>
+    <tr><td>UK Operational Resilience</td><td class="mono">31 Mar 2025</td><td>PS21/3 compliance deadline</td></tr>
+    <tr><td>EU EMIR REFIT</td><td class="mono">29 Apr 2024 / 26 Oct 2024</td><td>Application / back-reporting deadline</td></tr>
+    <tr><td>UK EMIR REFIT</td><td class="mono">30 Sep 2024 / 31 Mar 2025</td><td>Application / back-reporting deadline</td></tr>
+    <tr><td>MiCA &mdash; stablecoins</td><td class="mono">30 Jun 2024</td><td>ART/EMT rules apply</td></tr>
+    <tr><td>MiCA &mdash; CASPs</td><td class="mono">30 Dec 2024</td><td>Full CASP regime applies</td></tr>
+    <tr><td>MiCA &mdash; white papers</td><td class="mono">23 Dec 2025</td><td>iXBRL format requirement</td></tr>
+    <tr><td>MiCA &mdash; grandfathering end</td><td class="mono">1 Jul 2026</td><td>All CASPs must be authorised</td></tr>
+    <tr><td>CSDR Refit</td><td class="mono">17 Jan 2026</td><td>Remaining provisions apply</td></tr>
+    <tr><td>AIFMD II</td><td class="mono">16 Apr 2026</td><td>Member State transposition deadline</td></tr>
+    <tr><td>AIFMD II</td><td class="mono">16 Apr 2027</td><td>Supervisory reporting applies</td></tr>
+    <tr><td>AIFMD II</td><td class="mono">16 Apr 2029</td><td>Grandfathering ends for loan-originating AIFs</td></tr>
+  </table>
+</section>
+
+<!-- 05 TOKENISATION & DLT -->
+<section class="slide" id="s05">
+  <div class="kicker">05 &middot; Tokenisation & DLT</div>
+  <h2 class="title">The legal rails for tokenised securities already exist &mdash; in Germany, Luxembourg and Switzerland.</h2>
+  <p class="lede">Europe wrote the rulebook before the market. Germany&rsquo;s eWpG (2021), Luxembourg&rsquo;s blockchain laws (2019/2021) and Switzerland&rsquo;s DLT Act (2021) each created a legally recognised electronic-security category. The ECB&rsquo;s digital euro moved to its next phase on 30 Oct 2025, targeting potential first issuance in 2029. And the first fully tokenised UCITS fund on a public blockchain &mdash; Franklin Templeton, CSSF-approved Oct 2024 &mdash; is live in Luxembourg.</p>
+
+  <div class="mkgrid" id="dltgrid">
+    <div class="mk" data-mk="ecb"><span class="flag">&#127466;&#127482;</span><div class="stage frame">PREPARATION &rarr; NEXT PHASE</div><h4>ECB Digital Euro</h4><p>Next phase approved 30 Oct 2025. 36 PSPs selected for pilot; potential first issuance in 2029.</p></div>
+    <div class="mk" data-mk="ewpg"><span class="flag">&#127465;&#127466;</span><div class="stage live">LIVE LAW SINCE 2021</div><h4>German eWpG</h4><p>Crypto-securities register as a BaFin-licensable service. Siemens digital bond on SWIAT.</p></div>
+    <div class="mk" data-mk="lux"><span class="flag">&#127463;&#127467;</span><div class="stage live">LIVE LAW SINCE 2019</div><h4>Luxembourg Blockchain</h4><p>2019 + 2021 laws: complete DLT framework for issuance, holding & transfer of dematerialised securities.</p></div>
+    <div class="mk" data-mk="ch"><span class="flag">&#127464;&#127469;</span><div class="stage live">LIVE LAW SINCE 2021</div><h4>Swiss DLT Act</h4><p>Ledger-based securities (Registerwertrecht) + DLT trading-facility licence under FinMIA.</p></div>
+    <div class="mk" data-mk="ft"><span class="flag">&#127463;&#127467;</span><div class="stage live">FIRST TOKENISED UCITS</div><h4>Franklin Templeton</h4><p>CSSF approval 28 Oct 2024 &mdash; Europe&rsquo;s first fully tokenised UCITS on a public blockchain.</p></div>
+    <div class="mk" data-mk="hl"><span class="flag">&#127463;&#127467;</span><div class="stage live">DLT SHARE CLASS</div><h4>Hamilton Lane / Sygnum</h4><p>USD 3.8 bn GPA Fund, Polygon-registered share class; Apex as TA, FundRock-LRI as AIFM.</p></div>
+  </div>
+  <div class="mkdetail hidden" id="mkdetail"></div>
+
+  <div class="grid g2" style="margin-top:28px">
+    <div class="card dlt"><h4>More live issuances & explorers</h4><p>Partners Group, abrdn and Schroders are all exploring or launching tokenised products. Euronext owns a stake in Luxembourg tokenisation platform <b>Tokeny</b>; LSE works with <b>FundAdminChain</b>; SGX holds a stake in <b>ADDX</b>. BNP Paribas Securities Services acted as issuing & paying agent in Caisse des D&eacute;p&ocirc;ts&rsquo; first digital bond issuance (ECB wholesale-CBDC experimentation). <span class="tag fact">FACT</span></p></div>
+    <div class="card dlt"><h4>Digital euro cost envelope</h4><p>Total development costs estimated at <b>~EUR 1.3 bn</b> until first issuance (~2029); annual operating costs ~EUR 320 m/yr from 2029. If the EU Regulation is adopted in 2026, a 12-month pilot could start in <b>H2 2027</b>. <span class="tag fact">FACT</span> &mdash; ECB preparation-phase closing report</p></div>
+  </div>
+
+  <div class="note teal"><b>Sell angle:</b> The legal plumbing is settled in LU/DE/CH; the open gap is <i>servicing</i> &mdash; DLT-based transfer agency, on-chain share registries, digital-asset custody and integration with traditional fund admin. Franklin Templeton and Hamilton Lane are the reference clients. <span class="tag assess">ASSESSMENT</span></div>
+</section>
+
+<!-- 06 AI & OPERATIONS -->
+<section class="slide" id="s06">
+  <div class="kicker">06 &middot; AI & Operations</div>
+  <h2 class="title">AI is the operating-margin lever &mdash; and BNY has shipped it enterprise-wide.</h2>
+  <p class="lede">The European custody margin story is now an AI story. BNY&rsquo;s <b>Eliza</b> platform has 125+ AI solutions in production and 98% of staff trained on generative AI; State Street&rsquo;s <b>Alpha</b> is the front-to-back differentiator with 400 AI practitioners; Northern Trust is embedding Berenberg&rsquo;s AI hedging models into its servicing offer. The provider that can evidence governed, auditable AI at scale wins the re-platforming RFPs.</p>
+
+  <div class="grid g2">
+    <div class="card ai"><h4>BNY &mdash; Eliza <span class="tag ai">AI</span></h4><p>Enterprise AI platform (named for Eliza Hamilton), launched 2024. Built on NVIDIA chips, Microsoft Azure & Google Cloud; uses GPT-4, Gemini, Llama. <b>98% of employees trained</b> on generative AI by Sep 2025; adoption +175% YoY. <b>125+ AI solutions in production</b>; 20,000 staff building agents; 75% more solutions in Q3 2025 vs prior quarter. Use cases: fund benchmarking, reconciliation automation, onboarding, payments, code, lead identification. Ranked 14th in Evident AI Adoption Index (Oct 2024). <span class="tag fact">FACT</span> &mdash; BNY; Fortune</p></div>
+    <div class="card ai"><h4>State Street &mdash; Alpha <span class="tag ai">AI</span></h4><p>Positioned as &ldquo;the first and only&rdquo; front-to-back investment platform: front office (portfolio/risk analytics, trading) + b
