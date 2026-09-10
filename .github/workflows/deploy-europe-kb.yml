@@ -1,0 +1,22 @@
+name: Deploy Europe KB
+on:
+  push:
+    branches: [main]
+    paths: ['_europe_kb_compressed.b64']
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decompress and commit
+        run: |
+          base64 -d _europe_kb_compressed.b64 | gunzip > europe-asset-servicing-kb.html
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add europe-asset-servicing-kb.html
+          git rm -f _europe_kb_compressed.b64
+          git rm -f .github/workflows/deploy-europe-kb.yml || true
+          git commit -m "Add Europe asset-servicing knowledge base module — market sizing, custody, DORA/MiCA/AIFMD II, tokenisation, GTM plays"
+          git push
